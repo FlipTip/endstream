@@ -6,8 +6,8 @@ REM ## TITLE: WINSTREAM
 REM ## AUTHOR: Endwall
 REM ## Creation Date: January 27, 2018
 REM ## Version: 0.03
-REM ## Revision Date: January 30, 2018
-REM ## Copyright: 2018 The Endware Development Team
+REM ## Revision Date: February 11, 2018
+REM ##
 REM ## Description:  Stream internet video channels with mpv and youtube-dl
 REM ##
 REM ##
@@ -16,10 +16,18 @@ REM ##
 REM ######################################################
 
 REM ##################################################################### 
-REM # Instructions:  make a directory ~/bin and copy this file there, add this to the %PATH%
-REM #                then call the file as a batch file in cmd.
-
-REM #############################################################################################################################################################################
+REM # Instructions:  
+REM # make a directory C:\Users\%USERNAME%\bin and copy this file there, add this to the %PATH% by typing the following:
+REM # SET PATH=C:\Users\%USERNAME%\bin;%PATH% 
+REM # Alternatively put the file setpath.bat into C:\Users\%USERNAME% and call it in the command line.
+REM #  
+REM # Download mpv.exe from www.mpv.io and also download youtube-dl.exe, then unpack the 7zip archive with mpv.exe and the
+REM # dll files into C:\Users\%USERNAME%\bin  also make sure that youtube-dl.exe and mpv.exe are located in the bin directory
+REM # now type winstream in cmd to call the file: 
+REM # C:\Users\%USERNNAME%> winstream
+REM # or double click on the batch file which should work as well.
+REM # 
+REM ##############################################################################################################################################################################
 REM #                                         ACKNOWLEDGMENTS
 REM #############################################################################################################################################################################
 REM #  The Endware Development Team would like to acknowledge the work and efforts of OdiliTime, Balrog and SnakeDude who graciously hosted and promoted this software project. 
@@ -128,18 +136,23 @@ REM #       This would be deemed unacceptable and is specifically rejected by th
 REM #       and it will be taken into consideration.  
 REM #############################################################################################################################
 
-SET PRODUCT="WINSTREAM"
+REM ################################### BEGINNING OF PROGRAM ###################################################
+
+SETLOCAL
+SETLOCAL ENABLEEXTENSIONS
+SETLOCAL ENABLEDELAYEDEXPANSION
+
+SET PRODUCT=WINSTREAM
 SET BRANCH="WINDOWS NT 6.x"
-SET VERSION="0.03"
-SET REV_DATE="30/01/2018"
+SET VERSION=0.03
+SET REV_DATE="09/02/2018"
 
 REM ## SET THE TITLE
 TITLE ENDSTREAM %DATE%
 REM ## CHANGE THE COLOUR
-REM COLOR 1e
+COLOR 1e
 REM cOLOR 07
-
-CLS
+REM cOLOR 07
 
 REM ## Display the current date and time
 REM DATE /T
@@ -148,53 +161,52 @@ REM TIME /T
 set prior_num="1"
 
 :MENU_LIST
+CLS
 ECHO "========================== %PRODUCT% %VERSION% ====================="
-ECHO "||=====ENGLISH======||=======FRENCH=======||=======SPANISH=======||   "
-ECHO "|| 1) BBC WORLD     ||41) FRANCE 24 FR    ||81)RT ESPANOL        ||   "
-ECHO "|| 2) SKY NEWS      ||42) RT FRANCE       ||82)DW ESPANOL         ||   "
-ECHO "|| 3) EURONEWS      ||43) BMF TV FRANCE   ||83)CGTN ESPANOL      ||   "
-ECHO "|| 4) RT UK         ||44) TV 5 FRANCE     ||84)HISPAN TV         ||   "
-ECHO "|| 5) FRANCE24      ||45) CGTN FRANCAIS   ||85)LE ZAP ES         ||   "
-ECHO "|| 6) RT RU         ||46) BFM PARIS       ||86)CNN CHILE         ||   "
-ECHO "|| 7) DW DE         ||47) ASSEMBLE QUEBEC ||87)----------        ||   "
-ECHO "|| 8) BBC LONDON    ||48) CANAL SAVOIR    ||88)----------        ||   "
-ECHO "|| 9) CBSN USA      ||49) GONG CINEMA     ||89)----------        ||   "
-ECHO "|| 10) Bloomberg USA||50) GONG MAX        ||90)----------        ||   "
-ECHO "|| 11) RT USA       ||51) ANTENNA CENTER  ||91)----------        ||   "
-ECHO "|| 12) MSNBC USA    ||52) IL TV FRANCE    ||92)----------        ||   "
-ECHO "|| 13) ABC USA      ||53)  ---------      ||93)----------        ||   "
-ECHO "|| 14) CNN USA      ||54)  ---------      ||94)----------        ||   "
-ECHO "|| 15) CGTN USA     ||55)  ---------      ||95)----------        ||   "
-ECHO "|| 16) NEWSY USA    ||56)  ---------      ||96)----------        ||   "
-ECHO "|| 17) BIZ TV       ||57)  ---------      ||97)----------        ||   "
-ECHO "|| 18) TRT WORLD TK ||58)  ---------      ||98)----------        ||   "
-ECHO "|| 19) i24 News IL  ||59)  ---------      ||99)----------        ||   "
-ECHO "|| 20) Al Jazzera   ||60)  ---------      ||100)----------       ||   "
-ECHO "|| 21) PRESSTV IR   ||61)  ---------      ||101)----------       ||   "
-ECHO "|| 22) INDIA TODAY  ||62)  ---------      ||102)----------       ||   "
-ECHO "|| 23) NEWSX INDIA  ||63)  ---------      ||103)----------       ||   "
-ECHO "|| 24) NDTV IN      ||64)  ---------      ||104)----------       ||   "
-ECHO "|| 25) CGTN CN      ||65)  ---------      ||105)----------       ||   "
-ECHO "|| 26) NHK JP       ||66)  ---------      ||106)----------       ||   "
-ECHO "|| 27) CNN PH       ||67)  ---------      ||107)----------       ||   "
-ECHO "|| 28) ABC AU       ||68)  ---------      ||108)----------       ||   "
-ECHO "|| 29) ANN7 ZA      ||69)  ---------      ||109)----------       ||   "
-ECHO "|| 30) ARISE NG     ||70)  ---------      ||110)----------       ||   "
-ECHO "|| 31) CSPAN 1 USA  ||71)  ---------      ||111)----------       ||   "
-ECHO "|| 32) CPAC 1 CA    ||72)  ---------      ||112)----------       ||   "
-ECHO "|| 33) RT DOCUMENT  ||73)  ---------      ||113)----------       ||   "
-ECHO "|| 34) CGTN DOCUMENT||74)  ---------      ||114)----------       ||   "
-ECHO "|| 35) NEWSMAX USA  ||75)  ---------      ||115)----------       ||   "
-ECHO "|| 36) FREESPEECH   ||76)  ---------      ||116)----------       ||   "
-ECHO "|| 37) INFOWARS     ||77)  ---------      ||117)----------       ||   "
-ECHO "|| 38) TWIT         ||78)  ---------      ||118)----------       ||   "
-ECHO "|| 39) JUPITER      ||79)  ---------      ||119)----------       ||   "
-ECHO "|| 40) ---------    ||80)  ---------      ||120)----------       ||   "
-ECHO "====================================================================="
+ECHO "||=====ENGLISH======||=======FRENCH=======||=======SPANISH=======||  "
+ECHO "|| 1) BBC WORLD     ||41) FRANCE 24 FR    ||81)RT ESPANOL        ||  "
+ECHO "|| 2) SKY NEWS      ||42) RT FRANCE       ||82)DW ESPANOL        ||  " 
+ECHO "|| 3) BBC LONDON    ||43) BMF TV FRANCE   ||83)CGTN ESPANOL      ||  " 
+ECHO "|| 4) RT UK         ||44) TV 5 FRANCE     ||84)HISPAN TV         ||  " 
+ECHO "|| 5) FRANCE24      ||45) CGTN FRANCAIS   ||85)LE ZAP ES         ||  " 
+ECHO "|| 6) DW DE         ||46) BFM PARIS       ||86)CNN CHILE         ||  " 
+ECHO "|| 7) RT RU         ||47) ASSEMBLE QUEBEC ||87)----------        ||  " 
+ECHO "|| 8) EURONEWS      ||48) CANAL SAVOIR    ||88)----------        ||  " 
+ECHO "|| 9) CBSN USA      ||49) GONG CINEMA     ||89)----------        ||  " 
+ECHO "|| 10) MSNBC USA    ||50) GONG MAX        ||90)----------        ||  " 
+ECHO "|| 11) Bloomberg USA||51) ANTENNA CENTER  ||91)----------        ||  " 
+ECHO "|| 12) RT USA       ||52) IL TV FRANCE    ||92)----------        ||  " 
+ECHO "|| 13) CGTN USA     ||53)  ---------      ||93)----------        ||  " 
+ECHO "|| 14) NEWSY USA    ||54)  ---------      ||94)----------        ||  " 
+ECHO "|| 15) ABC USA      ||55)  ---------      ||95)----------        ||  " 
+ECHO "|| 16) TRT WORLD TK ||56)  ---------      ||96)----------        ||  " 
+ECHO "|| 17) i24 News IL  ||57)  ---------      ||97)----------        ||  " 
+ECHO "|| 18) Al Jazzera   ||58)  ---------      ||98)----------        ||  "  
+ECHO "|| 19) PRESSTV IR   ||59)  ---------      ||99)----------        ||  "
+ECHO "|| 20) INDIA TODAY  ||60)  ---------      ||100)----------       ||  " 
+ECHO "|| 21) NEWSX INDIA  ||61)  ---------      ||101)----------       ||  " 
+ECHO "|| 22) NDTV IN      ||62)  ---------      ||102)----------       ||  " 
+ECHO "|| 23) CGTN CN      ||63)  ---------      ||103)----------       ||  " 
+ECHO "|| 24) NHK JP       ||64)  ---------      ||104)----------       ||  " 
+ECHO "|| 25) CNN PH       ||65)  ---------      ||105)----------       ||  " 
+ECHO "|| 26) ABC AU       ||66)  ---------      ||106)----------       ||  " 
+ECHO "|| 27) ANN7 ZA      ||67)  ---------      ||107)----------       ||  " 
+ECHO "|| 28) ARISE NG     ||68)  ---------      ||108)----------       ||  " 
+ECHO "|| 29) VOA USA      ||69)  ---------      ||109)----------       ||  " 
+ECHO "|| 30) RT DOCUMENT  ||70)  ---------      ||110)----------       ||  " 
+ECHO "|| 31) CGTN DOCUMENT||71)  ---------      ||111)----------       ||  " 
+ECHO "|| 32) BYUTV USA    ||72)  ---------      ||112)----------       ||  " 
+ECHO "|| 33) BIZ TV       ||73)  ---------      ||113)----------       ||  " 
+ECHO "|| 34) NEWSMAX USA| ||74)  ---------      ||114)----------       ||  " 
+ECHO "|| 35) FREESPEECH   ||75)  ---------      ||115)----------       ||  " 
+ECHO "|| 36) INFOWARS     ||76)  ---------      ||116)----------       ||  " 
+ECHO "|| 37) TWIT         ||77)  ---------      ||117)----------       ||  " 
+ECHO "|| 38) JUPITER      ||78)  ---------      ||118)----------       ||  "
+ECHO "|| 39) CSPAN 1 USA  ||79)  ---------      ||119)----------       ||  "
+ECHO "|| 40) CPAC 1 CA    ||80)  ---------      ||120)----------       ||  "
+ECHO "===================================================================== "
 PROMPT $LWINSTREAM$G$D$T$$
 set /p chan_num="Select a Channel Number:"
-
-
 
 echo %chan_num%
 
@@ -368,23 +380,57 @@ GOTO CHAN_83
 GOTO CHAN_84
 ) ELSE IF "%chan_num%"=="85" ( 
 GOTO CHAN_85
-
-
-
-
-) ELSE IF "%chan_num%"=="+" ( 
-set /A chan_num=%prior_num% + 1  
-echo "%chan_num%"
-GOTO CHAN_"%chan_num%"
-) ELSE IF "%chan_num%"=="-" ( 
-set /A chan_num=%prior_num% - 1
-echo "%chan_num%"
-GOTO CHAN_"%chan_num%"
+) ELSE IF "%chan_num%"=="86" ( 
+GOTO CHAN_86
+) ELSE IF "%chan_num%"=="87" ( 
+GOTO CHAN_87
+) ELSE IF "%chan_num%"=="88" ( 
+GOTO CHAN_88
+) ELSE IF "%chan_num%"=="89" ( 
+GOTO CHAN_89
+) ELSE IF "%chan_num%"=="90" ( 
+GOTO CHAN_90
+) ELSE IF "%chan_num%"=="91" ( 
+GOTO CHAN_91
+) ELSE IF "%chan_num%"=="92" ( 
+GOTO CHAN_92
+) ELSE IF "%chan_num%"=="93" ( 
+GOTO CHAN_93
+) ELSE IF "%chan_num%"=="94" ( 
+GOTO CHAN_94
+) ELSE IF "%chan_num%"=="95" ( 
+GOTO CHAN_95
+) ELSE IF "%chan_num%"=="96" ( 
+GOTO CHAN_96
+) ELSE IF "%chan_num%"=="97" ( 
+GOTO CHAN_97
+) ELSE IF "%chan_num%"=="98" ( 
+GOTO CHAN_98
+) ELSE IF "%chan_num%"=="99" ( 
+GOTO CHAN_99
+) ELSE IF "%chan_num%"=="100" ( 
+GOTO CHAN_100
 ) ELSE IF "%chan_num%"=="q" ( 
 GOTO END_OF_PROGRAM 
+) ELSE IF "%chan_num%"=="+" ( 
+set /A chan_num=!prior_num!+1 
+GOTO CHAN_!chan_num!
+) ELSE IF "%chan_num%"=="-" ( 
+set /A chan_num=!prior_num%!-1
+GOTO CHAN_!chan_num!
+) ELSE IF "%chan_num%" LSS "1" ( 
+set /A chan_num="1"
+GOTO CHAN_!chan_num!
 ) ELSE (
 GOTO MENU_LIST
 )
+
+:CHAN_0
+set link="http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/BBCW/tu1_1.m3u8"
+set chan_name="BBC WORLD NEWS"
+set /A chan_num="1"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
 
 :CHAN_1
 set link="http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/BBCW/tu1_1.m3u8"
@@ -405,237 +451,228 @@ set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_4
-set link="https://secure-streams.akamaized.net/rt-uk/index1600.m3u8
-"
+set link="https://secure-streams.akamaized.net/rt-uk/index1600.m3u8"
 set chan_name="RT UK" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_5
-set link="http://f24hls-i.akamaihd.net/hls/live/221193/F24_EN_LO_HLS/master.m3u8
-"
+set link="http://f24hls-i.akamaihd.net/hls/live/221193-b/F24_EN_LO_HLS/master.m3u8"
 set chan_name='FRANCE 24'
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_6
 set link="https://secure-streams.akamaized.net/rt/index1600.m3u8"
-
 set chan_name="RT RUSSIA" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_7
 set link="http://dwstream4-lh.akamaihd.net/i/dwstream4_live@131329/master.m3u8" 
-
 set chan_name="Deutsche Welle English DE" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_8
-set link="https://www.filmon.com/tv/bbc-news
-
-"
+set link="https://www.filmon.com/tv/bbc-news"
 set chan_name="BBC LONDON"
 set /A prior_num="%chan_num%" 
 goto PLAY_CASE
 
 :CHAN_9
-set link="https://dai.google.com/linear/hls/event/Sid4xiTQTkCT1SLu6rjUSQ/master.m3u8?iu=/8264/vaw-can/mobile_web/cbsnews_mobile"
-
+REM set link="https://dai.google.com/linear/hls/p/event/Sid4xiTQTkCT1SLu6rjUSQ/stream/e674cda6-3052-4a2a-bb05-78db73f04343:CBF/variant/4d0b0dfc2918a3cc7f47a0a730929d96/bandwidth/840400.m3u8"
+REM set link="https://dai.google.com/linear/hls/event/Sid4xiTQTkCT1SLu6rjUSQ/master.m3u8?iu=/8264/vaw-can/mobile_web/cbsnews_mobile"
+set link="https://dai.google.com/linear/hls/event/Sid4xiTQTkCT1SLu6rjUSQ/master.m3u8?#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1390400,CODECS="avc1.4d001f,mp4a.40.2",RESOLUTION=960x540" 
+REM set link="https://dai.google.com/linear/hls/event/Sid4xiTQTkCT1SLu6rjUSQ/master.m3u8"
 set chan_name="CBSN" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_10
-set link="https://liveproduseast.akamaized.net/us/Channel-USTV-AWS-virginia-1/Source-USTV-1000-1_live.m3u8
-"
-set chan_name="Bloomberg USA" 
-set /A prior_num="%chan_num%"
-goto PLAY_CASE
-
-:CHAN_11
-set link="https://secure-streams.akamaized.net/rt-usa/index1600.m3u8
-"
-set chan_name="RT USA" 
-set /A prior_num="%chan_num%"
-goto PLAY_CASE
-
-:CHAN_12
 set link="http://tvemsnbc-lh.akamaihd.net/i/nbcmsnbc_1@122532/master.m3u8"
-
 set chan_name="MSNBC USA" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
+:CHAN_11
+set link="https://liveproduseast.akamaized.net/us/Channel-USTV-AWS-virginia-1/Source-USTV-1000-1_live.m3u8"
+set chan_name="Bloomberg USA" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_12
+set link="https://secure-streams.akamaized.net/rt-usa/index1600.m3u8"
+set chan_name="RT USA" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
 :CHAN_13
-set link="http://abclive.abcnews.com/i/abc_live4@136330/index_2500_av-b.m3u8?sd=10&rebase=on"
-
-set chan_name="ABC USA" 
-set /A prior_num="%chan_num%"
-goto PLAY_CASE
-
-:CHAN_14
-set link="http://cnn-lh.akamaihd.net/i/cnndebates_1@352100/master.m3u8
-"
-set chan_name="CNN USA" 
-set /A prior_num="%chan_num%"
-goto PLAY_CASE
-
-:CHAN_15
-set link="https://api.new.livestream.com/accounts/7082210/events/7115682/live.m3u8
-"
+set link="https://api.new.livestream.com/accounts/7082210/events/7115682/live.m3u8"
 set chan_name="CGTN USA" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_16
-set link="https://content.jwplatform.com/players/hBmO7M6k
-"
+:CHAN_14
+set link="https://content.jwplatform.com/players/hBmO7M6k"
 set chan_name="NEWSY USA" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_17
-set link="https://imavex2.mmdlive.lldns.net/imavex2/0b2f65006e0743bd9701cce1339a3b9f/manifest.m3u8"
-set chan_name="BIZ TV" 
+:CHAN_15
+set link="http://abclive.abcnews.com/i/abc_live4@136330/index_2500_av-b.m3u8?sd=10&rebase=on"
+set chan_name="ABC USA" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_18
+:CHAN_16
 set link="http://trtcanlitv-lh.akamaihd.net/i/TRTWORLD_1@321783/index_720p_av-p.m3u8?sd=10&rebase=on"
-
 set chan_name="TRT WORLD" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_19
-set link="https://stream-01.dc3.dailymotion.com/44/dm/3/x29atae/live-2.m3u8
-"
+:CHAN_17
+set link=""http://www.dailymotion.com/video/x29atae"
 set chan_name="i24 News Israel" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_20
-set link="https://players.brightcove.net/665003303001/SkrZHHcl_default/index.html?videoId=4865263685001
-"
+:CHAN_18
+set link="https://players.brightcove.net/665003303001/SkrZHHcl_default/index.html?videoId=4865263685001"
 set chan_name="Al Jazzera" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_21
-set link="http://107.189.40.49:1935/live/ptven/playlist.m3u8
-"
+:CHAN_19
+set link="http://107.189.40.49:1935/live/ptven/playlist.m3u8"
 set chan_name="PRESS TV IRAN" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_22
+:CHAN_20
 set link="http://livestream.com/accounts/11965022/events/4086327/player"
-
 set chan_name="INDIA TODAY" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_23
+:CHAN_21
 set link="http://newsx.live-s.cdn.bitgravity.com/cdn-live/_definst_/newsx/live/newsxnew.smil/playlist.m3u8"
 set chan_name="NEWSX INDIA" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_24
+:CHAN_22
 set link="http://ndtv.live-s.cdn.bitgravity.com/cdn-live-b7/_definst_/ndtv/live/ndtv247live.smil/playlist.m3u8" 
 set chan_name="NDTV IN" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_25
+:CHAN_23
 set link="https://live.cgtn.com/manifest.m3u8"
 set chan_name="CGTN Beijing" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_26
+:CHAN_24
 set link="https://nhkwtvglobal-i.akamaihd.net/hls/live/263941/nhkwtvglobal/index_1180.m3u8"
 set chan_name="NHK WORLD" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_27
+:CHAN_25
 set link="rtmp://54.251.134.121/live/15273.sdp"
 set chan_name="CNN PHILLIPEANS" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_28
+:CHAN_26
 set link="https://abcnews24mha-lh.akamaihd.net/i/abcnews24nospe_1@70019/index_750_av-p.m3u8?sd=10&rebase=on" 
 set chan_name="ABC NEWS Australia" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_29
+:CHAN_27
 set link="http://46.4.25.213:1935/live-ann7/ann7.smil/chunklist_w799375146_b550000.m3u8"
 set chan_name="ANN7 ZA" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_30
+:CHAN_28
 set link="http://contributionstreams.ashttp9.visionip.tv/live/visiontv-contributionstreams-arise-tv-hsslive-25f-16x9-SD/chunklist.m3u8"
 set chan_name="ARISE NEWS NIGERIA" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_31
-set link="http://cspan1-lh.akamaihd.net/i/cspan1_1@304727/index_1000_av-p.m3u8?sd=10&rebase=on" 
-set chan_name="CSPAN 1" 
+:CHAN_29
+set link=http://voa-lh.akamaihd.net/i/voa_mpls_tvmc6@320298/master.m3u8
+REM set link=https://www.filmon.com/tv/voa-english
+set chan_name="VOA"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_32
-set link="http://players.brightcove.net/1242843915001/SJ3Tc5kb_default/index.html?videoId=5027924874001"
-set chan_name="CPAC 1 CANADA" 
-set /A prior_num="%chan_num%"
-goto PLAY_CASE
-
-:CHAN_33
+:CHAN_30
 set link="https://secure-streams.akamaized.net/rt-doc/index800.m3u8"
 set chan_name="RT DOCUMENTARY" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_34
+:CHAN_31
 set link="https://live.cgtn.com/cctv-d.m3u8" 
 set chan_name="CGTN DOCUMENTARY" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_35
+:CHAN_32
+set link=https://byubhls-i.akamaihd.net/hls/live/267187/byutvhls/master.m3u8
+set chan_name="BYUTV" ;;
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_33
+set link="https://imavex2.mmdlive.lldns.net/imavex2/0b2f65006e0743bd9701cce1339a3b9f/manifest.m3u8"
+set chan_name="BIZ TV" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_34
 set link="http://cdnapi.kaltura.com/p/2216081/sp/221608100/playManifest/entryId/1_f19eeulz/format/applehttp/protocol/http/uiConfId/28428751/a.m3u8"
 set chan_name="NEWS MAX" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_36
+:CHAN_35
 set link="https://edge.free-speech-tv-live.top.comcast.net/out/u/fstv.m3u8"
 set chan_name="FREE SPEECH TV" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_37
+:CHAN_36
 set link="http://infowarslive-lh.akamaihd.net/i/infowarslivestream_1@353459/master.m3u8" 
 set chan_name="INFOWARS" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_38
+:CHAN_37
 set link="https://www.twitch.tv/twit" 
 set chan_name="TWIT" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_39
+:CHAN_38
 set link="http://jblive.videocdn.scaleengine.net/jb-live/play/jblive.stream/playlist.m3u8"  
 set chan_name="JUPITER BROADCASTING" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_39
+set link="http://cspan1-lh.akamaihd.net/i/cspan1_1@304727/index_1000_av-p.m3u8?sd=10&rebase=on" 
+set chan_name="CSPAN 1" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_40
+set link="http://players.brightcove.net/1242843915001/SJ3Tc5kb_default/index.html?videoId=5027924874001"
+set chan_name="CPAC 1 CANADA" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
@@ -713,20 +750,11 @@ set chan_name="ILTV FRANCE"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-
-
-
-
-
-
-
-
-
-
+:CHAN_53
+goto MENU_LIST
 
 
 REM ################################# SPANISH ######################################
-
 
 :CHAN_81
 set link="https://secure-streams.akamaized.net/rt-esp/index800.m3u8"   
@@ -760,16 +788,12 @@ goto PLAY_CASE
 
 :CHAN_86
 set link="http://unlimited1-us.dps.live/cnn/cnn.smil/cnn/livestream1/playlist.m3u8"   
-set chan_name="LE ZAP ES" 
+set chan_name="CNN CHILE" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-
-
-
-
-
-
+:CHAN_87
+goto MENU_LIST
 
 REM ##################################################################################
 
@@ -793,3 +817,7 @@ PROMPT $P$G
 TITLE CMD %DATE%
 REM ## CHANGE THE COLOUR BACK
 COLOR 07
+
+ENDLOCAL
+
+REM ####################################   END OF PROGRAM #####################################################
