@@ -5,8 +5,8 @@ REM ## FILENAME: WINSTREAM.BAT
 REM ## TITLE: WINSTREAM
 REM ## AUTHOR: Endwall
 REM ## Creation Date: January 27, 2018
-REM ## Version: 0.03
-REM ## Revision Date: February 11, 2018
+REM ## Version: 0.04
+REM ## Revision Date: February 17, 2018
 REM ##
 REM ## Description:  Stream internet video channels with mpv and youtube-dl
 REM ##
@@ -18,13 +18,12 @@ REM ######################################################
 REM ##################################################################### 
 REM # Instructions:  
 REM # make a directory C:\Users\%USERNAME%\bin and copy this file there, add this to the %PATH% by typing the following:
-REM # SET PATH=C:\Users\%USERNAME%\bin;%PATH% 
-REM # Alternatively put the file setpath.bat into C:\Users\%USERNAME% and call it in the command line.
+REM # SET PATH=C:\Users\%USERNAME%\bin;%PATH%
 REM #  
-REM # Download mpv.exe from www.mpv.io and also download youtube-dl.exe, then unpack the 7zip archive with mpv.exe and the
+REM # Download mpv.exe from www.mpv.io and also download youtube-dl.exe from the build links, then unpack the 7zip archive with mpv.exe and the
 REM # dll files into C:\Users\%USERNAME%\bin  also make sure that youtube-dl.exe and mpv.exe are located in the bin directory
 REM # now type winstream in cmd to call the file: 
-REM # C:\Users\%USERNNAME%> winstream
+REM # C:\Users\%USERNNAME%>  winstream
 REM # or double click on the batch file which should work as well.
 REM # 
 REM ##############################################################################################################################################################################
@@ -144,8 +143,9 @@ SETLOCAL ENABLEDELAYEDEXPANSION
 
 SET PRODUCT=WINSTREAM
 SET BRANCH="WINDOWS NT 6.x"
-SET VERSION=0.03
-SET REV_DATE="09/02/2018"
+SET VERSION=0.04
+SET REV_DATE="17/02/2018"
+SET MODE="VIDEO"
 
 REM ## SET THE TITLE
 TITLE ENDSTREAM %DATE%
@@ -166,10 +166,10 @@ ECHO "========================== %PRODUCT% %VERSION% ====================="
 ECHO "||=====ENGLISH======||=======FRENCH=======||=======SPANISH=======||  "
 ECHO "|| 1) BBC WORLD     ||41) FRANCE 24 FR    ||81)RT ESPANOL        ||  "
 ECHO "|| 2) SKY NEWS      ||42) RT FRANCE       ||82)DW ESPANOL        ||  " 
-ECHO "|| 3) BBC LONDON    ||43) BMF TV FRANCE   ||83)CGTN ESPANOL      ||  " 
+ECHO "|| 3) BBC LONDON    ||43) BMF TV FRANCE** ||83)CGTN ESPANOL      ||  " 
 ECHO "|| 4) RT UK         ||44) TV 5 FRANCE     ||84)HISPAN TV         ||  " 
 ECHO "|| 5) FRANCE24      ||45) CGTN FRANCAIS   ||85)LE ZAP ES         ||  " 
-ECHO "|| 6) DW DE         ||46) BFM PARIS       ||86)CNN CHILE         ||  " 
+ECHO "|| 6) DW DE         ||46) BFM PARIS **    ||86)CNN CHILE         ||  " 
 ECHO "|| 7) RT RU         ||47) ASSEMBLE QUEBEC ||87)----------        ||  " 
 ECHO "|| 8) EURONEWS      ||48) CANAL SAVOIR    ||88)----------        ||  " 
 ECHO "|| 9) CBSN USA      ||49) GONG CINEMA     ||89)----------        ||  " 
@@ -197,7 +197,7 @@ ECHO "|| 30) RT DOCUMENT  ||70)  ---------      ||110)----------       ||  "
 ECHO "|| 31) CGTN DOCUMENT||71)  ---------      ||111)----------       ||  " 
 ECHO "|| 32) BYUTV USA    ||72)  ---------      ||112)----------       ||  " 
 ECHO "|| 33) BIZ TV       ||73)  ---------      ||113)----------       ||  " 
-ECHO "|| 34) NEWSMAX USA| ||74)  ---------      ||114)----------       ||  " 
+ECHO "|| 34) NEWSMAX USA  ||74)  ---------      ||114)----------       ||  " 
 ECHO "|| 35) FREESPEECH   ||75)  ---------      ||115)----------       ||  " 
 ECHO "|| 36) INFOWARS     ||76)  ---------      ||116)----------       ||  " 
 ECHO "|| 37) TWIT         ||77)  ---------      ||117)----------       ||  " 
@@ -206,8 +206,8 @@ ECHO "|| 39) CSPAN 1 USA  ||79)  ---------      ||119)----------       ||  "
 ECHO "|| 40) CPAC 1 CA    ||80)  ---------      ||120)----------       ||  "
 ECHO "===================================================================== "
 PROMPT $LWINSTREAM$G$D$T$$
-set /p chan_num="Select a Channel Number:"
-
+set /p chan_num="Select a Channel Number, press + or ] to increment, - or [ to decrement, or q to quit:"
+,
 echo %chan_num%
 
 IF "%chan_num%"=="1" ( 
@@ -418,9 +418,24 @@ GOTO CHAN_!chan_num!
 ) ELSE IF "%chan_num%"=="-" ( 
 set /A chan_num=!prior_num%!-1
 GOTO CHAN_!chan_num!
+) ELSE IF "%chan_num%"=="]" ( 
+set /A chan_num=!prior_num!+1 
+GOTO CHAN_!chan_num!
+) ELSE IF "%chan_num%"=="[" ( 
+set /A chan_num=!prior_num%!-1
+GOTO CHAN_!chan_num!
 ) ELSE IF "%chan_num%" LSS "1" ( 
 set /A chan_num="1"
 GOTO CHAN_!chan_num!
+) ELSE IF "%chan_num%"=="--audio" ( 
+set MODE="AUDIO"
+GOTO MENU_LIST
+) ELSE IF "%chan_num%"=="--video" ( 
+set MODE="VIDEO"
+GOTO MENU_LIST
+) ELSE IF "%chan_num%"=="--no-audio" ( 
+set MODE="NOAUDIO"
+GOTO MENU_LIST
 ) ELSE (
 GOTO MENU_LIST
 )
@@ -463,14 +478,14 @@ set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_6
-set link="https://secure-streams.akamaized.net/rt/index1600.m3u8"
-set chan_name="RT RUSSIA" 
+set link="http://dwstream4-lh.akamaihd.net/i/dwstream4_live@131329/master.m3u8" 
+set chan_name="Deutsche Welle English DE" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_7
-set link="http://dwstream4-lh.akamaihd.net/i/dwstream4_live@131329/master.m3u8" 
-set chan_name="Deutsche Welle English DE" 
+set link="https://secure-streams.akamaized.net/rt/index1600.m3u8"
+set chan_name="RT RUSSIA" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
@@ -624,7 +639,7 @@ goto PLAY_CASE
 
 :CHAN_32
 set link=https://byubhls-i.akamaihd.net/hls/live/267187/byutvhls/master.m3u8
-set chan_name="BYUTV" ;;
+set chan_name=BYUTV
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
@@ -799,10 +814,19 @@ REM ############################################################################
 
 
 :PLAY_CASE
-TITLE %PRODUCT% %chan_name%
+TITLE %PRODUCT% %chan_name% on Channel %chan_num%
 
-ECHO "Playing %chan_name% on Channel %chan_num%"
+ECHO Playing %chan_name% on Channel %chan_num%
+
+IF !MODE!=="VIDEO" ( 
 mpv --fs --resume-playback=no --loop-playlist=inf %link%
+) ELSE IF !MODE!=="AUDIO" ( 
+mpv --fs --resume-playback=no --loop-playlist=inf --no-video %link%
+) ELSE IF !MODE!=="NOAUDIO" ( 
+mpv --fs --resume-playback=no --loop-playlist=inf --no-audio %link%
+) ELSE (
+mpv --fs --resume-playback=no --loop-playlist=inf %link%
+)
 
 ECHO You were watching %chan_name% on Channel %chan_num%
 
