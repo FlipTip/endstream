@@ -185,15 +185,15 @@ channel_matrix_0()
    echo "8)CBSN USA           48)CNBC              88)Euronews FR       128)Guada TV ES      168)Radio 21 DE       208)News24.city Milan IT      248)Al Jazeera Mubasher QA"
    echo "9)Bloomberg USA      49)MSNBC             89)Africa News       129)GRANADA TV ES    169)DW Deutsch + DE   209)Radio TV Rome IT          249)KSA 1 SA"
    echo "10)RT America        50)Made in Leeds     90)TVA CA            130)C5N AR           170)W24 Wein AT       210)Udinews TV Udine IT       250)SBC SA"
-   echo "11)Newsy USA         51)Made in Tyne      91)RTS UN CH         131)AcequiaMendozaAR 171)Tirol TV AT       211)DiTV Canale 89 Lucchese IT251)KSA Sports SA"
-   echo "12)ABC News USA      52)Made in Cardiff   92)France 2          132)Todo Noticias AR 172)Auftanken AT      212)RTM Arcevia IT            252)Al Arabiya AE"
-   echo "13)TRT World TK      53)Fiji One          93)France 3          133)La Nacion AR     173)SRF CH CH         213)50NewsVersiliaViareggio IT253)Al Mayadeen LB"
-   echo "14)Al Jazeera        54)QVC USA           94)ARTE Francais     134)TV5 AR           174)Musig24 TV CH     214)50 Canale Pisa IT         254)Belqees TV YE"
-   echo "15)India Today       55)TSC CA            95)France O          135)KZO AR           175)TV OOST BE        215)Teleliberta Piacenza IT   255)Sky Arabic AE"  
-   echo "16)Press TV Iran     56)FIOS1 LongIsland  96)Bidtween FR       136)Canal 2 AR       176)AT5 NL ***        216)ONE TV NBC 112 Milan IT   256)Alghad EG"
-   echo "17)CGTN Beijing      57)Lake Tahoe TV     97)TV 7 FR           137)Canal 6 AR       177)Euronews Russian  217)Euronews IT               257)Extra News EG"
-   echo "18)NHK World JP      58)TVW Washington    98)IL TV FR          138)Canal 7 AR       178)POCCNR 24 RU      218)ONE MT                    258)CBC Sofra EG"	
-   echo "19)ABC AU            59)FiOS1 New Jersey  99)TLM Lyon FR       139)Canal 13 AR      179)RBC TV RU         219)Z1 Televizija HR          259)CBC Drama EG"
+   echo "11)Newsy USA         51)Made in Tyne      91)RDI ICI CA        131)AcequiaMendozaAR 171)Tirol TV AT       211)DiTV Canale 89 Lucchese IT251)KSA Sports SA"
+   echo "12)ABC News USA      52)Made in Cardiff   92)RTS UN CH         132)Todo Noticias AR 172)Auftanken AT      212)RTM Arcevia IT            252)Al Arabiya AE"
+   echo "13)TRT World TK      53)Fiji One          93)France 2          133)La Nacion AR     173)SRF CH CH         213)50NewsVersiliaViareggio IT253)Al Mayadeen LB"
+   echo "14)Al Jazeera        54)QVC USA           94)France 3          134)TV5 AR           174)Musig24 TV CH     214)50 Canale Pisa IT         254)Belqees TV YE"
+   echo "15)India Today       55)TSC CA            95)ARTE Francais     135)KZO AR           175)TV OOST BE        215)Teleliberta Piacenza IT   255)Sky Arabic AE"  
+   echo "16)Press TV Iran     56)FIOS1 LongIsland  96)France O          136)Canal 2 AR       176)AT5 NL ***        216)ONE TV NBC 112 Milan IT   256)Alghad EG"
+   echo "17)CGTN Beijing      57)Lake Tahoe TV     97)Bidtween FR       137)Canal 6 AR       177)Euronews Russian  217)Euronews IT               257)Extra News EG"
+   echo "18)NHK World JP      58)TVW Washington    98)TV 7 FR           138)Canal 7 AR       178)POCCNR 24 RU      218)ONE MT                    258)CBC Sofra EG"	
+   echo "19)ABC AU            59)FiOS1 New Jersey  99)IL TV FR          139)Canal 13 AR      179)RBC TV RU         219)Z1 Televizija HR          259)CBC Drama EG"
    echo "20)Arise News NG     60)DC Network        100)BFM Paris FR     140)SuperCanal 3 AR  180)CGTN Russian      220)RTV Posavina HR           260)DMC Live EG"  
    echo "21)NEWSMAX USA       61)DC Knowledge      101)Alsace 20 FR     141)CN23 AR          181)Vesti FM RU       221)OsjeckaTV HR              261)Al-Fallujah IQ"
    echo "22)Free Speech TV USA62)Laurel TV MD      102)Mosaik TV FR     142)Telemax AR       182)Current Time VOA  222)Tomix Wein HR             262)AFAQ TV IQ"       
@@ -1673,6 +1673,10 @@ chan_name="NewsX India" ;;
 # 78)
 # 79)
 # 80)
+
+
+
+
 ################################################    FRENCH   ###################################
 # 81) France 24 
 81)
@@ -1827,61 +1831,74 @@ link="https://players.brightcove.net/5481942443001/r1t0JFRjG_default/index.html?
 use_cookies="no"
 #method="Tor"
 chan_name="TVA CA";;
-# 91) RTS UN
-91) 
+# 91) RDI Radio Canada ICI 
+91)
+#EXT-X-STREAM-INF:BANDWIDTH=281600,AVERAGE-BANDWIDTH=281600,CODECS="avc1.42c00c,mp4a.40.2",RESOLUTION=320x180,FRAME-RATE=14.985,AUDIO="program_audio",CLOSED-CAPTIONS="CC"
+#link="https://rcavlive.akamaized.net/hls/live/704020/cancbxft/master_256.m3u8"
+#EXT-X-STREAM-INF:BANDWIDTH=440000,AVERAGE-BANDWIDTH=440000,CODECS="avc1.42c00d,mp4a.40.2",RESOLUTION=320x180,FRAME-RATE=29.970,AUDIO="program_audio",CLOSED-CAPTIONS="CC"
+#link="https://rcavlive.akamaized.net/hls/live/704020/cancbxft/master_400.m3u8"
+#EXT-X-STREAM-INF:BANDWIDTH=770000,AVERAGE-BANDWIDTH=770000,CODECS="avc1.66.30,mp4a.40.2",RESOLUTION=640x360,FRAME-RATE=29.970,AUDIO="program_audio",CLOSED-CAPTIONS="CC"
+#link="https://rcavlive.akamaized.net/hls/live/704020/cancbxft/master_700.m3u8"
+#EXT-X-STREAM-INF:BANDWIDTH=1210000,AVERAGE-BANDWIDTH=1210000,CODECS="avc1.4d401f,mp4a.40.2",RESOLUTION=852x480,FRAME-RATE=29.970,AUDIO="program_audio",CLOSED-CAPTIONS="CC"
+#link="https://rcavlive.akamaized.net/hls/live/704020/cancbxft/master_1100.m3u8"
+#EXT-X-STREAM-INF:BANDWIDTH=1980000,AVERAGE-BANDWIDTH=1980000,CODECS="avc1.4d401f,mp4a.40.2",RESOLUTION=852x480,FRAME-RATE=29.970,AUDIO="program_audio",CLOSED-CAPTIONS="CC"
+#link="https://rcavlive.akamaized.net/hls/live/704020/cancbxft/master_1800.m3u8"
+#EXT-X-STREAM-INF:BANDWIDTH=2750000,AVERAGE-BANDWIDTH=2750000,CODECS="avc1.4d401f,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=29.970,AUDIO="program_audio",CLOSED-CAPTIONS="CC"
+link="https://rcavlive.akamaized.net/hls/live/704020/cancbxft/master_2500.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="program_audio",LANGUAGE="fra",NAME="audio_fr",AUTOSELECT=YES,DEFAULT=YES,URI="master_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="program_audio",LANGUAGE="fra",NAME="audio_frdv",AUTOSELECT=YES,DEFAULT=NO,URI="master_dv.m3u8"
+use_cookies="no"
+chan_name="RDI Radio Canada ICI" ;;
+# 92) RTS UN
+92) 
 #link=http://par-3.firstone.tv/hls/22797bb2-c681-91ce-2f29-fd5690f82b91.m3u8
 link=https://www.filmon.com/tv/rts-un
 use_cookies="no" 
 #method="Tor"
 chan_name="RTS UN" ;;
-# 92) FRANCE 2
-92) 
+# 93) FRANCE 2
+93) 
 #link=http://par-4.firstone.tv/hls/1f181ce3-b1d5-70a2-8cc7-9f6ef5df7d89.m3u8
 link=https://www.filmon.com/tv/france-2
 use_cookies="no"
 #method="Tor"
 chan_name="France 2" ;;
-# 93) France 3 
-93) 
+# 94) France 3 
+94) 
 #link=http://par-4.firstone.tv/hls/f5d676d6-692f-eb8c-8c3c-34f741a0f7b3.m3u8
 link=https://www.filmon.com/tv/france-3-rhone-alpes
 use_cookies="no"
 #method="Tor"
 chan_name="France 3" ;;
-# 94) ARTE FRANCAIS
-94) 
+# 95) ARTE FRANCAIS
+95) 
 link=https://www.filmon.com/tv/arte-francais
 use_cookies="yes" 
 #method="Tor"
 chan_name="ARTE Francais" ;;
-# 95) France O
-95) 
+# 96) France O
+96) 
 link=https://www.filmon.com/tv/france-0
 use_cookies="yes"
 chan_name="France O" ;;
-# 96) Bidtween La chaîne TV des Enchères FR
-96)
+# 97) Bidtween La chaîne TV des Enchères FR
+97)
 #link="https://livestream.com/accounts/25334545/events/7803598"
 link="$( curl "https://livestream.com/accounts/25334545/events/7803598" | grep "secure_play_url" | awk ' BEGIN { FS="\"" } { for (i=1 ; i<=NF ; i++ )  if ( $i ~ /secure_m3u8_url/ && $(i+2) ~ /broadcasts/  )  print $(i+2) } ' | cut -d \? -f 1  | head -n 1  )"
 use_cookies="no"
 chan_name="Bidtween La chaîne TV des Enchères FR" ;;
-# 97) TV 7 Francais
-97)  
+# 98) TV 7 Francais
+98)  
 link=http://tv7.hdr-tv.com:1935/live/tv7/livestream/playlist.m3u8
 use_cookies="no"
 #method="Tor"
 chan_name="TV 7 Francais" ;;  
-# 98) IL TV France
-98)
+# 99) IL TV France
+99)
 link=rtmp://str81.creacast.com:80/iltv/high
 use_cookies="no"
 #method="Tor"
 chan_name="IL TV" ;;
-# 99) TLM Lyon Metro
-99) 
-keyword="TLM"
-link=https://www.youtube.com/watch?v="$(curl -A "$UA" "https://www.youtube.com/user/telelyonmetropole/videos?&view=2" | grep "$keyword" | grep "watch?v=" | head -n 1 | cut -d = -f 11 | cut -d \" -f 1)" 
-chan_name="TLM Television Lyon Metro" ;;
 # 100) BFM Paris Francais
 100)   
 link=https://players.brightcove.net/5132998232001/H1bPo8t6_default/index.html?videoId=5152968636001
