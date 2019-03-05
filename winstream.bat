@@ -5,8 +5,8 @@ REM ## FILENAME: WINSTREAM.BAT
 REM ## TITLE: WINSTREAM
 REM ## AUTHOR: Endwall
 REM ## Creation Date: January 27, 2018
-REM ## Version: 0.05
-REM ## Revision Date: February 19, 2019
+REM ## Version: 0.0502
+REM ## Revision Date: March 05, 2019
 REM ##
 REM ## Description:  Stream internet video channels with mpv and youtube-dl
 REM ##
@@ -17,14 +17,16 @@ REM ######################################################
 
 REM #################################################################################################################################################################
 REM # Instructions:  
-REM # make a directory C:\Users\%USERNAME%\bin and copy this file there, add this to the %PATH% by typing the following:
-REM # SET PATH=C:\Users\%USERNAME%\bin;%PATH%
+REM # make a directory C:\Users\%USERNAME%\bin and copy this file there, 
+REM # File automatically adds this directory to the %PATH% . Or you may type in the prompt SET PATH=C:\Users\%USERNAME%\bin;%PATH%
+REM # 
 REM #  
 REM # Download mpv.exe from www.mpv.io and also download youtube-dl.exe from the build links, then unpack the 7zip archive with mpv.exe and the
 REM # dll files into C:\Users\%USERNAME%\bin  also make sure that youtube-dl.exe and mpv.exe are located in the bin directory
 REM # now type winstream in cmd to call the file: 
 REM # C:\Users\%USERNNAME%>  winstream
-REM # or double click on the batch file which should work as well.
+REM # or double click on the batch file which should work as well.  You may now place a shortcut to the file on your desktop by right clicking on the icon
+REM # and selecting "Create Shortcut".
 REM # 
 REM ##############################################################################################################################################################################
 REM #                                         ACKNOWLEDGMENTS
@@ -61,10 +63,11 @@ REM ############################################################################
 REM #  BEGINNING OF LICENSE AGREEMENT
 REM #  TITLE:  THE ENDWARE END USER LICENSE AGREEMENT (EULA) 
 REM #  CREATION DATE: MARCH 19, 2016
-REM #  VERSION: 1.15
-REM #  VERSION DATE: JULY 05, 2017
-REM #  COPYRIGHT: THE ENDWARE DEVELOPMENT TEAM, 2016-2017
-REM #      
+REM #  VERSION: 1.18
+REM #  VERSION DATE: JUNE 28, 2018
+REM #  COPYRIGHT: THE ENDWARE DEVELOPMENT TEAM, 2016-2018
+REM #  ALL RIGHTS RESERVED  
+REM #    
 REM #  WHAT CONSTITUTES "USE"? WHAT IS A "USER"?
 REM #  0) a) Use of this program means the ability to study, possess, run, copy, modify, publish, distribute and sell the code as included in all lines of this file,
 REM #        in text format or as a binary file constituting this particular program or its compiled binary machine code form, as well as the the performance 
@@ -74,17 +77,18 @@ REM #  WHO MAY USE THIS PROGRAM ?
 REM #  1) a) This program may be used by any living human being, any person, any corporation, any company, and by any sentient individual with the willingness and ability to do so.
 REM #  1) b) This program may be used by any citizen or resident of any country, and by any human being without citizenship or residency.
 REM #  1) c) This program may be used by any civilian, military officer, government agent, private citizen, government official, sovereign, monarch, head of state,
-REM #        dignitary, ambassador, legislator,congressional representative, member of parliament, senator, judicial official, judge, prosecutor, lawyer 
-REM #        noble, commoner, clergy, laity, and generally all classes and ranks of people, persons, and human beings mentioned and those not mentioned.
-REM #  1) d) This program may be used by any human being of any gender, including men, women, and any other gender not mentioned.       
-REM #  1) e) This program may be used by anyone of any affiliation, political viewpoint, political affiliation, religious belief, religious affiliation, and by those of non-belief or non affiliation.
-REM #  1) f) This program may be used by any person of any race, ethnicity, identity, origin, genetic makeup, physical appearance, mental ability, and by those of any other physical 
+REM #        dignitary, ambassador, legislator,congressional representative, member of parliament, senator, judicial official, judge, prosecutor, lawyer, law enforcement officer, 
+REM #        police constable, noble, commoner, clergy, laity, and generally all classes and ranks of people, persons, and human beings mentioned and those not mentioned.
+REM #  1) d) This program may be used by any human being of any sex or gender, including men, women, or any other sex, or gender not mentioned.       
+REM #  1) e) This program may be used by any human being of any affiliation, political viewpoint, political affiliation, religious belief, religious affiliation, and by those of non-belief or non affiliation.
+REM #  1) f) This program may be used by any human being of any race, ethnicity, identity, origin, genetic makeup, physical appearance, mental ability, and by those of any other physical 
 REM #        or non physical characteristics of differentiation.
 REM #  1) g) This program may be used by any human being of any sexual orientation, including heterosexual, homosexual, bisexual, asexual, or any other sexual orientation not mentioned.
-REM #  1) h) This program may be used by anyone. 
+REM #  1) h) This program may be used by all business classes and business entities, including corporations, limited liability companies, sole proprietorships, partnerships, joint venture companies, private companies, publicly owned companies, and any other business class not specifically mentioned. 
+REM #  1) i) This program may be used by anyone. 
 REM #  WHERE MAY A USER USE THIS PROGRAM ?
 REM #  2) a) This program may be used in any country, in any geographic location of the planet Earth, in any marine or maritime environment, at sea, sub-sea, in a submarine, underground,
-REM #        in the air, in an airplane, dirigible, blimp, or balloon, and at any distance from the surface of the planet Earth, including in orbit about the Earth or the Moon,
+REM #        in the air, in an airplane, dirigible, blimp, or balloon, in a car, bus, motor vehicle, armored transport vehicle, and at any distance from the surface of the planet Earth, including in orbit about the Earth or the Moon,
 REM #        on a satellite orbiting about the Earth, the Moon, about any Solar System planet and its moons, on any space transport vehicle, and anywhere in the Solar System including the Moon, Mars, and all other Solar System planets not listed.  
 REM #  2) b) This program may be used in any residential, commercial, business, and governmental property or location and in all public and private spaces. 
 REM #  2) c) This program may be used anywhere.
@@ -93,14 +97,16 @@ REM #  3)  This program may be used by any person, human being or sentient indiv
 REM #      business use, commercial use, government use, non-governmental organization use, non-profit organization use, military use, civilian use, and generally any other use 
 REM #      not specifically mentioned.
 REM #  WHAT MAY A "USER" DO WITH THIS PROGRAM ?
-REM #  4) Any user of this program is granted the freedom to study the code.
-REM #  5) a) Any user of this program is granted the freedom to distribute, publish, and share the code with any neighbor of their choice electronically or by any other method of transmission. 
+REM #  4) Any user of this program is granted the freedom to read and study the code.
+REM #  5) a) Any user of this program is granted the freedom to distribute, publish, and share the code with any recipient of their choice electronically or by any other method of transmission. 
 REM #  5) b) The LICENCSE AGREEMENT, ACKNOWLEDGMENTS, Header and Instructions must remain attached to the code in their entirety when re-distributed.
-REM #  5) c) Any user of this program is granted the freedom to sell this software as distributed or to bundle it with other software or salable goods.
-REM #  6) a) Any user of this program is granted the freedom to modify and improve the code.
-REM #  6) b) When modified or improved, any user of this program is granted the freedom of re-distribution of their modified code if and only if the user attatchs the LICENSE AGREEMENT
+REM #  5) c) Any user of this program is granted the freedom to sell this software as distributed or to bundle it with other software or saleable goods.
+REM #  6) a) Any user of this program is granted the freedom to modify the code.
+REM #  6) b) When modified, any user of this program is granted the freedom of re-distribution of their modified code if and only if the user attatchs the LICENSE AGREEMENT
 REM #        in its entirety to their modified code before re-distribution.
-REM #  6) c) Any user of this software is granted the freedom to sell their modified copy of this software or to bundle their modified copy with other software or salable goods.
+REM #  6) c) Any user of this software is granted the freedom to sell their modified copy of this software or to bundle their modified copy with other software or saleable goods.
+REM #  6) d) Any modified code shall be sublicensed by the modifier and distributor only under the original terms of the Endware End User License Agreement as presented in this LICENSE AGREEMENT.
+REM #  6) e) Any user of this software agrees that any derivative works produced as a result of user modification will be sublicensed when re-distributed under the original terms of this LICENSE AGREEMENT exactly as presented.
 REM #  7) a) Any user of this program is granted the freedom to run this code on any computer of their choice.
 REM #  7) b) Any user of this program is granted the freedom to run as many simultaneous instances of this code, on as many computers as they are able to and desire, and for as long as they desire and are
 REM #        able to do so with any degree of simultaneity in use. 
@@ -109,14 +115,14 @@ REM #  8) Any user of this program is not granted the freedom to procure a paten
 REM #  9) Any user of this program is not granted the freedom to arbitrarily procure a copyright on this software as presented, and agrees not to do so.
 REM #  10) Any user of this program is not granted the freedom to obtain or retain intellectual property rights on this software as presented and agrees not to do so.
 REM #  11) a) Any user of this program may use this software as part of a patented process, as a substitutable input into the process; however the user agrees not to attempt to patent this software as part of their patented process. 
-REM #      b) This software is a tool, like a hammer, and may be used in a process which applies for and gains a patent, as a substitutable input into the process;
+REM #  11) b) This software is a tool, like a hammer, and may be used in a process which applies for and gains a patent, as a substitutable input into the process;
 REM #         however the software tool itself may not be included in the patent or covered by the patent as a novel invention, and the user agrees not to do this and not to attempt to do this.
 REM #  WHO GRANTS THESE FREEDOMS ?
-REM #  12) The creators of this software are the original developer,"Endwall", and anyone listed as being a member of "The Endware Development Team", as well as ancillary contributors, and user modifiers and developers of the software. 
+REM #  12) The creators of this software are the original developer,"Endwall", and anyone listed as being a member of "The Endware Development Team" by "Endwall", as well as ancillary contributors, and user modifiers and developers of the software. 
 REM #  13) The aforementioned freedoms of use listed in sections 4),5),6),and 7) are granted by the creators of this software and the Endware Development Team to any qualifying user listed in section 1) and 
 REM #      comporting with any restrictions and qualifications mentioned in sections 2), 3), 8), 9), 10) and 11) of this LICENSE AGREEMENT.
 REM #  WHAT RELATIONSHIP DO THE USERS HAVE WITH THE CREATORS OF THE SOFTWARE ?
-REM #  14)  This software is distributed "as is" without any warranty and without any guaranty and the creators do not imply anything about its usefulness or efficacy.
+REM #  14)  This software is distributed "AS IS" without any warranty and without any guaranty and the creators do not imply anything about its usefulness or efficacy.
 REM #  15)  If the user suffers or sustains financial loss, informational loss, material loss, physical loss or data loss as a result of using, running, or modifying this software 
 REM #       the user agrees that they will hold the creators of this software, "The Endware Development Team", "Endwall", and the programmers involved in its creation, free from prosecution, 
 REM #       free from indemnity, and free from liability, and will not attempt to seek restitution, compensation, or payment for any such loss real or imagined.
@@ -129,23 +135,26 @@ REM #  ADDITIONAL NOTES:
 REM #  17)  If a user finds a significant flaw or makes a significant improvement to this software, please feel free to notify the original developers so that we may also
 REM #       include your user improvement in the next release; users are not obligated to do this, but we would enjoy this courtesy tremendously.
 REM #
-REM #  18)  Sections 0) a) 0) b) and 1) a) are sufficient for use; however sections 1) b) through 1) h) are presented to clarify 1 a) and to enforce non-discrimination and non-exclusion of use.  
+REM #  18)  Sections 0) a) 0) b) and 1) a) are sufficient for use; however sections 1) b) through 1) i) are presented to clarify 1 a) and to enforce non-discrimination and non-exclusion of use.  
 REM #       For example some people may choose to redefine the meaning of the words "person" "human being" or "sentient individual" to exclude certain types of people.
 REM #       This would be deemed unacceptable and is specifically rejected by the enumeration presented.  If the wording presented is problematic please contact us and suggest a change,
 REM #       and it will be taken into consideration.  
-REM #############################################################################################################################
+REM #################################################################################################################################################################################
 
 REM ################################### BEGINNING OF PROGRAM ###################################################
-
 
 SETLOCAL ENABLEEXTENSIONS
 SETLOCAL ENABLEDELAYEDEXPANSION
 SETLOCAL
 
+REM # SET THE PATH
+REM SET PATH=C:\Users\%USERNAME%\bin;%PATH%
+SET PATH=C:\Users\%USERNAME%\bin;D:\gnuwin32\bin;%PATH%
+
 SET PRODUCT=WINSTREAM
 SET BRANCH="WINDOWS NT 6.x"
-SET VERSION=0.05
-SET REV_DATE="19/02/2019"
+SET VERSION=0.0502
+SET REV_DATE="05/03/2019"
 SET MODE="VIDEO"
 
 REM ## SET THE TITLE
@@ -198,11 +207,11 @@ ECHO "|| 28) News 12 Brooklyn    ||68)TWIT                ||108)ANTENNA CENTER  
 ECHO "|| 29) News 12 Long Island ||69)JUPITER BROAD       ||109)IL TV FRANCE    ||149)-------------   ||189) 1 TV RU       ||229)KSA1           ||" 
 ECHO "|| 30) FiOS1 Hudson Valley ||70)Music Choice Play   ||110)FranceInfo Radio||150)-------------   ||190)Music BOX RU   ||230)KSA Sports     ||" 
 ECHO "|| 31) FiOS1 New Jersey    ||71)M20 Music           ||111)Europe 1        ||151)-------------   ||191)MOSCKVA 24 RU  ||231)India TV IN    ||" 
-ECHO "|| 32) Weather Nation      ||72)Radio Monte Carlo   ||112)RTL Radio       ||152)-------------   ||192)POCCNR 1 HD    ||232)-------------  ||" 
-ECHO "|| 33) Weather Channel     ||73)Hit Music TV        ||113)RMC Talk        ||153)-------------   ||193)TV Publica MD  ||233)-------------  ||" 
-ECHO "|| 34) VOA USA             ||74)CMC California      ||114)MB TV           ||154)-------------   ||194)UA TV          ||234)-------------  ||" 
-ECHO "|| 35) RT DOCUMENT         ||75)NRJ Music           ||115)Generations TV  ||155)-------------   ||195)SKY 24 IT      ||235)-------------  ||"
-ECHO "|| 36) CGTN DOCUMENT       ||76)Adult Swim          ||116)Tv Vendée       ||156)-------------   ||196)RSI LA CH      ||236)-------------  ||" 
+ECHO "|| 32) Weather Nation      ||72)Radio Monte Carlo   ||112)RTL Radio       ||152)-------------   ||192)POCCNR 1 HD    ||232)India Today    ||" 
+ECHO "|| 33) Weather Channel     ||73)Hit Music TV        ||113)RMC Talk        ||153)-------------   ||193)TV Publica MD  ||233)Real News      ||" 
+ECHO "|| 34) VOA USA             ||74)CMC California      ||114)MB TV           ||154)-------------   ||194)UA TV          ||234)War Room       ||" 
+ECHO "|| 35) RT DOCUMENT         ||75)NRJ Music           ||115)Generations TV  ||155)-------------   ||195)SKY 24 IT      ||235)Cheddar Finance||"
+ECHO "|| 36) CGTN DOCUMENT       ||76)Adult Swim          ||116)Tv Vendée       ||156)-------------   ||196)RSI LA CH      ||236)Cheddar News   ||" 
 ECHO "|| 37) BYUTV USA           ||77)Fashion Europe      ||117)OUATCH TV       ||157)-------------   ||197)Telecolor IT   ||237)-------------  ||"
 ECHO "|| 38) CBC CA              ||78)Fashion 1 Spain     ||118)Telesud         ||158)-------------   ||198)Star Lamia GR  ||238)-------------  ||"
 ECHO "|| 39) CPAC 1 CA           ||79)Red Bull TV         ||119)TV7 Bordeaux    ||159)-------------   ||199)Action 24 GR   ||239)-------------  ||"
@@ -478,11 +487,10 @@ set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_7
-REM set link="https://dai.google.com/linear/hls/p/event/Sid4xiTQTkCT1SLu6rjUSQ/stream/e674cda6-3052-4a2a-bb05-8db73f04343:CBF/variant/4d0b0dfc2918a3cc7f47a0a730929d96/bandwidth/840400.m3u8"
-REM set link="https://dai.google.com/linear/hls/event/Sid4xiTQTkCT1SLu6rjUSQ/master.m3u8?iu=/8264/vaw-can/mobile_web/cbsnews_mobile"
-REM set link="https://dai.google.com/linear/hls/event/Sid4xiTQTkCT1SLu6rjUSQ/master.m3u8?iu=/8264/vaw-can/mobile_web/cbsnews_mobile"
-REM set link="https://dai.google.com/linear/hls/event/Sid4xiTQTkCT1SLu6rjUSQ/master.m3u8?#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1390400,CODECS="avc1.4d001f,mp4a.40.2",RESOLUTION=960x540" 
-set link="https://dai.google.com/linear/hls/event/Sid4xiTQTkCT1SLu6rjUSQ/master.m3u8"
+set link=https://www.cbsnews.com/common/video/dai_prod.m3u8
+REM for /f "tokens=*" %%a in ( 'curl -L "https://dai.google.com/linear/hls/event/Sid4xiTQTkCT1SLu6rjUSQ/master.m3u8" ^| grep 1689600.m3u8 ^| tail -n 1' ) do set link=%%a
+REM set link="https://dai.google.com/linear/hls/event/Sid4xiTQTkCT1SLu6rjUSQ/master.m3u8"
+REM BANDWIDTHS: 3009600 2481600 1689600 1029600 580800 264000 
 set chan_name="CBSN" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
@@ -526,7 +534,7 @@ REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2499000,RESOLUTION=1280x720,CODECS=
 REM set link="https://abclive2-lh.akamaihd.net/i/abc_live11@423404/index_2500_av-b.m3u8?sd=10&rebase=on"
 REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=4000000,RESOLUTION=1280x720,CODECS="avc1.77.30, mp4a.40.2"
 set link="https://abclive2-lh.akamaihd.net/i/abc_live11@423404/index_4000_av-p.m3u8?sd=10&rebase=on"
-#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=4000000,RESOLUTION=1280x720,CODECS="avc1.77.30, mp4a.40.2"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=4000000,RESOLUTION=1280x720,CODECS="avc1.77.30, mp4a.40.2"
 REM set link="https://abclive2-lh.akamaihd.net/i/abc_live11@423404/index_4000_av-b.m3u8?sd=10&rebase=on"
 
 set chan_name="ABC USA" 
@@ -664,9 +672,9 @@ set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_19
-set link="https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/50345bf35f664739912f0b255c172ae9/index_1.m3u8"
+REM set link="https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/50345bf35f664739912f0b255c172ae9/index_1.m3u8"
 REM set link="https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/50345bf35f664739912f0b255c172ae9/index_2.m3u8"
-REM set link="https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/50345bf35f664739912f0b255c172ae9/index_3.m3u8"
+set link="https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/50345bf35f664739912f0b255c172ae9/index_3.m3u8"
 set chan_name="ABC Australia" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
@@ -693,9 +701,10 @@ goto PLAY_CASE
 
 :CHAN_23
 REM set link="http://cdnapi.kaltura.com/p/2216081/sp/221608100/playManifest/entryId/1_f19eeulz/format/applehttp/protocol/http/uiConfId/28428751/a.m3u8"
-set link="http://cdnapi.kaltura.com/p/2216081/sp/221608100/playManifest/entryId/1_f19eeulz/format/applehttp/protocol/http/uiConfId/28428751/index_720.m3u8"
+REM set link="http://cdnapi.kaltura.com/p/2216081/sp/221608100/playManifest/entryId/1_f19eeulz/format/applehttp/protocol/http/uiConfId/28428751/index_720.m3u8"
 REM set link="http://cdnapi.kaltura.com/p/2216081/sp/221608100/playManifest/entryId/1_f19eeulz/format/applehttp/protocol/http/uiConfId/28428751/index_480.m3u8"
 REM set link="http://cdnapi.kaltura.com/p/2216081/sp/221608100/playManifest/entryId/1_f19eeulz/format/applehttp/protocol/http/uiConfId/28428751/index_360.m3u8"
+set link="https://nmxlive.akamaized.net/hls/live/529965/Live_1/index.m3u8"
 set chan_name="NEWS MAX" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
@@ -716,11 +725,15 @@ set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_25
-REM set link=https://infowarslive-lh.akamaihd.net/i/infowarsevent_1@366809/master.m3u8
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=864000,RESOLUTION=720x406,CODECS="avc1.77.30, mp4a.40.2"
-set link="https://infowarslive-lh.akamaihd.net/i/infowarsevent_1@366809/index_800_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=64000,CODECS="mp4a.40.2"
-REM set link="https://infowarslive-lh.akamaihd.net/i/infowarsevent_1@366809/index_800_a-p.m3u8?sd=10&rebase=on"
+
+REM set link="https://infostream.secure.footprint.net/hls-live/infostream-infostream/_definst_/chunklist.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=866304,RESOLUTION=640x360
+REM set link="https://infostream.secure.footprint.net/hls-live/infostream-infostream/_definst_/chunklist_b866304.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=1155072,RESOLUTION=854x480
+REM set link="https://infostream.secure.footprint.net/hls-live/infostream-infostream/_definst_/chunklist_b1155072.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=2244608,RESOLUTION=1280x720
+set  link="https://infostream.secure.footprint.net/hls-live/infostream-infostream/_definst_/chunklist_b2244608.m3u8" 
+
 set chan_name="INFOWARS" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
@@ -2633,41 +2646,65 @@ set chan_name="India TV"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-
 :CHAN_232
-chan_name="UNASSIGNED"
+for /f "tokens=*" %%a in ( 'curl -L "https://player-api.new.livestream.com/accounts/11965022/events/4086327/" ^| grep "secure_play_url" ^| cut -d ] -f 7 ^| cut -d ? -f 2 ^| cut -d : -f 3' ) do set link=https:%%a
+echo !link!
+set chan_name="India Today"
 set /A prior_num="%chan_num%"
-goto MENU_!menu_num!
+goto PLAY_CASE
+
 :CHAN_233
-chan_name="UNASSIGNED"
+REM set link="https://infostream.secure.footprint.net/hls-live/infostream2-infostream2/_definst_/chunklist.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=866304,RESOLUTION=640x360
+REM set link="https://infostream.secure.footprint.net/hls-live/infostream2-infostream2/_definst_/chunklist_b866304.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=1155072,RESOLUTION=854x480
+REM set link="https://infostream.secure.footprint.net/hls-live/infostream2-infostream2/_definst_/chunklist_b1155072.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=2244608,RESOLUTION=1280x720
+set link="https://infostream.secure.footprint.net/hls-live/infostream2-infostream2/_definst_/chunklist_b2244608.m3u8" 
+
+set chan_name="Infowars Real News Infostream 2"
 set /A prior_num="%chan_num%"
-goto MENU_!menu_num!
+goto PLAY_CASE
+
 :CHAN_234
-chan_name="UNASSIGNED"
+REM set link="https://infostream.secure.footprint.net/hls-live/infostream3-infostream3/_definst_/chunklist.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=866304,RESOLUTION=640x360
+REM set link="https://infostream.secure.footprint.net/hls-live/infostream3-infostream3/_definst_/chunklist_b866304.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=1155072,RESOLUTION=854x480
+REM set link="https://infostream.secure.footprint.net/hls-live/infostream3-infostream3/_definst_/chunklist_b1155072.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=2244608,RESOLUTION=1280x720
+set link="https://infostream.secure.footprint.net/hls-live/infostream3-infostream3/_definst_/chunklist_b2244608.m3u8" 
+
+set chan_name="Infowars WarRoom Infostream 3"
 set /A prior_num="%chan_num%"
-goto MENU_!menu_num!
+goto PLAY_CASE
+
 :CHAN_235
-chan_name="UNASSIGNED"
+set link="https://live.chdrstatic.com/cbn/index.m3u8"
+set chan_name="Cheddar Big News"
 set /A prior_num="%chan_num%"
-goto MENU_!menu_num!
+goto PLAY_CASE
+
 :CHAN_236
-chan_name="UNASSIGNED"
+set link="https://live.chdrstatic.com/cheddar/index.m3u8"
+set chan_name="Cheddar Big News"
 set /A prior_num="%chan_num%"
-goto MENU_!menu_num!
+goto PLAY_CASE
+
 :CHAN_237
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_238
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_239
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_240
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 
