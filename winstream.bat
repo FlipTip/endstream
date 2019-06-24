@@ -5,8 +5,8 @@ REM ## FILENAME: WINSTREAM.BAT
 REM ## TITLE: WINSTREAM
 REM ## AUTHOR: Endwall
 REM ## Creation Date: January 27, 2018
-REM ## Version: 0.0502
-REM ## Revision Date: March 05, 2019
+REM ## Version: 0.0504
+REM ## Revision Date: June 24, 2019
 REM ##
 REM ## Description:  Stream internet video channels with mpv and youtube-dl
 REM ##
@@ -153,8 +153,8 @@ SET PATH=C:\Users\%USERNAME%\bin;D:\gnuwin32\bin;%PATH%
 
 SET PRODUCT=WINSTREAM
 SET BRANCH="WINDOWS NT 6.x"
-SET VERSION=0.0502
-SET REV_DATE="05/03/2019"
+SET VERSION=0.0504
+SET REV_DATE="24/06/2019"
 SET MODE="VIDEO"
 
 REM ## SET THE TITLE
@@ -176,8 +176,8 @@ set menu_num=0
 CLS
 ECHO "============================================ %PRODUCT% %VERSION% ==========================================================================="
 ECHO "||=========ENGLISH=========||======ENGLISH II=======||=======FRENCH=======||=======SPANISH======||========OTHER======||======EXTRA=========="
-ECHO "|| 1) SKY NEWS             ||41)BBC PARLIAMENT      ||81) FRANCE 24 FR    ||121)RT ESPANOL      ||161)VAR AZUR       ||201)Amouranth      ||"
-ECHO "|| 2) RT UK                ||42)ORIECTHAS IE        ||82) BFM TV FR       ||122)DW ESPANOL      ||162)MontBlanc 2    ||202)Geek and Sundry||"
+ECHO "|| 1) SKY NEWS             ||41)BBC NEWS UK         ||81) FRANCE 24 FR    ||121)RT ESPANOL      ||161)VAR AZUR       ||201)Amouranth      ||"
+ECHO "|| 2) RT UK                ||42)BBC PARLIAMENT      ||82) BFM TV FR       ||122)DW ESPANOL      ||162)MontBlanc 2    ||202)Geek and Sundry||"
 ECHO "|| 3) RTE NEWS IE          ||43)Made in Leeds       ||83) BMF BIZ FR      ||123)FRANCE 24 ES    ||163)Grenoble       ||203)Robot Chicken  ||" 
 ECHO "|| 4) France 24 Eng        ||44)Made in Tyne        ||84) RT FRANCE       ||124)CGTN ES         ||164)RTL 2          ||204)Retro TV       ||" 
 ECHO "|| 5) DW DE                ||45)Made in Cardiff     ||85) FranceINFO FR   ||125)HISPAN TV       ||165)OUI FM         ||205)Con TV         ||"
@@ -186,36 +186,36 @@ ECHO "|| 7) CBSN USA             ||47)TSC USA             ||87) CGTN FRANCAIS   
 ECHO "|| 8) Bloomberg USA        ||48)QVC 2 USA           ||88)AFRICA NEWS      ||128)----------      ||168)-------------  ||208)EWTN English   ||" 
 ECHO "|| 9) RT USA               ||49)QVC Beauty          ||89)TVA CA           ||129)----------      ||169)-------------  ||209)EWTN Ireland   ||" 
 ECHO "|| 10) ABC USA             ||50)QVC Raw             ||90)RDI ICI CA       ||130)----------      ||170)-------------  ||210)EWTN Africa    ||" 
-ECHO "|| 11) TRT WORLD TK        ||51)FiOS1 Long Island   ||91)RTS UN           ||131)----------      ||171)WDR Germany    ||211)EWTN Asia      ||" 
-ECHO "|| 12) Al Jazzera          ||52)TVW Washington TV   ||92)FRANCE 2         ||132)----------      ||172)DW DE          ||212)Salt and Light ||" 
-ECHO "|| 13) PRESSTV IR          ||53)DCN Columbia        ||93)FRANCE 3         ||133)--------------  ||173)ZDF InfoKanal  ||213)Catholic TV    ||" 
-ECHO "|| 14) NEWSX INDIA         ||54)DCC Columbia        ||94)ARTE Francais    ||134)--------------  ||174)QVC DE         ||214)EWTN Espanol   ||" 
-ECHO "|| 15) NDTV IN             ||55)DCKN Columbia       ||95)France O         ||135)--------------  ||175)ADR Alpha DE   ||215)EWTN Deutsche  ||" 
-ECHO "|| 16) CGTN CN             ||56)Southeastern        ||96)Azur TV FR       ||136)--------------  ||176)DW + DE        ||216)KTO Catholique ||" 
-ECHO "|| 17) NHK JP              ||57)Texas State         ||97)BFM TV PARIS     ||137)--------------  ||177)W24 AT         ||217)CBN            ||"  
-ECHO "|| 18) News Asia SG        ||58)BronxNET NY         ||98)Alsace 20 Fr     ||138)--------------  ||178)Tirol AT       ||218)CBN News       ||"
-ECHO "|| 19) ABC AU              ||59)CNN Live USA        ||99)RTS DEUX         ||139)-------------   ||179)SRF CH         ||219)IHOP           ||" 
-ECHO "|| 20) ARISE NG            ||60)CNN HLN USA         ||100)LCP FR          ||140)-------------   ||180)-------------- ||220)TopNews Albania||" 
-ECHO "|| 21) AFRICA NEWS         ||61)FOX NEWS TALK       ||101)Public Senate   ||141)-------------   ||181)AT5 NL         ||221)RT Arabic      ||" 
-ECHO "|| 22) TeleSUR ENG VE      ||62)CNBC USA            ||102)CPAC 1 FR CA    ||142)-------------   ||182)Euronews RU    ||222)France24 Arab  ||" 
-ECHO "|| 23) NEWSMAX USA         ||63)CBC News Network    ||103)ASSEMBLE QUEBEC ||143)-------------   ||183)POCCNR 24 RU   ||223)BBC Arabic     ||" 
-ECHO "|| 24) FREESPEECH          ||64)ET Live             ||104)CANAL SAVOIR    ||144)-------------   ||184)RBC RU         ||224)DW Arabic      ||"
-ECHO "|| 25) INFOWARS            ||65)ET India            ||105)GONG CINEMA     ||145)-------------   ||185)CCTV RU        ||225)CCTV Arabic    ||"
-ECHO "|| 26) UN WEB TV           ||66)NEWSY USA           ||106)GONG MAX        ||146)-------------   ||186)Vesti FM RU    ||226)AlJazeera Arab ||" 
-ECHO "|| 27) WGN 9 Chicago       ||67)CNN PH              ||107)BX1 BE          ||147)-------------   ||187)CurrentTimeVOA ||227)AlJazeera Docs ||" 
-ECHO "|| 28) News 12 Brooklyn    ||68)TWIT                ||108)ANTENNA CENTER  ||148)-------------   ||188)RTR Planeta RU ||228)AlJazeera Mubas||" 
-ECHO "|| 29) News 12 Long Island ||69)JUPITER BROAD       ||109)IL TV FRANCE    ||149)-------------   ||189) 1 TV RU       ||229)KSA1           ||" 
-ECHO "|| 30) FiOS1 Hudson Valley ||70)Music Choice Play   ||110)FranceInfo Radio||150)-------------   ||190)Music BOX RU   ||230)KSA Sports     ||" 
-ECHO "|| 31) FiOS1 New Jersey    ||71)M20 Music           ||111)Europe 1        ||151)-------------   ||191)MOSCKVA 24 RU  ||231)India TV IN    ||" 
-ECHO "|| 32) Weather Nation      ||72)Radio Monte Carlo   ||112)RTL Radio       ||152)-------------   ||192)POCCNR 1 HD    ||232)India Today    ||" 
-ECHO "|| 33) Weather Channel     ||73)Hit Music TV        ||113)RMC Talk        ||153)-------------   ||193)TV Publica MD  ||233)Real News      ||" 
-ECHO "|| 34) VOA USA             ||74)CMC California      ||114)MB TV           ||154)-------------   ||194)UA TV          ||234)War Room       ||" 
-ECHO "|| 35) RT DOCUMENT         ||75)NRJ Music           ||115)Generations TV  ||155)-------------   ||195)SKY 24 IT      ||235)Cheddar Finance||"
-ECHO "|| 36) CGTN DOCUMENT       ||76)Adult Swim          ||116)Tv Vendée       ||156)-------------   ||196)RSI LA CH      ||236)Cheddar News   ||" 
-ECHO "|| 37) BYUTV USA           ||77)Fashion Europe      ||117)OUATCH TV       ||157)-------------   ||197)Telecolor IT   ||237)-------------  ||"
-ECHO "|| 38) CBC CA              ||78)Fashion 1 Spain     ||118)Telesud         ||158)-------------   ||198)Star Lamia GR  ||238)-------------  ||"
-ECHO "|| 39) CPAC 1 CA           ||79)Red Bull TV         ||119)TV7 Bordeaux    ||159)-------------   ||199)Action 24 GR   ||239)-------------  ||"
-ECHO "|| 40)BBC NEWS UK          ||80)MLB Network         ||120)VL              ||160)-------------   ||200)TRT Haber      ||240)-------------  ||" 
+ECHO "|| 11) Cheddar News        ||51)TVW Washington TV   ||91)RTS UN           ||131)----------      ||171)WDR Germany    ||211)EWTN Asia      ||" 
+ECHO "|| 12) Cheddar Finance     ||52)DCN Columbia        ||92)FRANCE 2         ||132)----------      ||172)DW DE          ||212)Salt and Light ||" 
+ECHO "|| 13) TRT WORLD TK        ||53)DCC Columbia        ||93)FRANCE 3         ||133)--------------  ||173)ZDF InfoKanal  ||213)Catholic TV    ||" 
+ECHO "|| 14) Al Jazzera          ||54)DCKN Columbia       ||94)ARTE Francais    ||134)--------------  ||174)QVC DE         ||214)EWTN Espanol   ||" 
+ECHO "|| 15) PRESSTV IR          ||55)Southeastern        ||95)France O         ||135)--------------  ||175)ADR Alpha DE   ||215)EWTN Deutsche  ||" 
+ECHO "|| 16) NEWSX INDIA         ||56)Texas State         ||96)Azur TV FR       ||136)--------------  ||176)DW + DE        ||216)KTO Catholique ||" 
+ECHO "|| 17) CGTN CN             ||57)BronxNET NY         ||97)BFM TV PARIS     ||137)--------------  ||177)W24 AT         ||217)CBN            ||"  
+ECHO "|| 18) NHK JP              ||58)CNN HLN USA         ||98)Alsace 20 Fr     ||138)--------------  ||178)Tirol AT       ||218)CBN News       ||"
+ECHO "|| 19) Arirang KR          ||59)FOX NEWS TALK       ||99)RTS DEUX         ||139)-------------   ||179)SRF CH         ||219)IHOP           ||" 
+ECHO "|| 20) News Asia SG        ||60)CNBC USA            ||100)LCP FR          ||140)-------------   ||180)-------------- ||220)TRWAM Poland   ||" 
+ECHO "|| 21) ABC AU              ||61)CBC News Network    ||101)Public Senate   ||141)-------------   ||181)AT5 NL         ||221)RT Arabic      ||" 
+ECHO "|| 22) ARISE NG            ||62)ET Live             ||102)CPAC 1 FR CA    ||142)-------------   ||182)Euronews RU    ||222)France24 Arab  ||" 
+ECHO "|| 23) AFRICA NEWS         ||63)WGN 9 Chicago       ||103)ASSEMBLE QUEBEC ||143)-------------   ||183)POCCNR 24 RU   ||223)BBC Arabic     ||" 
+ECHO "|| 24) TeleSUR ENG VE      ||64)News 12 Brooklyn    ||104)CANAL SAVOIR    ||144)-------------   ||184)RBC RU         ||224)DW Arabic      ||"
+ECHO "|| 25) NEWSMAX USA         ||65)News 12 Bronx       ||105)GONG CINEMA     ||145)-------------   ||185)CCTV RU        ||225)CCTV Arabic    ||"
+ECHO "|| 26) FREESPEECH          ||66)News 12 Long Island ||106)GONG MAX        ||146)-------------   ||186)Vesti FM RU    ||226)AlJazeera Arab ||" 
+ECHO "|| 27) INFOWARS            ||67)FiOS1 Long Island   ||107)BX1 BE          ||147)-------------   ||187)CurrentTimeVOA ||227)AlJazeera Docs ||" 
+ECHO "|| 28) Real News           ||68)FiOS1 Hudson Valley ||108)ANTENNA CENTER  ||148)-------------   ||188)RTR Planeta RU ||228)AlJazeera Mubas||" 
+ECHO "|| 29) War Room            ||69)FiOS1 New Jersey    ||109)IL TV FRANCE    ||149)-------------   ||189) 1 TV RU       ||229)KSA1           ||" 
+ECHO "|| 30) UN WEB TV           ||70)TWIT                ||110)FranceInfo Radio||150)-------------   ||190)Music BOX RU   ||230)KSA Sports     ||" 
+ECHO "|| 31) Weather Nation      ||71)NRA TV              ||111)Europe 1        ||151)-------------   ||191)MOSCKVA 24 RU  ||231)India TV IN    ||" 
+ECHO "|| 32) Weather Channel     ||72)CNN PH              ||112)RTL Radio       ||152)-------------   ||192)POCCNR 1 HD    ||232)India Today    ||" 
+ECHO "|| 33) VOA USA             ||73)Temple University   ||113)RMC Talk        ||153)-------------   ||193)TV Publica MD  ||233)NDTV IN        ||" 
+ECHO "|| 34) RT DOCUMENT         ||74)----------------    ||114)MB TV           ||154)-------------   ||194)UA TV          ||234)Times In       ||" 
+ECHO "|| 35) CGTN DOCUMENT       ||75)----------------    ||115)Generations TV  ||155)-------------   ||195)SKY 24 IT      ||235)ET India       ||"
+ECHO "|| 36) BYUTV USA           ||76)----------------    ||116)Tv Vendée       ||156)-------------   ||196)RSI LA CH      ||236)NEWSY USA      ||" 
+ECHO "|| 37) CBC CA              ||77)----------------    ||117)OUATCH TV       ||157)-------------   ||197)Telecolor IT   ||237)QVC UK         ||"
+ECHO "|| 38) CPAC 1 CA           ||78)----------------    ||118)Telesud         ||158)-------------   ||198)Star Lamia GR  ||238)OIREACTHAS IE  ||"
+ECHO "|| 39) ---------------     ||79)----------------    ||119)TV7 Bordeaux    ||159)-------------   ||199)Action 24 GR   ||239)TopNews Albania||"
+ECHO "|| 40) ---------------     ||80)----------------    ||120)VL              ||160)-------------   ||200)TRT Haber      ||240)-------------  ||" 
 ECHO "=============================================================================================================================================="
 PROMPT $LWINSTREAM$G$D$T$$
 set /p chan_num="Select a Channel Number, press + or ] to increment, - or [ to decrement,m for main menu, n for next menu, or q to quit:"
@@ -226,47 +226,47 @@ GOTO INPUT_SELECT
 :MENU_1
 CLS
 ECHO "============================================ %PRODUCT% %VERSION% ==========================================================================="
-ECHO "||=========================||=====================||===================||====================||===================||====================="
-ECHO "|| 241) --------------      ||281)--------------  ||321)-------------- ||361)--------------  ||401)-------------- ||441)-------------- ||"
-ECHO "|| 242) --------------      ||282)--------------  ||322)-------------- ||362)--------------  ||402)-------------- ||442)-------------- ||"
-ECHO "|| 243) --------------      ||283)--------------  ||323)-------------- ||363)--------------  ||403)-------------- ||443)-------------- ||" 
-ECHO "|| 244) --------------      ||284)--------------  ||324)-------------- ||364)--------------  ||404)-------------- ||444)-------------- ||" 
-ECHO "|| 245) --------------      ||285)--------------  ||325)-------------- ||365)--------------  ||405)-------------- ||445)-------------- ||"
-ECHO "|| 246) --------------      ||286)--------------  ||326)-------------- ||366)--------------  ||406)-------------- ||446)-------------- ||" 
-ECHO "|| 247) --------------      ||287)--------------  ||327)-------------- ||367)--------------  ||407)-------------- ||447)-------------- ||" 
-ECHO "|| 248) --------------      ||288)--------------  ||328)-------------- ||368)--------------  ||408)-------------- ||448)-------------- ||" 
-ECHO "|| 249) --------------      ||289)--------------  ||329)-------------- ||369)--------------  ||409)-------------  ||449)-------------- ||" 
-ECHO "|| 250) --------------      ||290)--------------  ||330)-------------- ||370)--------------  ||410)-------------  ||450)-------------- ||" 
-ECHO "|| 251) --------------      ||291)--------------  ||331)-------------- ||371)--------------  ||411)-------------- ||451)-------------- ||" 
-ECHO "|| 252) --------------      ||292)--------------  ||332)-------------- ||372)--------------  ||412)-------------- ||452)-------------- ||" 
-ECHO "|| 253) --------------      ||293)--------------  ||333)-------------- ||373)--------------  ||413)-------------- ||453)-------------- ||" 
-ECHO "|| 254) --------------      ||294)--------------  ||334)-------------- ||374)--------------  ||414)-------------- ||454)-------------- ||" 
-ECHO "|| 255) --------------      ||295)--------------  ||335)-------------- ||375)--------------  ||415)-------------- ||455)-------------- ||" 
-ECHO "|| 256) --------------      ||296)--------------  ||336)-------------- ||376)--------------  ||416)-------------- ||456)-------------- ||" 
-ECHO "|| 257) --------------      ||297)--------------  ||337)-------------- ||377)--------------  ||417)-------------- ||457)-------------- ||"  
-ECHO "|| 258) --------------      ||298)--------------  ||338)-------------- ||378)--------------  ||418)-------------- ||458)-------------- ||"
-ECHO "|| 259) --------------      ||299)--------------  ||339)-------------- ||379)-------------   ||419)-------------- ||459)-------------- ||" 
-ECHO "|| 260) --------------      ||300)--------------  ||340)-------------- ||380)-------------   ||420)-------------- ||460)-------------- ||" 
-ECHO "|| 261) --------------      ||301)--------------  ||341)-------------- ||381)-------------   ||421)-------------- ||461)-------------- ||" 
-ECHO "|| 262) --------------      ||302)--------------  ||342)-------------- ||382)-------------   ||422)-------------- ||462)-------------- ||" 
-ECHO "|| 263) --------------      ||303)--------------  ||343)-------------- ||383)-------------   ||423)-------------- ||463)-------------- ||" 
-ECHO "|| 264) --------------      ||304)--------------  ||344)-------------- ||384)-------------   ||424)-------------- ||464)-------------- ||"
-ECHO "|| 265) --------------      ||305)--------------  ||345)-------------- ||385)-------------   ||425)-------------- ||465)-------------- ||"
-ECHO "|| 266) --------------      ||306)--------------  ||346)-------------- ||386)-------------   ||426)-------------- ||466)-------------- ||" 
-ECHO "|| 267) --------------      ||307)--------------  ||347)-------------- ||387)-------------   ||427)-------------- ||467)-------------- ||" 
-ECHO "|| 268) --------------      ||308)--------------  ||348)-------------- ||388)-------------   ||428)-------------- ||468)-------------- ||" 
-ECHO "|| 269) --------------      ||309)--------------  ||349)-------------- ||389)-------------   ||429)-------------- ||469)-------------- ||" 
-ECHO "|| 270) --------------      ||310)--------------  ||350)-------------- ||390)-------------   ||430)-------------- ||470)-------------- ||" 
-ECHO "|| 271) --------------      ||311)--------------  ||351)-------------- ||391)-------------   ||431)-------------- ||471)-------------- ||" 
-ECHO "|| 272) --------------      ||312)--------------  ||352)-------------- ||392)-------------   ||432)-------------- ||472)-------------  ||" 
-ECHO "|| 273) --------------      ||313)--------------  ||353)-------------- ||393)-------------   ||433)-------------- ||473)-------------  ||" 
-ECHO "|| 274) --------------      ||314)--------------  ||354)-------------- ||394)-------------   ||434)-------------- ||474)-------------  ||" 
-ECHO "|| 275) --------------      ||315)--------------  ||355)-------------- ||395)-------------   ||435)-------------- ||475)-------------  ||"
-ECHO "|| 276) --------------      ||316)--------------  ||356)-------------- ||396)-------------   ||436)-------------- ||476)-------------  ||" 
-ECHO "|| 277) --------------      ||317)--------------  ||357)-------------- ||397)-------------   ||437)-------------- ||477)-------------  ||"
-ECHO "|| 278) --------------      ||318)--------------  ||358)-------------- ||398)-------------   ||438)-------------- ||478)-------------  ||"
-ECHO "|| 279) --------------      ||319)--------------  ||359)-------------- ||399)-------------   ||439)-------------- ||479)-------------  ||"
-ECHO "|| 280)--------------       ||320)--------------  ||360)-------------- ||400)-------------   ||440)-------------- ||480)-------------  ||" 
+ECHO "||=======ENTERTAINMENT======||======OVERFLOW=======||===================||====================||===================||====================="
+ECHO "|| 241) JUPITER BROAD       ||281)CBC Vancouver    ||321)-------------- ||361)--------------  ||401)-------------- ||441)-------------- ||"
+ECHO "|| 242) Music Choice Play   ||282)CBC Yellowknife  ||322)-------------- ||362)--------------  ||402)-------------- ||442)-------------- ||"
+ECHO "|| 243) M20 Music           ||283)CBC Edmonton     ||323)-------------- ||363)--------------  ||403)-------------- ||443)-------------- ||" 
+ECHO "|| 244) Radio Monte Carlo   ||284)CBC Calgary      ||324)-------------- ||364)--------------  ||404)-------------- ||444)-------------- ||" 
+ECHO "|| 245) Hit Music TV        ||285)CBC Regina       ||325)-------------- ||365)--------------  ||405)-------------- ||445)-------------- ||"
+ECHO "|| 246) CMC California      ||286)CBC Winnepeg     ||326)-------------- ||366)--------------  ||406)-------------- ||446)-------------- ||" 
+ECHO "|| 247) Country Network     ||287)CBC Windsor      ||327)-------------- ||367)--------------  ||407)-------------- ||447)-------------- ||" 
+ECHO "|| 248) Adult Swim          ||288)CBC Toronto      ||328)-------------- ||368)--------------  ||408)-------------- ||448)-------------- ||" 
+ECHO "|| 249) Fashion Europe      ||289)CBC Ottawa       ||329)-------------- ||369)--------------  ||409)-------------  ||449)-------------- ||" 
+ECHO "|| 250) Fashion 1 Spain     ||290)CBC Montreal     ||330)-------------- ||370)--------------  ||410)-------------  ||450)-------------- ||" 
+ECHO "|| 251) Red Bull TV         ||291)CBC Frederickton ||331)-------------- ||371)--------------  ||411)-------------- ||451)-------------- ||" 
+ECHO "|| 252) MLB Network         ||292)CBC Charlottetown||332)-------------- ||372)--------------  ||412)-------------- ||452)-------------- ||" 
+ECHO "|| 253) V2Beat TV           ||293)CBC Halifax      ||333)-------------- ||373)--------------  ||413)-------------- ||453)-------------- ||" 
+ECHO "|| 254) Brit Asia TV        ||294)CBC St. John's   ||334)-------------- ||374)--------------  ||414)-------------- ||454)-------------- ||" 
+ECHO "|| 255) 11 Sports Next      ||295)CBCNews Montreal ||335)-------------- ||375)--------------  ||415)-------------- ||455)-------------- ||" 
+ECHO "|| 256) Geek and Sundry     ||296)Generations TV   ||336)-------------- ||376)--------------  ||416)-------------- ||456)-------------- ||" 
+ECHO "|| 257) Con TV              ||297)Suivez Telesud   ||337)-------------- ||377)--------------  ||417)-------------- ||457)-------------- ||"  
+ECHO "|| 258) Shout Factory       ||298)VAR AZUR         ||338)-------------- ||378)--------------  ||418)-------------- ||458)-------------- ||"
+ECHO "|| 259) Retro TV            ||299)VL               ||339)-------------- ||379)-------------   ||419)-------------- ||459)-------------- ||" 
+ECHO "|| 260) Robot Chicken       ||300)BFM TV           ||340)-------------- ||380)-------------   ||420)-------------- ||460)-------------- ||" 
+ECHO "|| 261) All Key Shop        ||301)8 Mont Blanc 2   ||341)-------------- ||381)-------------   ||421)-------------- ||461)-------------- ||" 
+ECHO "|| 262) Amouranth           ||302)téléGrenoble     ||342)-------------- ||382)-------------   ||422)-------------- ||462)-------------- ||" 
+ECHO "|| 263) --------------      ||303)RTL2             ||343)-------------- ||383)-------------   ||423)-------------- ||463)-------------- ||" 
+ECHO "|| 264) --------------      ||304)OUI FM           ||344)-------------- ||384)-------------   ||424)-------------- ||464)-------------- ||"
+ECHO "|| 265) --------------      ||305)D24TV            ||345)-------------- ||385)-------------   ||425)-------------- ||465)-------------- ||"
+ECHO "|| 266) --------------      ||306)Canal Savoir     ||346)-------------- ||386)-------------   ||426)-------------- ||466)-------------- ||" 
+ECHO "|| 267) --------------      ||307)--------------   ||347)-------------- ||387)-------------   ||427)-------------- ||467)-------------- ||" 
+ECHO "|| 268) --------------      ||308)--------------   ||348)-------------- ||388)-------------   ||428)-------------- ||468)-------------- ||" 
+ECHO "|| 269) --------------      ||309)--------------   ||349)-------------- ||389)-------------   ||429)-------------- ||469)-------------- ||" 
+ECHO "|| 270) --------------      ||310)--------------   ||350)-------------- ||390)-------------   ||430)-------------- ||470)-------------- ||" 
+ECHO "|| 271) --------------      ||311)--------------   ||351)-------------- ||391)-------------   ||431)-------------- ||471)-------------- ||" 
+ECHO "|| 272) --------------      ||312)--------------   ||352)-------------- ||392)-------------   ||432)-------------- ||472)-------------  ||" 
+ECHO "|| 273) --------------      ||313)--------------   ||353)-------------- ||393)-------------   ||433)-------------- ||473)-------------  ||" 
+ECHO "|| 274) --------------      ||314)--------------   ||354)-------------- ||394)-------------   ||434)-------------- ||474)-------------  ||" 
+ECHO "|| 275) --------------      ||315)--------------   ||355)-------------- ||395)-------------   ||435)-------------- ||475)-------------  ||"
+ECHO "|| 276) --------------      ||316)--------------   ||356)-------------- ||396)-------------   ||436)-------------- ||476)-------------  ||" 
+ECHO "|| 277) --------------      ||317)--------------   ||357)-------------- ||397)-------------   ||437)-------------- ||477)-------------  ||"
+ECHO "|| 278) --------------      ||318)--------------   ||358)-------------- ||398)-------------   ||438)-------------- ||478)-------------  ||"
+ECHO "|| 279) --------------      ||319)--------------   ||359)-------------- ||399)-------------   ||439)-------------- ||479)-------------  ||"
+ECHO "|| 280)--------------       ||320)--------------   ||360)-------------- ||400)-------------   ||440)-------------- ||480)-------------  ||" 
 ECHO "=============================================================================================================================================="
 PROMPT $LWINSTREAM$G$D$T$$
 set /p chan_num="Select a Channel Number, press + or ] to increment, - or [ to decrement,m for main menu, n for next menu,or q to quit:"
@@ -437,6 +437,8 @@ goto PLAY_CASE
 :CHAN_4
 REM set link=http://f24hls-i.akamaihd.net/hls/live/221193-b/F24_EN_LO_HLS/master.m3u8
 set link=http://f24hls-i.akamaihd.net/hls/live/221193-b/F24_EN_LO_HLS/master_900.m3u8
+REM set link=http://f24hls-i.akamaihd.net/hls/live/221193/F24_EN_LO_HLS/master.m3u8
+REM set link=http://f24hls-i.akamaihd.net/hls/live/221193/F24_EN_LO_HLS/master_900.m3u8
 set chan_name="France 24"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
@@ -542,10 +544,22 @@ set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_11
+set link="https://live.chdrstatic.com/cbn/index.m3u8"
+set chan_name="Cheddar Big News"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_12
+set link="https://live.chdrstatic.com/cheddar/index.m3u8"
+set chan_name="Cheddar Finance"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_13
 REM set link="https://trtcanlitv-lh.akamaihd.net/i/TRTWORLD_1@321783/index_720p_av-p.m3u8?sd=10&rebase=on"
 REM set link=https://trtcanlitv-lh.akamaihd.net/i/TRTWORLD_1@321783/master.m3u8
 REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=664000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="https://trtcanlitv-lh.akamaihd.net/i/TRTWORLD_1@321783/index_360p_av-p.m3u8?sd=10&rebase=on"
+set link="https://trtcanlitv-lh.akamaihd.net/i/TRTWORLD_1@321783/index_360p_av-p.m3u8?sd=10&rebase=on"
 REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=594000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2"
 REM set link="https://trtcanlitv-lh.akamaihd.net/i/TRTWORLD_1@321783/index_360p_av-b.m3u8?sd=10&rebase=on"
 REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=818000,RESOLUTION=852x480,CODECS="avc1.77.30, mp4a.40.2"
@@ -559,7 +573,7 @@ REM set link="https://trtcanlitv-lh.akamaihd.net/i/TRTWORLD_1@321783/index_360p_
 REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=818000,RESOLUTION=852x480,CODECS="avc1.77.30, mp4a.40.2"
 REM link="https://trtcanlitv-lh.akamaihd.net/i/TRTWORLD_1@321783/index_480p_av-p.m3u8?sd=10&rebase=on"
 REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1928000,RESOLUTION=1280x720,CODECS="avc1.77.30, mp4a.40.2"
-set link="https://trtcanlitv-lh.akamaihd.net/i/TRTWORLD_1@321783/index_720p_av-p.m3u8?sd=10&rebase=on"
+REM set link="https://trtcanlitv-lh.akamaihd.net/i/TRTWORLD_1@321783/index_720p_av-p.m3u8?sd=10&rebase=on"
 REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=3128000,RESOLUTION=1920x1080,CODECS="avc1.77.30, mp4a.40.2"
 REM set link="https://trtcanlitv-lh.akamaihd.net/i/TRTWORLD_1@321783/index_1080p_av-p.m3u8?sd=10&rebase=on"
 
@@ -567,7 +581,7 @@ set chan_name="TRT WORLD"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_12
+:CHAN_14
 REM set link="https://players.brightcove.net/665003303001/SkrZHHcl_default/index.html?videoId=4865263685001"
 REM set link="https://players.brightcove.net/665003303001/SkrZHHcl_default/index.html?videoId=4865263685001"
 set link="https://english.streaming.aljazeera.net/aljazeera/english2/index4147.m3u8"
@@ -591,43 +605,28 @@ set chan_name="Al Jazzera"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_13
+:CHAN_15
 REM set link=https://www.filmon.com/tv/press-tv
-set link="https://5a61de8ed719d.streamlock.net/liveprs/smil:liveprs.smil/chunklist_w92271025_b594100_slen.m3u8"
-#EXT-X-STREAM-INF:BANDWIDTH=1380059,CODECS="avc1.66.40,mp4a.40.2",RESOLUTION=1280x720
+set link="https://5a61de8ed719d.streamlock.net/liveprs/smil:liveprs.smil/playlist.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=1380059,CODECS="avc1.66.40,mp4a.40.2",RESOLUTION=1280x720
 set chan_name="PRESS TV IRAN" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_14
-REM set link="https://d3cjrhqx3ygiqt.cloudfront.net/abr/ngrp:newsx_all/playlist.m3u8"
-REM #EXT-X-STREAM-INF:BANDWIDTH=1778000,CODECS="avc1.77.40,mp4a.40.2",RESOLUTION=558x406
-set link="https://d3cjrhqx3ygiqt.cloudfront.net/abr/ngrp:newsx_all/chunklist_w906609032_b1628000.m3u8"
-REM #EXT-X-STREAM-INF:BANDWIDTH=788000,CODECS="avc1.77.30,mp4a.40.2",RESOLUTION=396x288
-REM set link="https://d3cjrhqx3ygiqt.cloudfront.net/abr/ngrp:newsx_all/chunklist_w906609032_b728000.m3u8"
+:CHAN_16
 REM #EXT-X-STREAM-INF:BANDWIDTH=348000,CODECS="avc1.77.21,mp4a.40.2",RESOLUTION=296x216
-REM set link="https://d3cjrhqx3ygiqt.cloudfront.net/abr/ngrp:newsx_all/chunklist_w906609032_b328000.m3u8"
+REM set link="https://streamidea.multitvsolution.in/live/NewsX-c/p1.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=788000,CODECS="avc1.77.30,mp4a.40.2",RESOLUTION=396x288
+REM set link="https://streamidea.multitvsolution.in/live/NewsX-c/p2.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=1778000,CODECS="avc1.77.40,mp4a.40.2",RESOLUTION=558x406
+REM set link="https://streamidea.multitvsolution.in/live/NewsX-c/p3.m3u8"
+REM HD 853x480
+set link="https://streamidea.multitvsolution.in/live/NewsX-c/p4.m3u8"
 set chan_name="NEWSX INDIA" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_15
-REM set link="https://ndtvstream-lh.akamaihd.net/i/ndtv_24x7_1@300633/master.m3u8"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=128000,RESOLUTION=640x480,CODECS="avc1.64001f, mp4a.40.2"
-REM set link="https://ndtvstream-lh.akamaihd.net/i/ndtv_24x7_1@300633/index_96_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=256000,RESOLUTION=640x480,CODECS="avc1.64001f, mp4a.40.2"
-REM set link="https://ndtvstream-lh.akamaihd.net/i/ndtv_24x7_1@300633/index_224_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=384000,RESOLUTION=640x480,CODECS="avc1.64001f, mp4a.40.2"
-REM set link="https://ndtvstream-lh.akamaihd.net/i/ndtv_24x7_1@300633/index_352_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=512000,RESOLUTION=640x480,CODECS="avc1.64001f, mp4a.40.2"
-REM set link="https://ndtvstream-lh.akamaihd.net/i/ndtv_24x7_1@300633/index_480_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=768000,RESOLUTION=640x480,CODECS="avc1.64001f, mp4a.40.2"
-set link="https://ndtvstream-lh.akamaihd.net/i/ndtv_24x7_1@300633/index_736_av-p.m3u8?sd=10&rebase=on"
-set chan_name="NDTV IN" 
-set /A prior_num="%chan_num%"
-goto PLAY_CASE
-
-:CHAN_16
+:CHAN_17
 REM set link="https://live.cgtn.com/manifest.m3u8"
 REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1096000,NAME="720p HD"
 set link="https://live.cgtn.com/1000/prog_index.m3u8"
@@ -642,28 +641,39 @@ set chan_name="CGTN Beijing"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_17
-set link="https://nhkwtvglobal-i.akamaihd.net/hls/live/263941/nhkwtvglobal/index_1180.m3u8"
-REM set link=https://nhkwtvglobal-i.akamaihd.net/hls/live/263941/nhkwtvglobal/index.m3u8 
+:CHAN_18
+REM set link="https://b-nhkwlive-xjp.akamaized.net/hls/live/2003458/nhkwlive-xjp/index.m3u8 
+REM set link="https://b-nhkwlive-xjp.akamaized.net/hls/live/2003458/nhkwlive-xjp/index_2100.m3u8"
 REM #EXT-X-STREAM-INF:BANDWIDTH=2310000,AVERAGE-BANDWIDTH=2310000,CODECS="avc1.4d401f,mp4a.40.5",RESOLUTION=1280x720,FRAME-RATE=29.970,AUDIO="program_audio"
-set link="https://nhkwtvglobal-i.akamaihd.net/hls/live/263941/nhkwtvglobal/index_2100.m3u8"
+set link="https://b-nhkwlive-xjp.akamaized.net/hls/live/2003458/nhkwlive-xjp/index_2100.m3u8"
 REM #EXT-X-STREAM-INF:BANDWIDTH=1298000,AVERAGE-BANDWIDTH=1298000,CODECS="avc1.4d401f,mp4a.40.5",RESOLUTION=1280x720,FRAME-RATE=29.970,AUDIO="program_audio"
-REM set link="https://nhkwtvglobal-i.akamaihd.net/hls/live/263941/nhkwtvglobal/index_1180.m3u8"
+REM set link="https://b-nhkwlive-xjp.akamaized.net/hls/live/2003458/nhkwlive-xjp/index_1180.m3u8"
 REM #EXT-X-STREAM-INF:BANDWIDTH=990000,AVERAGE-BANDWIDTH=990000,CODECS="avc1.42c01e,mp4a.40.5",RESOLUTION=640x360,FRAME-RATE=29.970,AUDIO="program_audio"
-REM set link="https://nhkwtvglobal-i.akamaihd.net/hls/live/263941/nhkwtvglobal/index_900.m3u8"
+REM set link="https://b-nhkwlive-xjp.akamaized.net/hls/live/2003458/nhkwlive-xjp/index_900.m3u8"
 REM #EXT-X-STREAM-INF:BANDWIDTH=660000,AVERAGE-BANDWIDTH=660000,CODECS="avc1.42c01e,mp4a.40.5",RESOLUTION=640x360,FRAME-RATE=29.970,AUDIO="program_audio"
-REM set link="https://nhkwtvglobal-i.akamaihd.net/hls/live/263941/nhkwtvglobal/index_600.m3u8"
+REM set link="https://b-nhkwlive-xjp.akamaized.net/hls/live/2003458/nhkwlive-xjp/index_600.m3u8"
 REM #EXT-X-STREAM-INF:BANDWIDTH=440000,AVERAGE-BANDWIDTH=440000,CODECS="avc1.42c01e,mp4a.40.5",RESOLUTION=640x360,FRAME-RATE=29.970,AUDIO="program_audio"
-REM set link="https://nhkwtvglobal-i.akamaihd.net/hls/live/263941/nhkwtvglobal/index_400.m3u8"
+REM set link="https://b-nhkwlive-xjp.akamaized.net/hls/live/2003458/nhkwlive-xjp/index_400.m3u8"
 REM #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="program_audio",LANGUAGE="eng",NAME="Alternate Audio",AUTOSELECT=YES,DEFAULT=NO,URI="index_64.m3u8"
 REM #EXT-X-STREAM-INF:BANDWIDTH=220000,AVERAGE-BANDWIDTH=220000,CODECS="avc1.42c01e,mp4a.40.5",RESOLUTION=320x180,FRAME-RATE=29.970,AUDIO="program_audio"
-REM set link="https://nhkwtvglobal-i.akamaihd.net/hls/live/263941/nhkwtvglobal/index_200.m3u8"
+REM set link="https://b-nhkwlive-xjp.akamaized.net/hls/live/2003458/nhkwlive-xjp/index_200.m3u8"
 
 set chan_name="NHK WORLD" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_18
+:CHAN_19
+REM set link="https://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8"
+set link="https://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/chunklist_b1728000_sleng.m3u8"
+REM set link="https://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/chunklist_b1328000_sleng.m3u8"
+REM set link="https://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/chunklist_b928000_sleng.m3u8"
+REM set link="https://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/chunklist_b528000_sleng.m3u8"
+set chan_name="Arirang South Korea"
+set /A prior_num="%chan_num%"
+REM goto MENU_!menu_num!
+goto PLAY_CASE
+
+:CHAN_20
 set link="https://drsh196ivjwe8.cloudfront.net/hls/cnai/03.m3u8"
 REM set link="https://drsh196ivjwe8.cloudfront.net/hls/cnai/02.m3u8"
 REM set link="https://drsh196ivjwe8.cloudfront.net/hls/cnai/01.m3u8"
@@ -671,7 +681,7 @@ set chan_name="Channel News Asisa Singapore"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_19
+:CHAN_21
 REM set link="https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/50345bf35f664739912f0b255c172ae9/index_1.m3u8"
 REM set link="https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/50345bf35f664739912f0b255c172ae9/index_2.m3u8"
 set link="https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/50345bf35f664739912f0b255c172ae9/index_3.m3u8"
@@ -679,19 +689,19 @@ set chan_name="ABC Australia"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_20
+:CHAN_22
 set link="http://contributionstreams.ashttp9.visionip.tv/live/visiontv-contributionstreams-arise-tv-hsslive-25f-16x9-SD/chunklist.m3u8"
 set chan_name="ARISE NEWS NIGERIA" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_21
+:CHAN_23
 set link="https://www.dailymotion.com/video/x6i7vf8"
 set chan_name="Africa News" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_22
+:CHAN_24
 set link=https://d7g1ebft2592.cloudfront.net/mblivev3/hd/playlist.m3u8
 REM set link=https://d7g1ebft2592.cloudfront.net/mblivev3/480p/playlist.m3u8
 REM set link=https://d7g1ebft2592.cloudfront.net/mblivev3/360p/playlist.m3u8
@@ -699,7 +709,7 @@ set chan_name="TeleSUR English Veneuzula"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_23
+:CHAN_25
 REM set link="http://cdnapi.kaltura.com/p/2216081/sp/221608100/playManifest/entryId/1_f19eeulz/format/applehttp/protocol/http/uiConfId/28428751/a.m3u8"
 REM set link="http://cdnapi.kaltura.com/p/2216081/sp/221608100/playManifest/entryId/1_f19eeulz/format/applehttp/protocol/http/uiConfId/28428751/index_720.m3u8"
 REM set link="http://cdnapi.kaltura.com/p/2216081/sp/221608100/playManifest/entryId/1_f19eeulz/format/applehttp/protocol/http/uiConfId/28428751/index_480.m3u8"
@@ -709,23 +719,22 @@ set chan_name="NEWS MAX"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_24
-set link="https://edge.free-speech-tv-live.top.comcast.net/out/u/fstv.m3u8"
+:CHAN_26
+REM set link="https://edge.free-speech-tv-live.top.comcast.net/out/u/fstv.m3u8"
 REM #EXT-X-STREAM-INF:BANDWIDTH=1692100,RESOLUTION=848x480,CODECS="avc1.4D401F,mp4a.40.5"
-set link="https://edge.free-speech-tv-live.top.comcast.net/out/u/39569_3.m3u8"
+set link="https://edge.free-speech-tv-live.top.comcast.net/out/u/fstv_3.m3u8"
 REM #EXT-X-STREAM-INF:BANDWIDTH=1191846,RESOLUTION=640x360,CODECS="avc1.4D401F,mp4a.40.5"
-REM set link="https://edge.free-speech-tv-live.top.comcast.net/out/u/39569_4.m3u8"
+REM set link="https://edge.free-speech-tv-live.top.comcast.net/out/u/fstv_4.m3u8"
 REM #EXT-X-STREAM-INF:BANDWIDTH=791856,RESOLUTION=512x288,CODECS="avc1.42C01E,mp4a.40.5"
-REM set link="https://edge.free-speech-tv-live.top.comcast.net/out/u/39569_5.m3u8"
+REM set link="https://edge.free-speech-tv-live.top.comcast.net/out/u/fstv_5.m3u8"
 REM #EXT-X-STREAM-INF:BANDWIDTH=191727,CODECS="mp4a.40.5"
-REM set link="https://edge.free-speech-tv-live.top.comcast.net/out/u/39569_6.m3u8"
+REM set link="https://edge.free-speech-tv-live.top.comcast.net/out/u/fstv_6.m3u8"
 
 set chan_name="FREE SPEECH TV" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_25
-
+:CHAN_27
 REM set link="https://infostream.secure.footprint.net/hls-live/infostream-infostream/_definst_/chunklist.m3u8"
 REM #EXT-X-STREAM-INF:BANDWIDTH=866304,RESOLUTION=640x360
 REM set link="https://infostream.secure.footprint.net/hls-live/infostream-infostream/_definst_/chunklist_b866304.m3u8"
@@ -738,7 +747,33 @@ set chan_name="INFOWARS"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_26
+:CHAN_28
+REM set link="https://infostream.secure.footprint.net/hls-live/infostream2-infostream2/_definst_/chunklist.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=866304,RESOLUTION=640x360
+REM set link="https://infostream.secure.footprint.net/hls-live/infostream2-infostream2/_definst_/chunklist_b866304.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=1155072,RESOLUTION=854x480
+REM set link="https://infostream.secure.footprint.net/hls-live/infostream2-infostream2/_definst_/chunklist_b1155072.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=2244608,RESOLUTION=1280x720
+set link="https://infostream.secure.footprint.net/hls-live/infostream2-infostream2/_definst_/chunklist_b2244608.m3u8" 
+
+set chan_name="Infowars Real News Infostream 2"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_29
+REM set link="https://infostream.secure.footprint.net/hls-live/infostream3-infostream3/_definst_/chunklist.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=866304,RESOLUTION=640x360
+REM set link="https://infostream.secure.footprint.net/hls-live/infostream3-infostream3/_definst_/chunklist_b866304.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=1155072,RESOLUTION=854x480
+REM set link="https://infostream.secure.footprint.net/hls-live/infostream3-infostream3/_definst_/chunklist_b1155072.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=2244608,RESOLUTION=1280x720
+set link="https://infostream.secure.footprint.net/hls-live/infostream3-infostream3/_definst_/chunklist_b2244608.m3u8" 
+
+set chan_name="Infowars WarRoom Infostream 3"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_30
 set link=https://players.brightcove.net/1362235914001/B1J3DDQJf_default/index.html?videoId=5689257377001
 REM set link=https://bcliveunivsecure-lh.akamaihd.net/i/un150_1@575439/master.m3u8
 REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=828000,RESOLUTION=960x540,CODECS="avc1.77.30, mp4a.40.5"
@@ -749,71 +784,7 @@ set chan_name="United Nations TV"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE 
 
-:CHAN_27
-REM set link="https://wgntribune-lh.akamaihd.net/i/WGNPrimary_1@304622/master.m3u8"
-
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=878000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="https://wgntribune-lh.akamaihd.net/i/WGNPrimary_1@304622/index_750_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=878000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="https://wgntribune-lh.akamaihd.net/i/WGNPrimary_1@304622/index_750_av-b.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=878000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="https://wgntribune-lh.akamaihd.net/i/WGNPrimary_1@304622/index_750_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=878000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="https://wgntribune-lh.akamaihd.net/i/WGNPrimary_1@304622/index_750_av-b.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1128000,RESOLUTION=854x480,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="https://wgntribune-lh.akamaihd.net/i/WGNPrimary_1@304622/index_1000_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1128000,RESOLUTION=854x480,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="https://wgntribune-lh.akamaihd.net/i/WGNPrimary_1@304622/index_1000_av-b.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2628000,RESOLUTION=1280x720,CODECS="avc1.77.30, mp4a.40.2"
-set link="https://wgntribune-lh.akamaihd.net/i/WGNPrimary_1@304622/index_2500_av-p.m3u8?sd=10&rebase=on"
-REM EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2628000,RESOLUTION=1280x720,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="https://wgntribune-lh.akamaihd.net/i/WGNPrimary_1@304622/index_2500_av-b.m3u8?sd=10&rebase=on"
-set chan_name="WGN 9 Chicago USA" 
-set /A prior_num="%chan_num%"
-goto PLAY_CASE 
-
-:CHAN_28
-set link="http://hls.iptv.optimum.net/news12/nipadlive/index_new.m3u8?callsign=N12KN"
-set chan_name="News 12 Brooklyn" 
-set /A prior_num="%chan_num%"
-goto PLAY_CASE 
-
-:CHAN_29
-set link="http://hls.iptv.optimum.net/news12/nipadlive/index_new.m3u8?callsign=N12LI_WEST"
-set chan_name="News 12 Long Island" 
-set /A prior_num="%chan_num%"
-goto PLAY_CASE 
-
-:CHAN_30
-REM set link=https://cdnapisec.kaltura.com/p/424341/sp/42434100/playManifest/entryId/1_is35xshu/format/applehttp/protocol/https/uiConfId/39790741/a.m3u8
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=396000,RESOLUTION=320x180,CODECS="avc1.66.30, mp4a.40.34"
-REM set link="https://urtmpkal-f.akamaihd.net/i/1is35xshu_1@64997/index_1_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=396000,RESOLUTION=320x180,CODECS="avc1.66.30, mp4a.40.34"
-REM set link="https://urtmpkal-f.akamaihd.net/i/1is35xshu_1@64997/index_1_av-b.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1096000,RESOLUTION=640x360,CODECS="avc1.66.30, mp4a.40.34"
-REM set link="https://urtmpkal-f.akamaihd.net/i/1is35xshu_1@64997/index_2_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1096000,RESOLUTION=640x360,CODECS="avc1.66.30, mp4a.40.34"
-REM set link="https://urtmpkal-f.akamaihd.net/i/1is35xshu_1@64997/index_2_av-b.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2096000,RESOLUTION=1280x720,CODECS="avc1.66.30, mp4a.40.34"
-set link="https://urtmpkal-f.akamaihd.net/i/1is35xshu_1@64997/index_3_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2096000,RESOLUTION=1280x720,CODECS="avc1.66.30, mp4a.40.34"
-REM set link="https://urtmpkal-f.akamaihd.net/i/1is35xshu_1@64997/index_3_av-b.m3u8?sd=10&rebase=on"
-
-set chan_name="FiOS1 Lower Hudson Valey" 
-set /A prior_num="%chan_num%"
-goto PLAY_CASE 
-
 :CHAN_31
-REM set link=https://cdnapisec.kaltura.com/p/424341/sp/42434100/playManifest/entryId/1_if6bcg01/format/applehttp/protocol/https/uiConfId/39790741/a.m3u8
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2096000,RESOLUTION=1920x1080,CODECS="avc1.66.30, mp4a.40.34"
-set link="https://urtmpkal-f.akamaihd.net/i/1if6bcg01_1@394073/index_1_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2096000,RESOLUTION=1920x1080,CODECS="avc1.66.30, mp4a.40.34"
-REM set link="https://urtmpkal-f.akamaihd.net/i/1if6bcg01_1@394073/index_1_av-b.m3u8?sd=10&rebase=on"
-set chan_name="FiOS1 New Jersey" 
-set /A prior_num="%chan_num%"
-goto PLAY_CASE
-
-:CHAN_32
 REM set link=http://cdnapi.kaltura.com/p/931702/sp/93170200/playManifest/entryId/1_oorxcge2/format/applehttp/protocol/http/uiConfId/28428751/a.m3u8
 REM #EXT-X-STREAM-INF:BANDWIDTH=2128000,RESOLUTION=1280x720
 set link=http://cdnapi.kaltura.com/p/931702/sp/93170200/playManifest/entryId/1_oorxcge2/format/applehttp/protocol/http/uiConfId/28428751/chunklist_b2128000.m3u8
@@ -828,7 +799,7 @@ set chan_name="Weather Nation"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE 
 
-:CHAN_33
+:CHAN_32
 REM set link=https://weather-lh.akamaihd.net/i/twc_1@92006/master.m3u8
 REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=464000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2"
 REM set link="https://weather-lh.akamaihd.net/i/twc_1@92006/index_400_av-p.m3u8?sd=10&rebase=on"
@@ -851,7 +822,7 @@ set chan_name="Weather Channel"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE 
 
-:CHAN_34
+:CHAN_33
 REM set link=https://voa-lh.akamaihd.net/i/voa_mpls_tvmc6@320298/master.m3u8
 REM set link=https://voa-lh.akamaihd.net/i/voa_mpls_tvmc6@320298/master.m3u8
 REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=857000,RESOLUTION=512x288,CODECS="avc1.77.30, mp4a.40.2"
@@ -872,7 +843,7 @@ set chan_name="VOA"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_35
+:CHAN_34
 REM set link="https://rtd.rt.com/on-air/"
 set link="https://rt-doc.secure.footprint.net/1101-inadv-qidx-1k_v5.m3u8"
 REM set link="https://rt-doc.secure.footprint.net/1101-inadv-qidx-2k_v5.m3u8"
@@ -885,7 +856,7 @@ set chan_name="RT DOCUMENTARY"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_36
+:CHAN_35
 REM set link="https://live.cgtn.com/cctv-d.m3u8" 
 REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1096000,RESOLUTION=1280x720,NAME="720p HD"
 set link=https://livedoc.cgtn.com/1000d/prog_index.m3u8
@@ -898,8 +869,8 @@ set chan_name="CGTN DOCUMENTARY"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_37
-set link=https://byubhls-i.akamaihd.net/hls/live/267187/byutvhls/master.m3u8
+:CHAN_36
+REM set link=https://byubhls-i.akamaihd.net/hls/live/267187/byutvhls/master.m3u8
 REM #EXT-X-MEDIA:TYPE=CLOSED-CAPTIONS,GROUP-ID="CC",LANGUAGE="eng",NAME="EN",INSTREAM-ID="CC1"
 REM #EXT-X-STREAM-INF:BANDWIDTH=290400,AVERAGE-BANDWIDTH=290400,CODECS="avc1.66.30,mp4a.40.5",RESOLUTION=400x224,FRAME-RATE$
 REM set link=https://byubhls-i.akamaihd.net/hls/live/267187/byutvhls/master_264.m3u8
@@ -919,7 +890,7 @@ set chan_name=BYUTV
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_38
+:CHAN_37
 set link="https://cbclivedai5-i.akamaihd.net/hls/live/567235/event2/CBOT/master5.m3u8"
 REM set link="https://cbclivedai5-i.akamaihd.net/hls/live/567235/event2/CBOT/master4.m3u8"
 REM set link="https://cbclivedai5-i.akamaihd.net/hls/live/567235/event2/CBOT/master3.m3u8"
@@ -931,8 +902,8 @@ set chan_name="CBC CANADA"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_39
-REM set link="http://players.brightcove.net/1242843915001/SJ3Tc5kb_default/index.html?videoId=5027924874001"
+:CHAN_38
+set link="http://players.brightcove.net/1242843915001/SJ3Tc5kb_default/index.html?videoId=5027924874001"
 
 REM set link=http://bcoveliveios-i.akamaihd.net/hls/live/248519/1242843915001_1/master.m3u8
 REM set link=http://bcoveliveios-i.akamaihd.net/hls/live/248519/1242843915001_1/master.m3u8
@@ -941,7 +912,7 @@ REM set link=http://bcoveliveios-i.akamaihd.net/hls/live/248522/1242843915001_4/
 REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=612830,RESOLUTION=640x360,CODECS="avc1.77.31,mp4a.40.5"
 REM set link=http://bcoveliveios-i.akamaihd.net/hls/live/248519/1242843915001_1//Assets_1539347909947/Layer1_master.m3u8
 REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=920204,RESOLUTION=720x404,CODECS="avc1.77.31,mp4a.40.5"
-set link=http://bcoveliveios-i.akamaihd.net/hls/live/248519/1242843915001_1//Assets_1539347909947/Layer2_master.m3u8
+REM set link=http://bcoveliveios-i.akamaihd.net/hls/live/248519/1242843915001_1//Assets_1539347909947/Layer2_master.m3u8
 REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=3172598,RESOLUTION=1280x720,CODECS="avc1.77.31,mp4a.40.5"
 REM set link=http://bcoveliveios-i.akamaihd.net/hls/live/248519/1242843915001_1//Assets_1539347909947/Layer3_master.m3u8
 
@@ -949,25 +920,28 @@ set chan_name="CPAC 1 CANADA"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
+:CHAN_39
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
 :CHAN_40
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+REM ###########################  ENGLISH II  #########################################
+
+:CHAN_41
 set link="https://www.filmon.com/tv/bbc-news"
 set chan_name="BBC LONDON"
 set /A prior_num="%chan_num%" 
 goto PLAY_CASE
 
-
-REM ############################  ENGLISH II  #########################################
-
-:CHAN_41
+:CHAN_42
 set link="https://www.filmon.com/tv/bbc-parliament"
 set chan_name="BBC Parliament"
 set /A prior_num="%chan_num%" 
-goto PLAY_CASE
-
-:CHAN_42
-set link="https://media.heanet.ie/oirlive/oireachtas/ngrp:oireachtas.stream_all/playlist.m3u8"
-set chan_name="OIreachtas TV IE" 
-set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_43
@@ -1062,7 +1036,7 @@ REM set link=https://qvclvp2.mmdlive.lldns.net/qvclvp2/4bc0e8c660c94c00afcdae214
 #EXT-X-STREAM-INF:BANDWIDTH=4192000,RESOLUTION=1920x1080,SUBTITLES="subs"
 set link=https://qvclvp2.mmdlive.lldns.net/qvclvp2/4bc0e8c660c94c00afcdae21479e2b95/chunklist_b4192000.m3u8
 
-set chan_name="QVC Beauty" 
+set chan_name="QVC 3" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
@@ -1088,16 +1062,6 @@ set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_51
-REM set link=https://cdnapisec.kaltura.com/p/424341/sp/42434100/playManifest/entryId/1_b159ee77/format/applehttp/protocol/https/uiConfId/39790741/a.m3u8
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2096000,RESOLUTION=1920x1080,CODECS="avc1.66.30, mp4a.40.34"
-set link="https://urtmpkal-f.akamaihd.net/i/1b159ee77_1@192104/index_1_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2096000,RESOLUTION=1920x1080,CODECS="avc1.66.30, mp4a.40.34"
-REM set link="https://urtmpkal-f.akamaihd.net/i/1b159ee77_1@192104/index_1_av-b.m3u8?sd=10&rebase=on"
-set chan_name="FiOS1 Long Island" 
-set /A prior_num="%chan_num%"
-goto PLAY_CASE
-
-:CHAN_52
 set link=https://d3ktuc8v2sjk6m.cloudfront.net/livetv/ngrp:TVWAIR_all/master.m3u8
 REM #EXT-X-STREAM-INF:BANDWIDTH=1257472,CODECS="avc1.77.32,mp4a.40.2",RESOLUTION=1280x720
 REM set link=https://d3ktuc8v2sjk6m.cloudfront.net/livetv/ngrp:TVWAIR_all/chunklist_b1155072.m3u8
@@ -1111,7 +1075,7 @@ set chan_name="TVW Washington State TV"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_53
+:CHAN_52
 REM set link=https://video.oct.dc.gov/out/u/DCN.m3u8
 REM #EXT-X-STREAM-INF:BANDWIDTH=364035,RESOLUTION=416x234,CODECS="avc1.4D400D,mp4a.40.2"
 REM set link=https://video.oct.dc.gov/out/u/21_1.m3u8
@@ -1125,7 +1089,7 @@ set chan_name="DCN District of Columbia Network"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_54
+:CHAN_53
 REM set link=https://video.oct.dc.gov/out/u/DCC.m3u8
 REM #EXT-X-STREAM-INF:BANDWIDTH=364063,RESOLUTION=416x234,CODECS="avc1.4D400D,mp4a.40.2"
 REM set link=https://video.oct.dc.gov/out/u/15_1.m3u8
@@ -1139,7 +1103,7 @@ set chan_name="DCC District of Columbia Channel"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_55
+:CHAN_54
 REM set link=https://video.oct.dc.gov/out/u/DKN.m3u8
 REM #EXT-X-STREAM-INF:BANDWIDTH=428009,RESOLUTION=416x234,CODECS="avc1.4D400D,mp4a.40.2"
 REM set link=https://video.oct.dc.gov/out/u/96_7.m3u8
@@ -1153,20 +1117,20 @@ set chan_name="DCKN District of Columbia Knowledge Network Channel"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_56
+:CHAN_55
 set link=http://147.174.13.196/live/WIFI-1296k-540p/WIFI-1296k-540p.m3u8
 set chan_name="Southeastern University Television Channel" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_57
+:CHAN_56
 set link=http://tstv-stream.tsm.utexas.edu/hls/livestream_hi/index.m3u8
 REM set link=http://tstv-stream.tsm.utexas.edu/hls/livestream_low/index.m3u8
 set chan_name="Texas State University Channel" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_58
+:CHAN_57
 REM set link="https://reflect-live-bronxnet.cablecast.tv/live/live.m3u8"
 REM #EXT-X-STREAM-INF:BANDWIDTH=2180400,RESOLUTION=1280x720,NAME="WIFI-1896k-720p"
 set link="https://reflect-live-bronxnet.cablecast.tv/live/WIFI-1896k-720p/WIFI-1896k-720p.m3u8"
@@ -1176,32 +1140,13 @@ set chan_name="BronxNET NY USA"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_59
-REM set link=https://cnn-lh.akamaihd.net/i/cnndebates_1@352100/master.m3u8
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=424000,RESOLUTION=480x270,CODECS="avc1.66.30, mp4a.40.2"
-REM set link="https://cnn-lh.akamaihd.net/i/cnndebates_1@352100/index_360_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=424000,RESOLUTION=480x270,CODECS="avc1.66.30, mp4a.40.2"
-REM set link="https://cnn-lh.akamaihd.net/i/cnndebates_1@352100/index_360_av-b.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=924000,RESOLUTION=640x360,CODECS="avc1.66.30, mp4a.40.2"
-set link="https://cnn-lh.akamaihd.net/i/cnndebates_1@352100/index_860_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=924000,RESOLUTION=640x360,CODECS="avc1.66.30, mp4a.40.2"
-REM set link="https://cnn-lh.akamaihd.net/i/cnndebates_1@352100/index_860_av-b.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=64000,CODECS="mp4a.40.2"
-REM set link="https://cnn-lh.akamaihd.net/i/cnndebates_1@352100/index_360_a-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=64000,CODECS="mp4a.40.2"
-REM set #link="https://cnn-lh.akamaihd.net/i/cnndebates_1@352100/index_360_a-b.m3u8?sd=10&rebase=on"
-REM set link="https://1861340594.rsc.cdn77.org/ls-54548-1/tracks-v1a1/mono.m3u8"
-set chan_name="CNN Live USA" 
-set /A prior_num="%chan_num%"
-goto PLAY_CASE
-
-:CHAN_60
+:CHAN_58
 set link="https://1161275585.rsc.cdn77.org/LS-ATL-54548-7/tracks-v4a1/mono.m3u8"
 set chan_name="CNN HLN USA" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_61
+:CHAN_59
 REM set link="https://fnurtmp-f.akamaihd.net/i/FNRADIO_1@92141/master.m3u8"
 REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=364000,RESOLUTION=476x268,CODECS="avc1.66.30, mp4a.40.2"
 REM set link="https://fnurtmp-f.akamaihd.net/i/FNRADIO_1@92141/index_300_av-b.m3u8?sd=10&rebase=on"
@@ -1217,19 +1162,19 @@ set chan_name="FOX NEWS TALK USA"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_62
+:CHAN_60
 set link="https://1674331492.rsc.cdn77.org/LS-ATL-54548-14/tracks-v1a1/mono.m3u8"
 set chan_name="CNBC USA" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_63
+:CHAN_61
 set link="https://1359547862.rsc.cdn77.org/LS-ATL-54548-8/tracks-v4a1/mono.m3u8"
 set chan_name="CBC News Network CA" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_64
+:CHAN_62
 REM set link="https://etlive-mediapackage-fastly.cbsaavideo.com/dvr/manifest.m3u8"
 REM #EXT-X-STREAM-INF:BANDWIDTH=511336,RESOLUTION=640x360,CODECS="avc1.4D401E,mp4a.40.2"
 REM set link="http://etlive-mediapackage-fastly.cbsaavideo.com/dvr/manifest_1.m3u8"
@@ -1249,176 +1194,158 @@ set chan_name="Entertaintment Tonight Live ET USA"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_65
-REM set link="https://etnowweblive-lh.akamaihd.net/i/ETN_1@348070/master.m3u8"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=446000,RESOLUTION=360x288,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="https://etnowweblive-lh.akamaihd.net/i/ETN_1@348070/index_288_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=446000,RESOLUTION=360x288,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="https://etnowweblive-lh.akamaihd.net/i/ETN_1@348070/index_288_av-b.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=793000,RESOLUTION=544x432,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="https://etnowweblive-lh.akamaihd.net/i/ETN_1@348070/index_432_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=793000,RESOLUTION=544x432,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="https://etnowweblive-lh.akamaihd.net/i/ETN_1@348070/index_432_av-b.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1325000,RESOLUTION=720x576,CODECS="avc1.77.30, mp4a.40.2"
-set link="https://etnowweblive-lh.akamaihd.net/i/ETN_1@348070/index_576_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1325000,RESOLUTION=720x576,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="https://etnowweblive-lh.akamaihd.net/i/ETN_1@348070/index_576_av-b.m3u8?sd=10&rebase=on"
-set chan_name="ET Economic Times India" 
+:CHAN_63
+REM set link="https://wgntribune-lh.akamaihd.net/i/WGNPrimary_1@304622/master.m3u8"
+
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=878000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://wgntribune-lh.akamaihd.net/i/WGNPrimary_1@304622/index_750_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=878000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://wgntribune-lh.akamaihd.net/i/WGNPrimary_1@304622/index_750_av-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=878000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://wgntribune-lh.akamaihd.net/i/WGNPrimary_1@304622/index_750_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=878000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://wgntribune-lh.akamaihd.net/i/WGNPrimary_1@304622/index_750_av-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1128000,RESOLUTION=854x480,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://wgntribune-lh.akamaihd.net/i/WGNPrimary_1@304622/index_1000_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1128000,RESOLUTION=854x480,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://wgntribune-lh.akamaihd.net/i/WGNPrimary_1@304622/index_1000_av-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2628000,RESOLUTION=1280x720,CODECS="avc1.77.30, mp4a.40.2"
+set link="https://wgntribune-lh.akamaihd.net/i/WGNPrimary_1@304622/index_2500_av-p.m3u8?sd=10&rebase=on"
+REM EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2628000,RESOLUTION=1280x720,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://wgntribune-lh.akamaihd.net/i/WGNPrimary_1@304622/index_2500_av-b.m3u8?sd=10&rebase=on"
+set chan_name="WGN 9 Chicago USA" 
 set /A prior_num="%chan_num%"
-goto PLAY_CASE
+goto PLAY_CASE 
+
+:CHAN_64
+set link="http://hls.iptv.optimum.net/news12/nipadlive/index_new.m3u8?callsign=N12KN"
+set chan_name="News 12 Brooklyn" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE 
+
+:CHAN_65
+set link="http://hls.iptv.optimum.net/news12/nipadlive/index_new.m3u8?callsign=N12BX"
+set chan_name="News 12 The Bronx" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE 
 
 :CHAN_66
-set link="https://content.jwplatform.com/players/hBmO7M6k"
-REM set link=http://www.newsy.com/live/
-REM set link=https://www.filmon.com/tv/newsy
-set chan_name="NEWSY USA" 
+set link="http://hls.iptv.optimum.net/news12/nipadlive/index_new.m3u8?callsign=N12LI_WEST"
+set chan_name="News 12 Long Island" 
 set /A prior_num="%chan_num%"
-goto PLAY_CASE
+goto PLAY_CASE 
 
 :CHAN_67
-set link="rtmp://54.251.134.121/live/15273.sdp"
-set chan_name="CNN PHILLIPEANS" 
+REM set link=https://cdnapisec.kaltura.com/p/424341/sp/42434100/playManifest/entryId/1_b159ee77/format/applehttp/protocol/https/uiConfId/39790741/a.m3u8
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2096000,RESOLUTION=1920x1080,CODECS="avc1.66.30, mp4a.40.34"
+set link="https://urtmpkal-f.akamaihd.net/i/1b159ee77_1@192104/index_1_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2096000,RESOLUTION=1920x1080,CODECS="avc1.66.30, mp4a.40.34"
+REM set link="https://urtmpkal-f.akamaihd.net/i/1b159ee77_1@192104/index_1_av-b.m3u8?sd=10&rebase=on"
+set chan_name="FiOS1 Long Island" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_68
+REM set link=https://cdnapisec.kaltura.com/p/424341/sp/42434100/playManifest/entryId/1_is35xshu/format/applehttp/protocol/https/uiConfId/39790741/a.m3u8
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=396000,RESOLUTION=320x180,CODECS="avc1.66.30, mp4a.40.34"
+set link="https://urtmpkal-f.akamaihd.net/i/1is35xshu_1@64997/index_1_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=396000,RESOLUTION=320x180,CODECS="avc1.66.30, mp4a.40.34"
+REM set link="https://urtmpkal-f.akamaihd.net/i/1is35xshu_1@64997/index_1_av-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1096000,RESOLUTION=640x360,CODECS="avc1.66.30, mp4a.40.34"
+REM set link="https://urtmpkal-f.akamaihd.net/i/1is35xshu_1@64997/index_2_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1096000,RESOLUTION=640x360,CODECS="avc1.66.30, mp4a.40.34"
+REM set link="https://urtmpkal-f.akamaihd.net/i/1is35xshu_1@64997/index_2_av-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2096000,RESOLUTION=1280x720,CODECS="avc1.66.30, mp4a.40.34"
+REM set link="https://urtmpkal-f.akamaihd.net/i/1is35xshu_1@64997/index_3_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2096000,RESOLUTION=1280x720,CODECS="avc1.66.30, mp4a.40.34"
+REM set link="https://urtmpkal-f.akamaihd.net/i/1is35xshu_1@64997/index_3_av-b.m3u8?sd=10&rebase=on"
+
+set chan_name="FiOS1 Lower Hudson Valey" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE 
+
+:CHAN_69
+REM set link=https://cdnapisec.kaltura.com/p/424341/sp/42434100/playManifest/entryId/1_if6bcg01/format/applehttp/protocol/https/uiConfId/39790741/a.m3u8
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2096000,RESOLUTION=1920x1080,CODECS="avc1.66.30, mp4a.40.34"
+set link="https://urtmpkal-f.akamaihd.net/i/1if6bcg01_1@394073/index_1_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2096000,RESOLUTION=1920x1080,CODECS="avc1.66.30, mp4a.40.34"
+REM set link="https://urtmpkal-f.akamaihd.net/i/1if6bcg01_1@394073/index_1_av-b.m3u8?sd=10&rebase=on"
+set chan_name="FiOS1 New Jersey" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_70
 set link="https://www.twitch.tv/twit" 
 set chan_name="TWIT" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_69
-set link="http://jblive.videocdn.scaleengine.net/jb-live/play/jblive.stream/playlist.m3u8"  
-set chan_name="JUPITER BROADCASTING" 
-set /A prior_num="%chan_num%"
-goto PLAY_CASE
-
-:CHAN_70
-REM set link=http://edge.music-choice-play-chaina1.top.comcast.net/PlayMetadataInserter/play/playlist.m3u8
-set link=http://edge.music-choice-play-chaina1.top.comcast.net/PlayMetadataInserter/play/chunklist.m3u8
-set chan_name="Music Choice Play"
-set /A prior_num="%chan_num%"
-goto PLAY_CASE
-
 :CHAN_71
-REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/master.m3u8"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=48000,CODECS="mp4a.40.2"
-REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_48_a-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=48000,CODECS="mp4a.40.2"
-REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_48_a-b.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=150000,RESOLUTION=400x224,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_110_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=150000,RESOLUTION=400x224,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_110_av-b.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=240000,RESOLUTION=400x224,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_200_av-p.m3u8?sd=10&rebase=on"
-REM EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=240000,RESOLUTION=400x224,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_200_av-b.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=440000,RESOLUTION=400x224,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_400_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=440000,RESOLUTION=400x224,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_400_av-b.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=640000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2"
-set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_600_av-p.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=640000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2"
-REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_600_av-b.m3u8?sd=10&rebase=on"
-set chan_name="M2O"
+set chan_name="NRA TV"
+REM set link="https://stream1.nra.tv/nratv/ngrp:nratvall/playlist.m3u8"
+set link="https://stream1.nra.tv/nratv/ngrp:nratvall/chunklist_b1144576.m3u8"
+REM set link="https://stream1.nra.tv/nratv/ngrp:nratvall/chunklist_b5895168.m3u8"
+REM set link="https://stream1.nra.tv/nratv/ngrp:nratvall/chunklist_b2749440.m3u8"
+REM set link="https://stream1.nra.tv/nratv/ngrp:nratvall/chunklist_b1700864.m3u8"
+REM set link="https://stream1.nra.tv/nratv/ngrp:nratvall/chunklist_b576000.m3u8"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_72
-REM set link=http://wow01.105.net/live/rmc1/playlist.m3u8  
-REM #EXT-X-STREAM-INF:BANDWIDTH=1009334,CODECS="avc1.66.31,mp4a.40.2",RESOLUTION=720x432
-set link=http://wow01.105.net/live/rmc1/chunklist_w1187407711.m3u8
-REM set link=rtmp://fms.105.net:1935/live/rmc1
-set chan_name="Radio Monte Carlo TV"
+set link="rtmp://54.251.134.121/live/15273.sdp"
+set chan_name="CNN PHILLIPEANS" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_73
-set link=http://1mstream.digicable.hu/hitmusic/hitmusic.m3u8
-set chan_name="Hit Music Channel"
+set link="http://streaming.temple.edu/tutvlive/_definst_/mp4:play/chunklist.m3u8"
+set chan_name="Temple University TV" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_74
-set link=http://cmctv.ios.internapcdn.net/cmctv_vitalstream_com/live_1/CMCUSA/CCURstream0.m3u8
-set chan_name="California Music Channel"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
-goto PLAY_CASE
+goto MENU_!menu_num!
 
 :CHAN_75
-set link=http://5.196.138.6:1935/live/nrjbelgique/chunklist_w1339281553.m3u8  
-set chan_name="NRJ Hits"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
-goto PLAY_CASE
+goto MENU_!menu_num!
 
 :CHAN_76
-REM set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master.m3u8
-REM #EXT-X-STREAM-INF:BANDWIDTH=334400,CODECS="avc1.66.30,mp4a.40.5",RESOLUTION=416x234
-REM set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master_Layer0.m3u8
-REM #EXT-X-STREAM-INF:BANDWIDTH=554400,CODECS="avc1.66.30,mp4a.40.5",RESOLUTION=416x234
-REM set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master_Layer1.m3u8
-REM #EXT-X-STREAM-INF:BANDWIDTH=884400,CODECS="avc1.4d401f,mp4a.40.5",RESOLUTION=640x360
-REM set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master_Layer2.m3u8
-REM #EXT-X-STREAM-INF:BANDWIDTH=1445400,CODECS="avc1.4d401f,mp4a.40.5",RESOLUTION=640x360
-REM set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master_Layer3.m3u8
-REM #EXT-X-STREAM-INF:BANDWIDTH=2050400,CODECS="avc1.4d401f,mp4a.40.5",RESOLUTION=852x480
-REM set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master_Layer4.m3u8
-REM #EXT-X-STREAM-INF:BANDWIDTH=2820400,CODECS="avc1.4d401f,mp4a.40.5",RESOLUTION=960x540
-REM set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master_Layer5.m3u8
-REM #EXT-X-STREAM-INF:BANDWIDTH=3920400,CODECS="avc1.4d401f,mp4a.40.5",RESOLUTION=1280x720
-REM set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master_Layer6.m3u8
-REM #EXT-X-STREAM-INF:BANDWIDTH=5570400,CODECS="avc1.4d4028,mp4a.40.5",RESOLUTION=1920x1080
-set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master_Layer7.m3u8
-REM #EXT-X-STREAM-INF:BANDWIDTH=140800,CODECS="mp4a.40.2"
-REM set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master_Layer8.m3u8
-set chan_name="Adult Swim"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
-goto PLAY_CASE
+goto MENU_!menu_num!
 
 :CHAN_77
-set link=http://www.dailymotion.com/video/x3m6nld
-set chan_name="Fashion TV Europe"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
-goto PLAY_CASE
+goto MENU_!menu_num!
 
 :CHAN_78
-set link=http://www.dailymotion.com/video/x2t9nsf
-set chan_name="Fashion 1 Spain"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
-goto PLAY_CASE
+goto MENU_!menu_num!
 
 :CHAN_79
-REM set link=https://dms.redbull.tv/v3/linear-borb/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYXRlZ29yeSI6InBlcnNvbmFsX2NvbXB1dGVyIiwiY291bnRyeV9jb2RlIjoidXMiLCJleHBpcmVzIjoiMjAxNy0wOS0xNlQxNzo0NjowMy45NjM0NjI4NDJaIiwib3NfZmFtaWx5IjoiaHR0cCIsInJlbW90ZV9pcCI6IjEwLjE1Ny4xMTIuMTQ4IiwidWEiOiJNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBJbnRlbCBNYWMgT1MgWCAxMF8xMl81KSBBcHBsZVdlYktpdC82MDMuMi40IChLSFRNTCwgbGlrZSBHZWNrbykgVmVyc2lvbi8xMC4xLjEgU2FmYXJpLzYwMy4yLjQiLCJ1aWQiOiJkOGZiZWYzMC0yZDhhLTQwYTUtOGNjNy0wNzgxNGJhMTliNzMifQ.Q_38FNpW3so5yrA5FQt9qBuix3dTulKpb6uQ0dRjrtY/playlist.m3u8
-REM #EXT-X-STREAM-INF:BANDWIDTH=290400,AVERAGE-BANDWIDTH=290400,CODECS="avc1.66.30,mp4a.40.2",RESOLUTION=320x180,FRAME-RATE=30.000,CLOSED-CAPTIONS=NONE
-REM set link=https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_264.m3u8
-REM #EXT-X-STREAM-INF:BANDWIDTH=635800,AVERAGE-BANDWIDTH=635800,CODECS="avc1.4d4015,mp4a.40.2",RESOLUTION=426x240,FRAME-RATE=30.000,CLOSED-CAPTIONS=NONE
-REM set link=https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_578.m3u8
-REM #EXT-X-STREAM-INF:BANDWIDTH=1020800,AVERAGE-BANDWIDTH=1020800,CODECS="avc1.77.30,mp4a.40.2",RESOLUTION=640x360,FRAME-RATE=30.000,CLOSED-CAPTIONS=NONE
-REM set link=https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_928.m3u8
-REM #EXT-X-STREAM-INF:BANDWIDTH=1826000,AVERAGE-BANDWIDTH=1826000,CODECS="avc1.4d401f,mp4a.40.2",RESOLUTION=960x540,FRAME-RATE=30.000,CLOSED-CAPTIONS=NONE
-set link=https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_1660.m3u8
-REM #EXT-X-STREAM-INF:BANDWIDTH=3696000,AVERAGE-BANDWIDTH=3696000,CODECS="avc1.4d401f,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=30.000,CLOSED-CAPTIONS=NONE
-REM set link=https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8
-REM #EXT-X-STREAM-INF:BANDWIDTH=7326000,AVERAGE-BANDWIDTH=7326000,CODECS="avc1.4d4028,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=30.000,CLOSED-CAPTIONS=NONE
-REM set link=https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_6660.m3u8
-REM set link="https://www.twitch.tv/redbull"
-chan_name="RED Bull TV"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
-goto PLAY_CASE
+goto MENU_!menu_num!
 
 :CHAN_80
-set link=http://mlblive-akc.mlb.com/ls01/mlbam/mlb_network/NETWORK_LINEAR_1/master_wired.m3u8
-set chan_name="MLB Network"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
-goto PLAY_CASE
+goto MENU_!menu_num!
 
 REM ################################ FRENCH #########################################
 
 :CHAN_81
-REM set link="http://f24hls-i.akamaihd.net/hls/live/221192-b/F24_FR_LO_HLS/master.m3u8"   
-set link="http://f24hls-i.akamaihd.net/hls/live/221192-b/F24_FR_LO_HLS/master_900.m3u8"
+set link="http://f24hls-i.akamaihd.net/hls/live/221192-b/F24_FR_LO_HLS/master.m3u8"   
+REM set link="http://f24hls-i.akamaihd.net/hls/live/221192-b/F24_FR_LO_HLS/master_900.m3u8"
+REM set link="http://f24hls-i.akamaihd.net/hls/live/221192/F24_FR_LO_HLS/master.m3u8"   
+REM set link="http://f24hls-i.akamaihd.net/hls/live/221192/F24_FR_LO_HLS/master_900.m3u8"
+
 set chan_name="FRANCE 24 FRANCAIS" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
@@ -1816,135 +1743,135 @@ set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_128
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_129
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_130
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_131
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_132
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_133
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_134
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_135
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_136
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_137
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_138
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_139
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_140
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_141
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_142
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_143
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_144
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_145
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_146
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_147
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_148
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_149
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_150
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_151
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_152
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_153
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_154
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_155
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_156
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_157
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_158
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 :CHAN_159
 set /A prior_num="%chan_num%"
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 goto MENU_!menu_num!
 :CHAN_160
-chan_name="UNASSIGNED"
+set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 
@@ -2099,13 +2026,13 @@ set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_174
-link="https://llnw.live.qvc.simplestream.com/hera/remote/qvcde_primary_sdi7/2/prog_index.m3u8"
+set link="https://llnw.live.qvc.simplestream.com/hera/remote/qvcde_primary_sdi7/2/prog_index.m3u8"
 set chan_name="QVC DE"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_175
-link="https://br-i.akamaihd.net/i/tafeln/br-fernsehen/br-fernsehen-tafel_,0,A,B,E,C,X,.mp4.csmil/index_2_av.m3u8?null=0"
+set link="https://br-i.akamaihd.net/i/tafeln/br-fernsehen/br-fernsehen-tafel_,0,A,B,E,C,X,.mp4.csmil/index_2_av.m3u8?null=0"
 set chan_name="ADR Alpha Live DE"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
@@ -2324,7 +2251,7 @@ REM set link="https://trtcanlitv-lh.akamaihd.net/i/TRTHABERHD_1@181942/index_150
 set chan_name="TRT HABER"
 goto PLAY_CASE
 
-REM ############################## OTHER II ##########################################
+REM ############################## EXTRA  ##########################################
 :CHAN_201
 set link=https://www.twitch.tv/amouranth
 set chan_name="Amouranth"
@@ -2503,8 +2430,14 @@ set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_220
-set link="https://www.dailymotion.com/video/x6inuzo"
-set chan_name="Top News Albania"
+REM # set link=http://trwamtv.live.e55-po.insyscd.net/trwamtv2.smil/chunklist.m3u8
+REM #EXT-X-STREAM-INF:BANDWIDTH=950000,RESOLUTION=960x540
+set link=https://trwamtv.live.e55-po.insyscd.net/trwamtv2.smil/chunklist_b950000.m3u8
+REM #EXT-X-STREAM-INF:BANDWIDTH=500000,RESOLUTION=640x360
+REM # set link=http://trwamtv.live.e55-po.insyscd.net/trwamtv2.smil/chunklist_b500000.m3u8
+REM #EXT-X-STREAM-INF:BANDWIDTH=250000,RESOLUTION=320x180
+REM # set link=http://trwamtv.live.e55-po.insyscd.net/trwamtv2.smil/chunklist_b250000.m3u8
+set chan_name="TRWAM Poland"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
@@ -2514,7 +2447,7 @@ REM set link=https://rt-arab.secure.footprint.net/1104-inadv-qidx-2k_v5.m3u8
 REM set link=https://rt-arab.secure.footprint.net/1104-inadv-qidx-3k_v5.m3u8
 REM set link=https://rt-arab.secure.footprint.net/1104-inadv-qidx-4k_v5.m3u8
 REM set link=https://rt-arab.secure.footprint.net/1104-inadv-qidx-5k_v5.m3u8
-### AUDIO
+REM ### AUDIO
 REM set link=https://rt-arab.secure.footprint.net/1104-inadv-qidx-0k_v5.m3u8
 set chan_name="RT Arabic"
 set /A prior_num="%chan_num%"
@@ -2527,7 +2460,7 @@ REM set link=http://f24hls-i.akamaihd.net/hls/live/221196-b/F24_AR_LO_HLS/master
 REM #EXT-X-STREAM-INF:BANDWIDTH=1095600,AVERAGE-BANDWIDTH=1095600,CODECS="avc1.4d401f,mp4a.40.2",RESOLUTION=1024x576,FRAME-RATE=25.000,AUDIO="program_audio"
 set link=http://f24hls-i.akamaihd.net/hls/live/221196-b/F24_AR_LO_HLS/master_900.m3u8
 REM set link=http://f24hls-i.akamaihd.net/hls/live/221196/F24_AR_LO_HLS/master_900.m3u8
-#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="program_audio",LANGUAGE="fra",NAME="audio_1",AUTOSELECT=YES,DEFAULT=YES,URI="master_96.m3u8"
+REM #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="program_audio",LANGUAGE="fra",NAME="audio_1",AUTOSELECT=YES,DEFAULT=YES,URI="master_96.m3u8"
 set chan_name="France24 Arabic"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
@@ -2654,61 +2587,597 @@ set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_233
-REM set link="https://infostream.secure.footprint.net/hls-live/infostream2-infostream2/_definst_/chunklist.m3u8"
-REM #EXT-X-STREAM-INF:BANDWIDTH=866304,RESOLUTION=640x360
-REM set link="https://infostream.secure.footprint.net/hls-live/infostream2-infostream2/_definst_/chunklist_b866304.m3u8"
-REM #EXT-X-STREAM-INF:BANDWIDTH=1155072,RESOLUTION=854x480
-REM set link="https://infostream.secure.footprint.net/hls-live/infostream2-infostream2/_definst_/chunklist_b1155072.m3u8"
-REM #EXT-X-STREAM-INF:BANDWIDTH=2244608,RESOLUTION=1280x720
-set link="https://infostream.secure.footprint.net/hls-live/infostream2-infostream2/_definst_/chunklist_b2244608.m3u8" 
-
-set chan_name="Infowars Real News Infostream 2"
+REM set link="https://ndtvstream-lh.akamaihd.net/i/ndtv_24x7_1@300633/master.m3u8"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=128000,RESOLUTION=640x480,CODECS="avc1.64001f, mp4a.40.2"
+REM set link="https://ndtvstream-lh.akamaihd.net/i/ndtv_24x7_1@300633/index_96_av-p.m3u8?sd=10&rebase=on"
+REM set link="$(curl -A "$UA" $( curl -A "$UA" "https://dai.google.com/linear/hls/event/FbL8YN7tSnqysJ6wVjKW7A/master.m3u8" | cut -d \" -f 2 | cut -d \" -f 1 ) | grep 459008.m3u8 | tail -n 1 ) "
+for /f "tokens=*" %%a in ( 'curl -L "https://dai.google.com/linear/hls/event/FbL8YN7tSnqysJ6wVjKW7A/master.m3u8" ^| grep "459008.m3u8" ^| tail -n 1' ) do set link=%%a
+echo !link!
+set chan_name="NDTV IN" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_234
-REM set link="https://infostream.secure.footprint.net/hls-live/infostream3-infostream3/_definst_/chunklist.m3u8"
-REM #EXT-X-STREAM-INF:BANDWIDTH=866304,RESOLUTION=640x360
-REM set link="https://infostream.secure.footprint.net/hls-live/infostream3-infostream3/_definst_/chunklist_b866304.m3u8"
-REM #EXT-X-STREAM-INF:BANDWIDTH=1155072,RESOLUTION=854x480
-REM set link="https://infostream.secure.footprint.net/hls-live/infostream3-infostream3/_definst_/chunklist_b1155072.m3u8"
-REM #EXT-X-STREAM-INF:BANDWIDTH=2244608,RESOLUTION=1280x720
-set link="https://infostream.secure.footprint.net/hls-live/infostream3-infostream3/_definst_/chunklist_b2244608.m3u8" 
-
-set chan_name="Infowars WarRoom Infostream 3"
+set chan_name="Times India"
+set link="https://timesnow-lh.akamaihd.net/i/TNHD_1@129288/index_720_av-p.m3u8?sd=10@rebase=on"
+REM set link="https://timesnow-lh.akamaihd.net/i/TNHD_1@129288/index_720_av-b.m3u8?sd=10@rebase=on"
+REM set link="https://timesnow-lh.akamaihd.net/i/TNHD_1@129288/index_480_av-p.m3u8?sd=10@rebase=on"
+REM set link="https://timesnow-lh.akamaihd.net/i/TNHD_1@129288/index_480_av-b.m3u8?sd=10@rebase=on"
+REM set link="https://timesnow-lh.akamaihd.net/i/TNHD_1@129288/index_240_av-p.m3u8?sd=10@rebase=on"
+REM set link="https://timesnow-lh.akamaihd.net/i/TNHD_1@129288/index_240_av-b.m3u8?sd=10@rebase=on"
+REM set link="https://timesnow-lh.akamaihd.net/i/TNHD_1@129288/index_144_av-p.m3u8?sd=10@rebase=on"
+REM set link="https://timesnow-lh.akamaihd.net/i/TNHD_1@129288/index_144_av-b.m3u8?sd=10@rebase=on"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_235
-set link="https://live.chdrstatic.com/cbn/index.m3u8"
-set chan_name="Cheddar Big News"
+REM set link="https://etnowweblive-lh.akamaihd.net/i/ETN_1@348070/master.m3u8"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=446000,RESOLUTION=360x288,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://etnowweblive-lh.akamaihd.net/i/ETN_1@348070/index_288_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=446000,RESOLUTION=360x288,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://etnowweblive-lh.akamaihd.net/i/ETN_1@348070/index_288_av-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=793000,RESOLUTION=544x432,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://etnowweblive-lh.akamaihd.net/i/ETN_1@348070/index_432_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=793000,RESOLUTION=544x432,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://etnowweblive-lh.akamaihd.net/i/ETN_1@348070/index_432_av-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1325000,RESOLUTION=720x576,CODECS="avc1.77.30, mp4a.40.2"
+set link="https://etnowweblive-lh.akamaihd.net/i/ETN_1@348070/index_576_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1325000,RESOLUTION=720x576,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://etnowweblive-lh.akamaihd.net/i/ETN_1@348070/index_576_av-b.m3u8?sd=10&rebase=on"
+set chan_name="ET Economic Times India" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_236
-set link="https://live.chdrstatic.com/cheddar/index.m3u8"
-set chan_name="Cheddar Big News"
+set link="https://content.jwplatform.com/players/hBmO7M6k"
+REM set link="https://content-ause5.uplynk.com/channel/4bb4901b934c4e029fd4c1abfc766c37/h.m3u8"
+REM set link="https://content.uplynk.com/channel/4bb4901b934c4e029fd4c1abfc766c37.m3u8?ad=newsyweb"
+REM set link=http://www.newsy.com/live/
+REM set link=https://www.filmon.com/tv/newsy
+set chan_name="NEWSY USA" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_237
-set chan_name="UNASSIGNED"
+set chan_name="QVC UK"
+set link="https://d1txbbj1u9asam.cloudfont.net/live/qvcuk_main_clean/bitrate1.isml/3/prog_index.m3u8"
+REM set link="https://d1txbbj1u9asam.cloudfont.net/live/qvcuk_main_clean/bitrate2.isml/3/prog_index.m3u8"
+REM set link="https://d1txbbj1u9asam.cloudfont.net/live/qvcuk_main_clean/bitrate3.isml/3/prog_index.m3u8"
 set /A prior_num="%chan_num%"
-goto MENU_!menu_num!
+goto PLAY_CASE
+
 :CHAN_238
-set chan_name="UNASSIGNED"
+set link="https://oirlive.heanet.ie/oireachtas/ngrp:oireachtas.stream_all/playlist.m3u8"
+REM set link="https://oirlive.heanet.ie/oireachtas/ngrp:oireachtas.stream_all/chunklist_b1228000.m3u8"
+REM set link="https://oirlive.heanet.ie/oireachtas/ngrp:oireachtas.stream_all/chunklist_b978000.m3u8"
+REM set link="https://oirlive.heanet.ie/oireachtas/ngrp:oireachtas.stream_all/chunklist_b478000.m3u8"
+REM set link="https://oirlive.heanet.ie/oireachtas/ngrp:oireachtas.stream_all/chunklist_b128000.m3u8"
+set chan_name="OIreachtas TV IE" 
 set /A prior_num="%chan_num%"
-goto MENU_!menu_num!
+goto PLAY_CASE
+
 :CHAN_239
-set chan_name="UNASSIGNED"
+set link="https://www.dailymotion.com/video/x6inuzo"
+set chan_name="Top News Albania"
 set /A prior_num="%chan_num%"
-goto MENU_!menu_num!
+goto PLAY_CASE
+
 :CHAN_240
 set chan_name="UNASSIGNED"
 set /A prior_num="%chan_num%"
 goto MENU_!menu_num!
 
-REM ##################################################################################
+
+REM ################################### MENU PAGE 2 #########################################################
+:CHAN_241
+
+set link=https://vse-na-us-nw17.secdn.net/jupiter-chorigin/live/jupiter/chunklist.m3u8
+REM set link=https://vse-na-us-nw17.secdn.net/jupiter-chorigin/live/jupiter_360p/chunklist.m3u8
+REM set link=https://vse-na-us-nw17.secdn.net/jupiter-chorigin/live/jupiter_720p/chunklist.m3u8
+REM set link=https://vse-na-us-nw17.secdn.net/jupiter-chorigin/live/jupiter_480p/chunklist.m3u8
+REM set link=https://jupiter-hls.secdn.net/jupiter-channel/play/jupiter.smil/playlist.m3u8
+REM set link=https://jblive.videocdn.scaleengine.net/jb-live/play/jblive.stream/playlist.m3u8
+REM set link=rtmp://jblive.videocdn.scaleengine.net/jb-live/play/jblive.stream
+REM set link=rtsp://jblive.videocdn.scaleengine.net/jb-live/play/jblive.stream
+REM set link="http://jblive.videocdn.scaleengine.net/jb-live/play/jblive.stream/playlist.m3u8"  
+
+set chan_name="JUPITER BROADCASTING" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_242
+REM set link=http://edge.music-choice-play-chaina1.top.comcast.net/PlayMetadataInserter/play/playlist.m3u8
+set link=http://edge.music-choice-play-chaina1.top.comcast.net/PlayMetadataInserter/play/chunklist.m3u8
+set chan_name="Music Choice Play"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_243
+REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/master.m3u8"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=48000,CODECS="mp4a.40.2"
+REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_48_a-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=48000,CODECS="mp4a.40.2"
+REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_48_a-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=150000,RESOLUTION=400x224,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_110_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=150000,RESOLUTION=400x224,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_110_av-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=240000,RESOLUTION=400x224,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_200_av-p.m3u8?sd=10&rebase=on"
+REM EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=240000,RESOLUTION=400x224,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_200_av-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=440000,RESOLUTION=400x224,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_400_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=440000,RESOLUTION=400x224,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_400_av-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=640000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2"
+set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_600_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=640000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_600_av-b.m3u8?sd=10&rebase=on"
+set chan_name="M2O"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_244
+REM set link=http://wow01.105.net/live/rmc1/playlist.m3u8  
+REM #EXT-X-STREAM-INF:BANDWIDTH=1009334,CODECS="avc1.66.31,mp4a.40.2",RESOLUTION=720x432
+set link=http://wow01.105.net/live/rmc1/chunklist_w1187407711.m3u8
+REM set link=rtmp://fms.105.net:1935/live/rmc1
+set chan_name="Radio Monte Carlo TV"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_245
+set link=http://1mstream.digicable.hu/hitmusic/hitmusic.m3u8
+set chan_name="Hit Music Channel"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_246
+set link=https://cmctv.ios.internapcdn.net/cmctv_vitalstream_com/live_1/CMC-TV/chunklist.m3u8
+set chan_name="California Music Channel"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_247
+set link="https://dcunilive2-lh.akamaihd.net/i/dclive_1@390829/master.m3u8"
+set chan_name="Country Network"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_248
+REM set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master.m3u8
+REM #EXT-X-STREAM-INF:BANDWIDTH=334400,CODECS="avc1.66.30,mp4a.40.5",RESOLUTION=416x234
+REM set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master_Layer0.m3u8
+REM #EXT-X-STREAM-INF:BANDWIDTH=554400,CODECS="avc1.66.30,mp4a.40.5",RESOLUTION=416x234
+REM set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master_Layer1.m3u8
+REM #EXT-X-STREAM-INF:BANDWIDTH=884400,CODECS="avc1.4d401f,mp4a.40.5",RESOLUTION=640x360
+REM set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master_Layer2.m3u8
+REM #EXT-X-STREAM-INF:BANDWIDTH=1445400,CODECS="avc1.4d401f,mp4a.40.5",RESOLUTION=640x360
+REM set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master_Layer3.m3u8
+REM #EXT-X-STREAM-INF:BANDWIDTH=2050400,CODECS="avc1.4d401f,mp4a.40.5",RESOLUTION=852x480
+REM set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master_Layer4.m3u8
+REM #EXT-X-STREAM-INF:BANDWIDTH=2820400,CODECS="avc1.4d401f,mp4a.40.5",RESOLUTION=960x540
+REM set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master_Layer5.m3u8
+REM #EXT-X-STREAM-INF:BANDWIDTH=3920400,CODECS="avc1.4d401f,mp4a.40.5",RESOLUTION=1280x720
+REM set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master_Layer6.m3u8
+REM #EXT-X-STREAM-INF:BANDWIDTH=5570400,CODECS="avc1.4d4028,mp4a.40.5",RESOLUTION=1920x1080
+set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master_Layer7.m3u8
+REM #EXT-X-STREAM-INF:BANDWIDTH=140800,CODECS="mp4a.40.2"
+REM set link=http://adultswimhls-i.akamaihd.net/hls/live/238460/adultswim/main/1/master_Layer8.m3u8
+set chan_name="Adult Swim"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_249
+set link=http://www.dailymotion.com/video/x3m6nld
+set chan_name="Fashion TV Europe"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_250
+set link=http://www.dailymotion.com/video/x2t9nsf
+set chan_name="Fashion 1 Spain"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_251
+REM set link=https://dms.redbull.tv/v3/linear-borb/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYXRlZ29yeSI6InBlcnNvbmFsX2NvbXB1dGVyIiwiY291bnRyeV9jb2RlIjoidXMiLCJleHBpcmVzIjoiMjAxNy0wOS0xNlQxNzo0NjowMy45NjM0NjI4NDJaIiwib3NfZmFtaWx5IjoiaHR0cCIsInJlbW90ZV9pcCI6IjEwLjE1Ny4xMTIuMTQ4IiwidWEiOiJNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBJbnRlbCBNYWMgT1MgWCAxMF8xMl81KSBBcHBsZVdlYktpdC82MDMuMi40IChLSFRNTCwgbGlrZSBHZWNrbykgVmVyc2lvbi8xMC4xLjEgU2FmYXJpLzYwMy4yLjQiLCJ1aWQiOiJkOGZiZWYzMC0yZDhhLTQwYTUtOGNjNy0wNzgxNGJhMTliNzMifQ.Q_38FNpW3so5yrA5FQt9qBuix3dTulKpb6uQ0dRjrtY/playlist.m3u8
+REM #EXT-X-STREAM-INF:BANDWIDTH=290400,AVERAGE-BANDWIDTH=290400,CODECS="avc1.66.30,mp4a.40.2",RESOLUTION=320x180,FRAME-RATE=30.000,CLOSED-CAPTIONS=NONE
+REM set link=https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_264.m3u8
+REM #EXT-X-STREAM-INF:BANDWIDTH=635800,AVERAGE-BANDWIDTH=635800,CODECS="avc1.4d4015,mp4a.40.2",RESOLUTION=426x240,FRAME-RATE=30.000,CLOSED-CAPTIONS=NONE
+REM set link=https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_578.m3u8
+REM #EXT-X-STREAM-INF:BANDWIDTH=1020800,AVERAGE-BANDWIDTH=1020800,CODECS="avc1.77.30,mp4a.40.2",RESOLUTION=640x360,FRAME-RATE=30.000,CLOSED-CAPTIONS=NONE
+REM set link=https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_928.m3u8
+REM #EXT-X-STREAM-INF:BANDWIDTH=1826000,AVERAGE-BANDWIDTH=1826000,CODECS="avc1.4d401f,mp4a.40.2",RESOLUTION=960x540,FRAME-RATE=30.000,CLOSED-CAPTIONS=NONE
+set link=https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_1660.m3u8
+REM #EXT-X-STREAM-INF:BANDWIDTH=3696000,AVERAGE-BANDWIDTH=3696000,CODECS="avc1.4d401f,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=30.000,CLOSED-CAPTIONS=NONE
+REM set link=https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8
+REM #EXT-X-STREAM-INF:BANDWIDTH=7326000,AVERAGE-BANDWIDTH=7326000,CODECS="avc1.4d4028,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=30.000,CLOSED-CAPTIONS=NONE
+REM set link=https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_6660.m3u8
+REM set link="https://www.twitch.tv/redbull"
+set chan_name="RED Bull TV"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_252
+set link="http://mlblive-akc.mlb.com/ls01/mlbam/mlb_network/NETWORK_LINEAR_1/master_wired.m3u8"
+set chan_name="MLB Network"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_253
+set link="https://abr.de1se01.v2beat.live/live/live6/chunks.m3u8"
+set chan_name="V2Beat"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_254
+set link="https://www.dailymotion.com/video/x6s18p8"
+set chan_name="BritAsia TV"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_255
+set link="https://www.twitch.tv/elevensportsnext"
+set chan_name="ElevenSportNext"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_256
+set link="https://www.twitch.tv/geekandsundry"
+set chan_name="Geek and Sundry"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_257
+set link="https://www.twitch.tv/contv"
+set chan_name="Con TV"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_258
+set link="https://www.twitch.tv/shoutfactorytv"
+set chan_name="Shout Factory TV"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_259
+set link="http://247retrotv.com:1935/live/smil:247retro.smil/playlist.m3u8"
+set chan_name="Retro TV"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_260
+set link="https://adultswim-vodlive.cdn.turner.com/live/robot-chicken/stream.m3u8"
+set chan_name="Robot Chicken"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_261
+set link="https://www.twitch.tv/allkeyshop_tv"
+set chan_name="All Key Shop"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_262
+set link=https://www.twitch.tv/amouranth
+set chan_name="Amouranth"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_263
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_264
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_265
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_266
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_267
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_268
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_269
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_270
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_271
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_272
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_273
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_274
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_275
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_276
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_277
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_278
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_279
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_280
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+REM ####################################  OVERFLOW   ##########################################################
+
+:CHAN_281
+set link="https://cbclivedai2-i.akamaihd.net/hls/live/566968/event2/CBUT/master5.m3u8"
+REM set link="https://cbclivedai2-i.akamaihd.net/hls/live/566968/event2/CBUT/master4.m3u8"
+REM set link="https://cbclivedai2-i.akamaihd.net/hls/live/566968/event2/CBUT/master3.m3u8"
+REM set link="https://cbclivedai2-i.akamaihd.net/hls/live/566968/event2/CBUT/master2.m3u8"
+REM set link="https://cbclivedai2-i.akamaihd.net/hls/live/566968/event2/CBUT/master1.m3u8"
+set chan_name="CBC Vancouver British Columbia Canada"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_282
+set link="https://cbclivedai7-i.akamaihd.net/hls/live/567240/event2/CFYK/master5.m3u8"
+REM set link="https://cbclivedai7-i.akamaihd.net/hls/live/567240/event2/CFYK/master4.m3u8"
+REM set link="https://cbclivedai7-i.akamaihd.net/hls/live/567240/event2/CFYK/master3.m3u8"
+REM set link="https://cbclivedai7-i.akamaihd.net/hls/live/567240/event2/CFYK/master2.m3u8"
+REM set link="https://cbclivedai7-i.akamaihd.net/hls/live/567240/event2/CFYK/master1.m3u8"
+set chan_name="CBC Yellowknife Northwest Territories Canada"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_283
+set link="https://cbclivedai4-i.akamaihd.net/hls/live/567231/event2/CBXT/master5.m3u8"
+REM set link="https://cbclivedai4-i.akamaihd.net/hls/live/567231/event2/CBXT/master4.m3u8"
+REM set link="https://cbclivedai4-i.akamaihd.net/hls/live/567231/event2/CBXT/master3.m3u8"
+REM set link="https://cbclivedai4-i.akamaihd.net/hls/live/567231/event2/CBXT/master2.m3u8"
+REM set link="https://cbclivedai4-i.akamaihd.net/hls/live/567231/event2/CBXT/master1.m3u8"
+set chan_name="CBC Edmonton Alberta Canada"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_284
+set link="https://cbclivedai4-i.akamaihd.net/hls/live/567230/event2/CBRT/master5.m3u8"
+REM set link="https://cbclivedai4-i.akamaihd.net/hls/live/567230/event2/CBRT/master4.m3u8"
+REM set link="https://cbclivedai4-i.akamaihd.net/hls/live/567230/event2/CBRT/master3.m3u8"
+REM set link="https://cbclivedai4-i.akamaihd.net/hls/live/567230/event2/CBRT/master2.m3u8"
+REM set link="https://cbclivedai4-i.akamaihd.net/hls/live/567230/event2/CBRT/master1.m3u8"
+set chan_name="CBC Calgary Alberta Canada"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_285
+set link="https://cbclivedai2-i.akamaihd.net/hls/live/566969/event2/CBKT/master5.m3u8"
+REM set link="https://cbclivedai2-i.akamaihd.net/hls/live/566969/event2/CBKT/master4.m3u8"
+REM set link="https://cbclivedai2-i.akamaihd.net/hls/live/566969/event2/CBKT/master3.m3u8"
+REM set link="https://cbclivedai2-i.akamaihd.net/hls/live/566969/event2/CBKT/master2.m3u8"
+REM set link="https://cbclivedai2-i.akamaihd.net/hls/live/566969/event2/CBKT/master1.m3u8"
+set chan_name="CBC Regina Saskatchewan Canada"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_286
+set link="https://cbclivedai6-i.akamaihd.net/hls/live/567237/event2/CBWT/master5.m3u8"
+REM set link="https://cbclivedai6-i.akamaihd.net/hls/live/567237/event2/CBWT/master4.m3u8"
+REM set link="https://cbclivedai6-i.akamaihd.net/hls/live/567237/event2/CBWT/master3.m3u8"
+REM set link="https://cbclivedai6-i.akamaihd.net/hls/live/567237/event2/CBWT/master2.m3u8"
+REM set link="https://cbclivedai6-i.akamaihd.net/hls/live/567237/event2/CBWT/master1.m3u8"
+set chan_name="CBC Winnepeg Manitoba Canada"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_287
+set link="https://cbclivedai1-i.akamaihd.net/hls/live/566941/event2/CBET/master5.m3u8"
+REM set link="https://cbclivedai1-i.akamaihd.net/hls/live/566941/event2/CBET/master4.m3u8"
+REM set link="https://cbclivedai1-i.akamaihd.net/hls/live/566941/event2/CBET/master3.m3u8"
+REM set link="https://cbclivedai1-i.akamaihd.net/hls/live/566941/event2/CBET/master2.m3u8"
+REM set link="https://cbclivedai1-i.akamaihd.net/hls/live/566941/event2/CBET/master1.m3u8"
+set chan_name="CBC Windsor, Ontario, Canada"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_288
+set link="https://cbclivedai1-i.akamaihd.net/hls/live/566940/event2/CBLT/master5.m3u8"
+REM set link="https://cbclivedai1-i.akamaihd.net/hls/live/566940/event2/CBLT/master4.m3u8"
+REM set link="https://cbclivedai1-i.akamaihd.net/hls/live/566940/event2/CBLT/master3.m3u8"
+REM set link="https://cbclivedai1-i.akamaihd.net/hls/live/566940/event2/CBLT/master2.m3u8"
+REM set link="https://cbclivedai1-i.akamaihd.net/hls/live/566940/event2/CBLT/master1.m3u8"
+set chan_name="CBC Toronto, Ontario, Canada"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_289
+set link="https://cbclivedai5-i.akamaihd.net/hls/live/567235/event2/CBOT/master5.m3u8"
+REM set link="https://cbclivedai5-i.akamaihd.net/hls/live/567235/event2/CBOT/master4.m3u8"
+REM set link="https://cbclivedai5-i.akamaihd.net/hls/live/567235/event2/CBOT/master3.m3u8"
+REM set link="https://cbclivedai5-i.akamaihd.net/hls/live/567235/event2/CBOT/master2.m3u8"
+REM set link="https://cbclivedai5-i.akamaihd.net/hls/live/567235/event2/CBOT/master1.m3u8"
+REM set link="http://cbcnewshd-f.akamaihd.net/i/cbcnews_1@8981/index_2500_av-p.m3u8"
+set chan_name="CBC Ottawa Canada"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_290
+set link="https://cbclivedai3-i.akamaihd.net/hls/live/566976/event2/CBMT/master5.m3u8"
+REM set link="https://cbclivedai3-i.akamaihd.net/hls/live/566976/event2/CBMT/master4.m3u8"
+REM set link="https://cbclivedai3-i.akamaihd.net/hls/live/566976/event2/CBMT/master3.m3u8"
+REM set link="https://cbclivedai3-i.akamaihd.net/hls/live/566976/event2/CBMT/master2.m3u8"
+REM set link="https://cbclivedai3-i.akamaihd.net/hls/live/566976/event2/CBMT/master1.m3u8"
+set chan_name="CBC Montreal, Quebec, Canada "
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+
+:CHAN_291
+set link="https://cbclivedai7-i.akamaihd.net/hls/live/567244/event2/CBAT/master5.m3u8"
+REM set link="https://cbclivedai7-i.akamaihd.net/hls/live/567244/event2/CBAT/master4.m3u8"
+REM set link="https://cbclivedai7-i.akamaihd.net/hls/live/567244/event2/CBAT/master3.m3u8"
+REM set link="https://cbclivedai7-i.akamaihd.net/hls/live/567244/event2/CBAT/master2.m3u8"
+REM set link="https://cbclivedai7-i.akamaihd.net/hls/live/567244/event2/CBAT/master1.m3u8"
+set chan_name="CBC Frederickton New Brunswick Canada"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_292
+set link="https://cbclivedai1-i.akamaihd.net/hls/live/566941/event2/CBET/master5.m3u8"
+REM set link="https://cbclivedai1-i.akamaihd.net/hls/live/566941/event2/CBET/master4.m3u8"
+REM set link="https://cbclivedai1-i.akamaihd.net/hls/live/566941/event2/CBET/master3.m3u8"
+REM set link="https://cbclivedai1-i.akamaihd.net/hls/live/566941/event2/CBET/master2.m3u8"
+REM set link="https://cbclivedai1-i.akamaihd.net/hls/live/566941/event2/CBET/master1.m3u8"
+set chan_name="CBC Charlottetown, Prince Edward Island, Canada"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_293
+set link="https://cbclivedai3-i.akamaihd.net/hls/live/566977/event2/CBHT/master5.m3u8"
+REM set link="https://cbclivedai3-i.akamaihd.net/hls/live/566977/event2/CBHT/master4.m3u8"
+REM set link="https://cbclivedai3-i.akamaihd.net/hls/live/566977/event2/CBHT/master3.m3u8"
+REM set link="https://cbclivedai3-i.akamaihd.net/hls/live/566977/event2/CBHT/master2.m3u8"
+REM set link="https://cbclivedai3-i.akamaihd.net/hls/live/566977/event2/CBHT/master1.m3u8"
+set chan_name="CBC Halifax Nova Scotia Canada "
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_294
+set link="https://cbclivedai5-i.akamaihd.net/hls/live/567236/event2/CBNT/master5.m3u8"
+REM set link="https://cbclivedai5-i.akamaihd.net/hls/live/567236/event2/CBNT/master4.m3u8"
+REM set link="https://cbclivedai5-i.akamaihd.net/hls/live/567236/event2/CBNT/master3.m3u8"
+REM set link="https://cbclivedai5-i.akamaihd.net/hls/live/567236/event2/CBNT/master2.m3u8"
+REM set link="https://cbclivedai5-i.akamaihd.net/hls/live/567236/event2/CBNT/master1.m3u8"
+set chan_name="CBC St. John's Newfoundland Canada "
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_295
+set link="https://cbcnewshd-f.akamaihd.net/i/cbcregional_1@141286/index_2500_av-p.m3u8?sd=10&rebase=on"
+REM set link="https://cbcnewshd-f.akamaihd.net/i/cbcregional_1@141286/index_1800_av-p.m3u8?sd=10&rebase=on"
+REM set link="https://cbcnewshd-f.akamaihd.net/i/cbcregional_1@141286/index_700_av-p.m3u8?sd=10&rebase=on"
+REM set link="https://cbcnewshd-f.akamaihd.net/i/cbcregional_1@141286/index_400_av-p.m3u8?sd=10&rebase=on"
+REM set link="https://cbcnewshd-f.akamaihd.net/i/cbcregional_1@141286/index_256_av-p.m3u8?sd=10&rebase=on"
+REM set link="http://cbcnewshd-f.akamaihd.net/i/cbcnews_1@8981/index_2500_av-p.m3u8"
+set chan_name="CBC News Montreal Canada "
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_296
+set link="https://www.dailymotion.com/video/x2fxcwq"
+set chan_name="Generations TV"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_297
+set link="https://www.dailymotion.com/video/x52et3w"
+set chan_name="Suivez Telesud"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_298
+set link="https://www.dailymotion.com/video/x630wrb"
+set chan_name="VAR AZUR"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_299
+set link="https://www.dailymotion.com/video/x35m6bz"
+set chan_name=" VL"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_300
+set link="https://www.dailymotion.com/video/xgz4t1"
+set chan_name="BFM TV"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_301
+set link="https://www.dailymotion.com/video/x6nhqs0"
+set chan_name="8 Mont Blanc Live 2"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_302
+set link="https://www.dailymotion.com/video/x128fjo"
+set chan_name="téléGrenoble Isère"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_303
+set link="https://www.dailymotion.com/video/x2tzzpj"
+set chan_name="RTL2 "
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_304
+set link="https://www.dailymotion.com/video/x10990v"
+set chan_name="OUI FM"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_305
+set link="https://www.dailymotion.com/video/x6cq41k"
+set chan_name="D24TV"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_306
+set link=http://stream.canalsavoir.tv/livestream/stream.m3u8
+set chan_name="Canal Savoir Francais"
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+REM ####################################################################################################
 
 :PLAY_CASE
 TITLE %PRODUCT% %chan_name% on Channel %chan_num%
@@ -2728,7 +3197,6 @@ mpv --fs --resume-playback=no --loop-playlist=inf %link%
 ECHO You were watching %chan_name% on Channel %chan_num%
 
 goto MENU_!menu_num!
-
 
 :END_OF_PROGRAM
 ECHO TYPE WINSTREAM TO START AGAIN: BYE FOR NOW!
