@@ -430,11 +430,15 @@ set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_3
+
+set link="https://live.rte.ie/live/a/channel3/news.isml/news.m3u8"
+
 REM set link="https://cdn.rasset.ie/hls-live/_definst_/newsnow.m3u8"
-set link="https://cdn.rasset.ie/hls-live/_definst_/newsnow/newsnow-576.m3u8"
+REM set link="https://cdn.rasset.ie/hls-live/_definst_/newsnow/newsnow-576.m3u8"
 REM set link="https://cdn.rasset.ie/hls-live/_definst_/newsnow/newsnow-360.m3u8"
 REM set link="https://cdn.rasset.ie/hls-live/_definst_/newsnow/newsnow-270.m3u8"
 REM set link="https://cdn.rasset.ie/hls-live/_definst_/newsnow/newsnow-180.m3u8"
+
 set chan_name='RTE News Now Ireland'
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
