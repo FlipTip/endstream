@@ -5,8 +5,8 @@ REM ## FILENAME: WINSTREAM.BAT
 REM ## TITLE: WINSTREAM
 REM ## AUTHOR: Endwall
 REM ## Creation Date: January 27, 2018
-REM ## Version: 0.05042
-REM ## Revision Date: September 04, 2019
+REM ## Version: 0.05043
+REM ## Revision Date: September 05, 2019
 REM ##
 REM ## Description:  Stream internet video channels with mpv and youtube-dl
 REM ##
@@ -211,9 +211,9 @@ ECHO "|| 31) WGN 9 Chicago       ||71)NDTV IN             ||111)Europe 1        
 ECHO "|| 32) Weather Nation      ||72)Times IN            ||112)RTL Radio       ||152)-------------   ||192)POCCNR 1 HD    ||232)-------------- ||" 
 ECHO "|| 33) Weather Channel     ||73)ET India            ||113)RMC Talk        ||153)-------------   ||193)TV Publica MD  ||233)-------------- ||" 
 ECHO "|| 34) VOA USA             ||74)AFRICA NEWS         ||114)MB TV           ||154)-------------   ||194)UA TV          ||234)-------------- ||" 
-ECHO "|| 35) RT DOCUMENT         ||75)eNCA ZA             ||115)Generations TV  ||155)-------------   ||195)SKY 24 IT      ||235)-------------- ||"
-ECHO "|| 36) CGTN DOCUMENT       ||76)----------------    ||116)Tv Vendée       ||156)-------------   ||196)RSI LA CH      ||236)-------------- ||" 
-ECHO "|| 37) CBC CA              ||77)----------------    ||117)OUATCH TV       ||157)-------------   ||197)Telecolor IT   ||237)-------------- ||"
+ECHO "|| 35) RT DOCUMENT         ||75)Fox News Talk       ||115)Generations TV  ||155)-------------   ||195)SKY 24 IT      ||235)-------------- ||"
+ECHO "|| 36) CGTN DOCUMENT       ||76)CNN HLN             ||116)Tv Vendée       ||156)-------------   ||196)RSI LA CH      ||236)-------------- ||" 
+ECHO "|| 37) CBC CA              ||77)Jupiter Broadcast   ||117)OUATCH TV       ||157)-------------   ||197)Telecolor IT   ||237)-------------- ||"
 ECHO "|| 38) CBC NewsNet CA      ||78)----------------    ||118)Telesud         ||158)-------------   ||198)Star Lamia GR  ||238)-------------- ||"
 ECHO "|| 39) CPAC 1 CA           ||79)----------------    ||119)TV7 Bordeaux    ||159)-------------   ||199)Action 24 GR   ||239)-------------- ||"
 ECHO "|| 40) OIREACHTAS IE       ||80)----------------    ||120)VL              ||160)-------------   ||200)TRT Haber      ||240)-------------  ||" 
@@ -227,46 +227,46 @@ GOTO INPUT_SELECT
 :MENU_1
 CLS
 ECHO "============================================ %PRODUCT% %VERSION% ==========================================================================="
-ECHO "||=======ENTERTAINMENT======||======CANADA=========||======FRENCH II=====||======BBC/ITV=======||===================||=====RELIGIOUS======="
-ECHO "|| 241) Music Choice Play   ||281)CBC Vancouver    ||321)Generations TV  ||361)--------------  ||401)-------------- ||441)EWTN English   ||"
-ECHO "|| 242) M20 Music           ||282)CBC Yellowknife  ||322)Suivez Telesud  ||362)--------------  ||402)-------------- ||442)EWTN Ireland   ||"
-ECHO "|| 243) Radio Monte Carlo   ||283)CBC Edmonton     ||323)VAR AZUR        ||363)--------------  ||403)-------------- ||443)EWTN Africa    ||" 
-ECHO "|| 244) V2Beat TV           ||284)CBC Calgary      ||324)VL              ||364)--------------  ||404)-------------- ||444)EWTN Asia      ||" 
-ECHO "|| 245) DanceStart TV       ||285)CBC Regina       ||325)BFM TV          ||365)--------------  ||405)-------------- ||445)Salt and Light ||"
-ECHO "|| 246) Brit Asia TV        ||286)CBC Winnepeg     ||326)8 Mont Blanc 2  ||366)--------------  ||406)-------------- ||446)Catholic TV    ||" 
-ECHO "|| 247) Hit Music TV        ||287)CBC Windsor      ||327)téléGrenoble    ||367)--------------  ||407)-------------- ||447)EWTN Espanol   ||" 
-ECHO "|| 248) CMC California      ||288)CBC Toronto      ||328)RTL2            ||368)--------------  ||408)-------------- ||448)EWTN Deutsche  ||" 
-ECHO "|| 249) Country Network     ||289)CBC Ottawa       ||329)OUI FM          ||369)--------------  ||409)-------------  ||449)KTO Catholique ||" 
-ECHO "|| 250) Ditty TV            ||290)CBC Montreal     ||330)D24TV           ||370)--------------  ||410)-------------  ||450)TRWAM Poland   ||" 
-ECHO "|| 251) Rockland Radio      ||291)CBC Frederickton ||331)Canal Savoir    ||371)--------------  ||411)-------------- ||451)CBN            ||" 
-ECHO "|| 252) Classic Arts        ||292)CBC Charlottetown||332)--------------  ||372)--------------  ||412)-------------- ||452)CBN News       ||" 
-ECHO "|| 253) Fashion Europe      ||293)CBC Halifax      ||333)--------------  ||373)--------------  ||413)-------------- ||453)IHOP           ||" 
-ECHO "|| 254) Red Bull TV         ||294)CBC St. John's   ||334)--------------  ||374)--------------  ||414)-------------- ||454)LLBN His Word  ||" 
-ECHO "|| 255) MLB Network         ||295)GLOBAL Vancouver ||335)--------------  ||375)--------------  ||415)-------------- ||455)LLBN Smart Life||" 
-ECHO "|| 256) 11 Sports Next      ||296)GLOBAL Calgary   ||336)--------------  ||376)--------------  ||416)-------------- ||456)LLBN His Light ||" 
-ECHO "|| 257) Adult Swim          ||297)GLOBAL Edmonton  ||337)--------------  ||377)--------------  ||417)-------------- ||457)-------------- ||"  
-ECHO "|| 258) Geek and Sundry     ||298)GLOBAL Toronto   ||338)--------------  ||378)--------------  ||418)-------------- ||458)-------------- ||"
-ECHO "|| 259) Con TV              ||299)GLOBAL Halifax   ||339)--------------  ||379)-------------   ||419)-------------- ||459)-------------- ||" 
-ECHO "|| 260) Shout Factory       ||300)TELEQUEBEC CA    ||340)--------------  ||380)-------------   ||420)-------------- ||460)-------------- ||" 
-ECHO "|| 261) Retro TV            ||301)ICI CB-Yukon CA  ||341)--------------  ||381)-------------   ||421)-------------- ||461)-------------- ||" 
-ECHO "|| 262) Robot Chicken       ||302)ICI Alberta CA   ||342)--------------  ||382)-------------   ||422)-------------- ||462)-------------- ||" 
-ECHO "|| 263) All Key Shop        ||303)ICI Saskatchewan ||343)--------------  ||383)-------------   ||423)-------------- ||463)-------------- ||" 
-ECHO "|| 264) Amouranth           ||304)ICI Manitoba     ||344)--------------  ||384)-------------   ||424)-------------- ||464)-------------- ||"
-ECHO "|| 265) ET Live             ||305)ICI Ontario      ||345)--------------  ||385)-------------   ||425)-------------- ||465)-------------- ||"
-ECHO "|| 266) BYUTV               ||306)ICI Ottawa       ||346)--------------  ||386)-------------   ||426)-------------- ||466)-------------- ||" 
-ECHO "|| 267) --------------      ||307)ICI Acadie       ||347)--------------  ||387)-------------   ||427)-------------- ||467)-------------- ||" 
-ECHO "|| 268) --------------      ||308)ICI Estrie       ||348)--------------  ||388)-------------   ||428)-------------- ||468)-------------- ||" 
-ECHO "|| 269) --------------      ||309)ICI Montreal     ||349)--------------  ||389)-------------   ||429)-------------- ||469)-------------- ||" 
-ECHO "|| 270) --------------      ||310)ICI Maurice      ||350)--------------  ||390)-------------   ||430)-------------- ||470)-------------- ||" 
-ECHO "|| 271) --------------      ||311)ICI Sagueney     ||351)--------------  ||391)-------------   ||431)-------------- ||471)-------------- ||" 
-ECHO "|| 272) --------------      ||312)ICI Quebec       ||352)--------------  ||392)-------------   ||432)-------------- ||472)-------------  ||" 
-ECHO "|| 273) --------------      ||313)ICI Est-Quebec CA||353)--------------  ||393)-------------   ||433)-------------- ||473)-------------  ||" 
-ECHO "|| 274) --------------      ||314)CBCNews Montreal ||354)--------------  ||394)-------------   ||434)-------------- ||474)-------------  ||" 
-ECHO "|| 275) --------------      ||315)JUPITER BROAD    ||355)--------------  ||395)-------------   ||435)-------------- ||475)-------------  ||"
-ECHO "|| 276) --------------      ||316)--------------   ||356)--------------  ||396)-------------   ||436)-------------- ||476)-------------  ||" 
-ECHO "|| 277) --------------      ||317)--------------   ||357)--------------  ||397)-------------   ||437)-------------- ||477)-------------  ||"
-ECHO "|| 278) --------------      ||318)--------------   ||358)--------------  ||398)-------------   ||438)-------------- ||478)-------------  ||"
-ECHO "|| 279) --------------      ||319)--------------   ||359)--------------  ||399)-------------   ||439)-------------- ||479)-------------  ||"
+ECHO "||=======ENTERTAINMENT======||======CANADA=========||======FRENCH II=====||======FilmOnTV=======||===================||=====RELIGIOUS======="
+ECHO "|| 241) Music Choice Play   ||281)CBC Vancouver    ||321)Generations TV  ||361)BBC One         ||401)-------------- ||441)EWTN English   ||"
+ECHO "|| 242) M20 Music           ||282)CBC Yellowknife  ||322)Suivez Telesud  ||362)BBC News        ||402)-------------- ||442)EWTN Ireland   ||"
+ECHO "|| 243) Radio Monte Carlo   ||283)CBC Edmonton     ||323)VAR AZUR        ||363)BBC 1 Wales     ||403)-------------- ||443)EWTN Africa    ||" 
+ECHO "|| 244) V2Beat TV           ||284)CBC Calgary      ||324)VL              ||364)BBC 1 Scotland  ||404)-------------- ||444)EWTN Asia      ||" 
+ECHO "|| 245) DanceStart TV       ||285)CBC Regina       ||325)BFM TV          ||365)BBC 1 N Ireland ||405)-------------- ||445)Salt and Light ||"
+ECHO "|| 246) Brit Asia TV        ||286)CBC Winnepeg     ||326)8 Mont Blanc 2  ||366)BBC Two         ||406)-------------- ||446)Catholic TV    ||" 
+ECHO "|| 247) Hit Music TV        ||287)CBC Windsor      ||327)téléGrenoble    ||367)BBC Parliament  ||407)-------------- ||447)EWTN Espanol   ||" 
+ECHO "|| 248) CMC California      ||288)CBC Toronto      ||328)RTL2            ||368)BBC Four        ||408)-------------- ||448)EWTN Deutsche  ||" 
+ECHO "|| 249) Country Network     ||289)CBC Ottawa       ||329)OUI FM          ||369)ITV             ||409)-------------  ||449)KTO Catholique ||" 
+ECHO "|| 250) Ditty TV            ||290)CBC Montreal     ||330)D24TV           ||370)ITV +1          ||410)-------------  ||450)TRWAM Poland   ||" 
+ECHO "|| 251) Rockland Radio      ||291)CBC Frederickton ||331)Canal Savoir    ||371)ITV2            ||411)-------------- ||451)CBN            ||" 
+ECHO "|| 252) Classic Arts        ||292)CBC Charlottetown||332)--------------  ||372)ITV2 +1         ||412)-------------- ||452)CBN News       ||" 
+ECHO "|| 253) Fashion Europe      ||293)CBC Halifax      ||333)--------------  ||373)ITV3            ||413)-------------- ||453)IHOP           ||" 
+ECHO "|| 254) Red Bull TV         ||294)CBC St. John's   ||334)--------------  ||374)ITV3 +1         ||414)-------------- ||454)LLBN His Word  ||" 
+ECHO "|| 255) MLB Network         ||295)GLOBAL Vancouver ||335)--------------  ||375)ITV4            ||415)-------------- ||455)LLBN Smart Life||" 
+ECHO "|| 256) 11 Sports Next      ||296)GLOBAL Calgary   ||336)--------------  ||376)ITV4 +1         ||416)-------------- ||456)LLBN His Light ||" 
+ECHO "|| 257) Adult Swim          ||297)GLOBAL Edmonton  ||337)--------------  ||377)ITV Be          ||417)-------------- ||457)-------------- ||"  
+ECHO "|| 258) Geek and Sundry     ||298)GLOBAL Toronto   ||338)--------------  ||378)Channel 4       ||418)-------------- ||458)-------------- ||"
+ECHO "|| 259) Con TV              ||299)GLOBAL Halifax   ||339)--------------  ||379)E4              ||419)-------------- ||459)-------------- ||" 
+ECHO "|| 260) Shout Factory       ||300)TELEQUEBEC CA    ||340)--------------  ||380)More4           ||420)-------------- ||460)-------------- ||" 
+ECHO "|| 261) Retro TV            ||301)ICI CB-Yukon CA  ||341)--------------  ||381)Channel 5       ||421)-------------- ||461)-------------- ||" 
+ECHO "|| 262) Robot Chicken       ||302)ICI Alberta CA   ||342)--------------  ||382)5*              ||422)-------------- ||462)-------------- ||" 
+ECHO "|| 263) All Key Shop        ||303)ICI Saskatchewan ||343)--------------  ||383)5USA            ||423)-------------- ||463)-------------- ||" 
+ECHO "|| 264) Amouranth           ||304)ICI Manitoba     ||344)--------------  ||384)Really          ||424)-------------- ||464)-------------- ||"
+ECHO "|| 265) ET Live             ||305)ICI Ontario      ||345)--------------  ||385)Yesterday       ||425)-------------- ||465)-------------- ||"
+ECHO "|| 266) BYUTV               ||306)ICI Ottawa       ||346)--------------  ||386)Pick TV         ||426)-------------- ||466)-------------- ||" 
+ECHO "|| 267) --------------      ||307)ICI Acadie       ||347)--------------  ||387)CBS Reality     ||427)-------------- ||467)-------------- ||" 
+ECHO "|| 268) --------------      ||308)ICI Estrie       ||348)--------------  ||388)CBS Reality+1   ||428)-------------- ||468)-------------- ||" 
+ECHO "|| 269) --------------      ||309)ICI Montreal     ||349)--------------  ||389)CBS Drama       ||429)-------------- ||469)-------------- ||" 
+ECHO "|| 270) --------------      ||310)ICI Maurice      ||350)--------------  ||390)CBS Action      ||430)-------------- ||470)-------------- ||" 
+ECHO "|| 271) --------------      ||311)ICI Sagueney     ||351)--------------  ||391)truTV           ||431)-------------- ||471)-------------- ||" 
+ECHO "|| 272) --------------      ||312)ICI Quebec       ||352)--------------  ||392)FusionPlus TV   ||432)-------------- ||472)-------------  ||" 
+ECHO "|| 273) --------------      ||313)ICI Est-Quebec CA||353)--------------  ||393)Forces TV       ||433)-------------- ||473)-------------  ||" 
+ECHO "|| 274) --------------      ||314)CBCNews Montreal ||354)--------------  ||394)Challenge       ||434)-------------- ||474)-------------  ||" 
+ECHO "|| 275) --------------      ||315)JUPITER BROAD    ||355)--------------  ||395)Pick TV         ||435)-------------- ||475)-------------  ||"
+ECHO "|| 276) --------------      ||316)--------------   ||356)--------------  ||396)V Channel       ||436)-------------- ||476)-------------  ||" 
+ECHO "|| 277) --------------      ||317)--------------   ||357)--------------  ||397)Really TV       ||437)-------------- ||477)-------------  ||"
+ECHO "|| 278) --------------      ||318)--------------   ||358)--------------  ||398)My Face My Body ||438)-------------- ||478)-------------  ||"
+ECHO "|| 279) --------------      ||319)--------------   ||359)--------------  ||399)Dr. Fab Show    ||439)-------------- ||479)-------------  ||"
 ECHO "|| 280)--------------       ||320)--------------   ||360)--------------  ||400)-------------   ||440)-------------- ||480)-------------  ||" 
 ECHO "=============================================================================================================================================="
 PROMPT $LWINSTREAM$G$D$T$$
@@ -613,9 +613,9 @@ REM set link="https://streamidea.multitvsolution.in/live/NewsX-c/p1.m3u8"
 REM #EXT-X-STREAM-INF:BANDWIDTH=788000,CODECS="avc1.77.30,mp4a.40.2",RESOLUTION=396x288
 REM set link="https://streamidea.multitvsolution.in/live/NewsX-c/p2.m3u8"
 REM #EXT-X-STREAM-INF:BANDWIDTH=1778000,CODECS="avc1.77.40,mp4a.40.2",RESOLUTION=558x406
-REM set link="https://streamidea.multitvsolution.in/live/NewsX-c/p3.m3u8"
+set link="https://streamidea.multitvsolution.in/live/NewsX-c/p3.m3u8"
 REM HD 853x480
-set link="https://streamidea.multitvsolution.in/live/NewsX-c/p4.m3u8"
+REM set link="https://streamidea.multitvsolution.in/live/NewsX-c/p4.m3u8"
 set chan_name="NEWSX INDIA" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
@@ -1394,19 +1394,41 @@ set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_75
-set chan_name="eNCA ZA"
-set link="http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/enca/ls_satlink/b_828.m3u8"
-REM set link="http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/enca/ls_satlink/b_528.m3u8"
-REM set link="http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/enca/ls_satlink/b_264.m3u8"
-REM set link="http://wpc.c1a9.edgecastcdn.net/hds-live/20C1A9/enca/ls_satlink/b_828.f4m"
-REM set link="http://urtmpkal-f.akamaihd.net/i/1ciwepkyc_1@431710/master.m3u8"
+REM set link="https://fnurtmp-f.akamaihd.net/i/FNRADIO_1@92141/master.m3u8"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=364000,RESOLUTION=476x268,CODECS="avc1.66.30, mp4a.40.2"
+REM set link="https://fnurtmp-f.akamaihd.net/i/FNRADIO_1@92141/index_300_av-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=728000,RESOLUTION=768x432,CODECS="avc1.66.30, mp4a.40.2"
+REM set link="https://fnurtmp-f.akamaihd.net/i/FNRADIO_1@92141/index_600_av-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1328000,RESOLUTION=768x432,CODECS="avc1.66.30, mp4a.40.2"
+REM set link="https://fnurtmp-f.akamaihd.net/i/FNRADIO_1@92141/index_1200_av-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2628000,RESOLUTION=1280x720,CODECS="avc1.77.30, mp4a.40.2"
+set link="https://fnurtmp-f.akamaihd.net/i/FNRADIO_1@92141/index_2500_av-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=64000,CODECS="mp4a.40.2"
+REM set link="https://fnurtmp-f.akamaihd.net/i/FNRADIO_1@92141/index_300_a-b.m3u8?sd=10&rebase=on"
+set chan_name="FOX NEWS TALK USA" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_76
+set link="https://1161275585.rsc.cdn77.org/LS-ATL-54548-7/tracks-v4a1/mono.m3u8"
+set chan_name="CNN HLN USA" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_77
-set chan_name="UNASSIGNED"
+set link=https://vse-na-us-nw17.secdn.net/jupiter-chorigin/live/jupiter/chunklist.m3u8
+REM set link=https://vse-na-us-nw17.secdn.net/jupiter-chorigin/live/jupiter_360p/chunklist.m3u8
+REM set link=https://vse-na-us-nw17.secdn.net/jupiter-chorigin/live/jupiter_720p/chunklist.m3u8
+REM set link=https://vse-na-us-nw17.secdn.net/jupiter-chorigin/live/jupiter_480p/chunklist.m3u8
+REM set link=https://jupiter-hls.secdn.net/jupiter-channel/play/jupiter.smil/playlist.m3u8
+REM set link=https://jblive.videocdn.scaleengine.net/jb-live/play/jblive.stream/playlist.m3u8
+REM set link=rtmp://jblive.videocdn.scaleengine.net/jb-live/play/jblive.stream
+REM set link=rtsp://jblive.videocdn.scaleengine.net/jb-live/play/jblive.stream
+REM set link="http://jblive.videocdn.scaleengine.net/jb-live/play/jblive.stream/playlist.m3u8"  
+
+set chan_name="JUPITER BROADCASTING" 
 set /A prior_num="%chan_num%"
-goto MENU_!menu_num!
+goto PLAY_CASE
 
 :CHAN_78
 set chan_name="UNASSIGNED"
@@ -2835,16 +2857,31 @@ set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_265
+REM set link="https://etlive-mediapackage-fastly.cbsaavideo.com/dvr/manifest.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=511336,RESOLUTION=640x360,CODECS="avc1.4D401E,mp4a.40.2"
+REM set link="http://etlive-mediapackage-fastly.cbsaavideo.com/dvr/manifest_1.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=951336,RESOLUTION=640x360,CODECS="avc1.4D401E,mp4a.40.2"
+REM set link="http://etlive-mediapackage-fastly.cbsaavideo.com/dvr/manifest_2.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=1391336,RESOLUTION=854x480,CODECS="avc1.4D401F,mp4a.40.2"
+REM set link="http://etlive-mediapackage-fastly.cbsaavideo.com/dvr/manifest_3.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=2051336,RESOLUTION=960x540,CODECS="avc1.4D401F,mp4a.40.2"
+REM set link="http://etlive-mediapackage-fastly.cbsaavideo.com/dvr/manifest_4.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=2821300,RESOLUTION=1280x720,CODECS="avc1.4D401F,mp4a.40.2"
+REM set link="http://etlive-mediapackage-fastly.cbsaavideo.com/dvr/manifest_5.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=3371336,RESOLUTION=1280x720,CODECS="avc1.4D401F,mp4a.40.2"
+REM set link="http://etlive-mediapackage-fastly.cbsaavideo.com/dvr/manifest_6.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=5571336,RESOLUTION=1920x1080,CODECS="avc1.4D4028,mp4a.40.2"
+set link="http://etlive-mediapackage-fastly.cbsaavideo.com/dvr/manifest_7.m3u8"
+set chan_name="Entertaintment Tonight Live ET USA" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_266
 REM set link="https://content.uplynk.com/channel/2bb01dbf7c9b425db6854a4e45a57af8.m3u8"
 set link="https://content-ausw1-up-vmg1.uplynk.com/channel/2bb01dbf7c9b425db6854a4e45a57af8.mpd?tc=1&ct=c&rn=2130849654&exp=1567481039&cid=2bb01dbf7c9b425db6854a4e45a57af8&sig=0a5dcc15dbdca41d843d245e21ec6c8c855e6b4168635f5f15ac6b0589cfc4d8&pbs=8fa0751fdf3949b0a40a5416d6e00148"
 set chan_name="BYUTV"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
-
-:CHAN_266
-set chan_name="UNASSIGNED"
-set /A prior_num="%chan_num%"
-goto MENU_!menu_num!
 
 :CHAN_267
 set chan_name="UNASSIGNED"
@@ -3372,140 +3409,332 @@ set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 
-REM #################################################################################
+REM ###########################  FRENCH II   ######################################################
 
-:CHAN_321
-set link="https://1161275585.rsc.cdn77.org/LS-ATL-54548-7/tracks-v4a1/mono.m3u8"
-set chan_name="CNN HLN USA" 
-set /A prior_num="%chan_num%"
-goto PLAY_CASE
-
-:CHAN_322
-REM set link="https://fnurtmp-f.akamaihd.net/i/FNRADIO_1@92141/master.m3u8"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=364000,RESOLUTION=476x268,CODECS="avc1.66.30, mp4a.40.2"
-REM set link="https://fnurtmp-f.akamaihd.net/i/FNRADIO_1@92141/index_300_av-b.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=728000,RESOLUTION=768x432,CODECS="avc1.66.30, mp4a.40.2"
-REM set link="https://fnurtmp-f.akamaihd.net/i/FNRADIO_1@92141/index_600_av-b.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1328000,RESOLUTION=768x432,CODECS="avc1.66.30, mp4a.40.2"
-REM set link="https://fnurtmp-f.akamaihd.net/i/FNRADIO_1@92141/index_1200_av-b.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2628000,RESOLUTION=1280x720,CODECS="avc1.77.30, mp4a.40.2"
-set link="https://fnurtmp-f.akamaihd.net/i/FNRADIO_1@92141/index_2500_av-b.m3u8?sd=10&rebase=on"
-REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=64000,CODECS="mp4a.40.2"
-REM set link="https://fnurtmp-f.akamaihd.net/i/FNRADIO_1@92141/index_300_a-b.m3u8?sd=10&rebase=on"
-set chan_name="FOX NEWS TALK USA" 
-set /A prior_num="%chan_num%"
-goto PLAY_CASE
-
-:CHAN_323
-set link="https://1674331492.rsc.cdn77.org/LS-ATL-54548-14/tracks-v1a1/mono.m3u8"
-set chan_name="CNBC USA" 
-set /A prior_num="%chan_num%"
-goto PLAY_CASE
-
-:CHAN_324
-REM set link="https://etlive-mediapackage-fastly.cbsaavideo.com/dvr/manifest.m3u8"
-REM #EXT-X-STREAM-INF:BANDWIDTH=511336,RESOLUTION=640x360,CODECS="avc1.4D401E,mp4a.40.2"
-REM set link="http://etlive-mediapackage-fastly.cbsaavideo.com/dvr/manifest_1.m3u8"
-REM #EXT-X-STREAM-INF:BANDWIDTH=951336,RESOLUTION=640x360,CODECS="avc1.4D401E,mp4a.40.2"
-REM set link="http://etlive-mediapackage-fastly.cbsaavideo.com/dvr/manifest_2.m3u8"
-REM #EXT-X-STREAM-INF:BANDWIDTH=1391336,RESOLUTION=854x480,CODECS="avc1.4D401F,mp4a.40.2"
-REM set link="http://etlive-mediapackage-fastly.cbsaavideo.com/dvr/manifest_3.m3u8"
-REM #EXT-X-STREAM-INF:BANDWIDTH=2051336,RESOLUTION=960x540,CODECS="avc1.4D401F,mp4a.40.2"
-REM set link="http://etlive-mediapackage-fastly.cbsaavideo.com/dvr/manifest_4.m3u8"
-REM #EXT-X-STREAM-INF:BANDWIDTH=2821300,RESOLUTION=1280x720,CODECS="avc1.4D401F,mp4a.40.2"
-REM set link="http://etlive-mediapackage-fastly.cbsaavideo.com/dvr/manifest_5.m3u8"
-REM #EXT-X-STREAM-INF:BANDWIDTH=3371336,RESOLUTION=1280x720,CODECS="avc1.4D401F,mp4a.40.2"
-REM set link="http://etlive-mediapackage-fastly.cbsaavideo.com/dvr/manifest_6.m3u8"
-REM #EXT-X-STREAM-INF:BANDWIDTH=5571336,RESOLUTION=1920x1080,CODECS="avc1.4D4028,mp4a.40.2"
-set link="http://etlive-mediapackage-fastly.cbsaavideo.com/dvr/manifest_7.m3u8"
-set chan_name="Entertaintment Tonight Live ET USA" 
-set /A prior_num="%chan_num%"
-goto PLAY_CASE
-
-:CHAN_325
-set link=https://vse-na-us-nw17.secdn.net/jupiter-chorigin/live/jupiter/chunklist.m3u8
-REM set link=https://vse-na-us-nw17.secdn.net/jupiter-chorigin/live/jupiter_360p/chunklist.m3u8
-REM set link=https://vse-na-us-nw17.secdn.net/jupiter-chorigin/live/jupiter_720p/chunklist.m3u8
-REM set link=https://vse-na-us-nw17.secdn.net/jupiter-chorigin/live/jupiter_480p/chunklist.m3u8
-REM set link=https://jupiter-hls.secdn.net/jupiter-channel/play/jupiter.smil/playlist.m3u8
-REM set link=https://jblive.videocdn.scaleengine.net/jb-live/play/jblive.stream/playlist.m3u8
-REM set link=rtmp://jblive.videocdn.scaleengine.net/jb-live/play/jblive.stream
-REM set link=rtsp://jblive.videocdn.scaleengine.net/jb-live/play/jblive.stream
-REM set link="http://jblive.videocdn.scaleengine.net/jb-live/play/jblive.stream/playlist.m3u8"  
-
-set chan_name="JUPITER BROADCASTING" 
-set /A prior_num="%chan_num%"
-goto PLAY_CASE
 
 
 REM ###############################################################################################
 
-:CHAN_361
+:CHAN_321
 set link="https://www.dailymotion.com/video/x2fxcwq"
 set chan_name="Generations TV"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_362
+:CHAN_322
 set link="https://www.dailymotion.com/video/x52et3w"
 set chan_name="Suivez Telesud"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_363
+:CHAN_323
 set link="https://www.dailymotion.com/video/x630wrb"
 set chan_name="VAR AZUR"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_364
+:CHAN_324
 set link="https://www.dailymotion.com/video/x35m6bz"
 set chan_name=" VL"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_365
+:CHAN_325
 set link="https://www.dailymotion.com/video/xgz4t1"
 set chan_name="BFM TV"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_366
+:CHAN_326
 set link="https://www.dailymotion.com/video/x6nhqs0"
 set chan_name="8 Mont Blanc Live 2"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_367
+:CHAN_327
 set link="https://www.dailymotion.com/video/x128fjo"
 set chan_name="téléGrenoble Isère"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_368
+:CHAN_328
 set link="https://www.dailymotion.com/video/x2tzzpj"
 set chan_name="RTL2 "
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_369
+:CHAN_329
 set link="https://www.dailymotion.com/video/x10990v"
 set chan_name="OUI FM"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_370
+:CHAN_330
 set link="https://www.dailymotion.com/video/x6cq41k"
 set chan_name="D24TV"
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
-:CHAN_371
-set link=http://stream.canalsavoir.tv/livestream/stream.m3u8
-set chan_name="Canal Savoir Francais"
+:CHAN_331
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_332
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_333
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+:CHAN_334
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+REM ###################################  FILMON TV ################################################################
+
+:CHAN_361
+set link="https://www.filmon.com/tv/bbc-one" 
+set chan_name="BBC ONE" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
+:CHAN_362
+set link="https://www.filmon.com/tv/bbc-news"
+set chan_name="BBC NEWS" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_363
+set link="https://www.filmon.com/tv/bbc-1-wales"
+set chan_name="BBC 1 Wales" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_364
+set link="https://www.filmon.com/tv/bbc-1-scotland"
+set chan_name="BBC 1 Scotland" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_365
+set link="https://www.filmon.com/tv/bbc-1-north-ireland"
+set chan_name="BBC 1 North Ireland" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_366
+set link="https://www.filmon.com/tv/bbc-two"
+set chan_name="BBC TWO" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_367
+set link="https://www.filmon.com/tv/bbc-parliament"
+set chan_name="BBC Parliament" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_368
+set link="https://www.filmon.com/tv/cbeebiesbbc-four"
+set chan_name="BBC Four" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_369
+set link="https://www.filmon.com/tv/itv1"
+set chan_name="BBC Four" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_370
+set link="https://www.filmon.com/tv/itv-plus-1"
+set chan_name="ITV + 1" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_371
+set link="https://www.filmon.com/tv/itv2"
+set chan_name="ITV + 1" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_372
+set link="https://www.filmon.com/tv/itv2-plus-1"
+set chan_name="ITV 2 + 1" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_373
+set link="https://www.filmon.com/tv/itv3"
+set chan_name="ITV 2 + 1" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_374
+set link="https://www.filmon.com/tv/itv3-plus-1"
+set chan_name="ITV 3 + 1" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_375
+set link="https://www.filmon.com/tv/itv4"
+set chan_name="ITV 4" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_376
+set link="https://www.filmon.com/tv/itv4-plus-1"
+set chan_name="ITV 4 + 1" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_377
+set link="https://www.filmon.com/tv/itvbe"
+set chan_name="ITV Be" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_378
+set link="https://www.filmon.com/tv/channel-4"
+set chan_name="Channel 4" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_379
+set link="https://www.filmon.com/tv/e4"
+set chan_name="E4" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_380
+set link="https://www.filmon.com/tv/more4"
+set chan_name="More4" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_381
+set link="https://www.filmon.com/tv/channel-5"
+set chan_name="Channel 5" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_382
+set link="https://www.filmon.com/tv/5-star"
+set chan_name="5\*" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_383
+set link="https://www.filmon.com/tv/5usa"
+set chan_name="5 USA" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_384
+set link="https://www.filmon.com/tv/really"
+set chan_name="Really" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_385
+set link="https://www.filmon.com/tv/yesterday"
+set chan_name="Yesterday" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_386
+set link="https://www.filmon.com/tv/pick-tv"
+set chan_name="Pick TV" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_387
+set link="https://www.filmon.com/tv/cbs-reality"
+set chan_name="CBS Reality" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_388
+set link="https://www.filmon.com/tv/cbs-reality1"
+set chan_name="CBS Reality + 1" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_389
+set link="https://www.filmon.com/tv/cbs-drama"
+set chan_name="CBS Drama" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_390
+set link="https://www.filmon.com/tv/cbs-action"
+set chan_name="CBS Action" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_391
+set link="https://www.filmon.com/tv/tru-tv"
+set chan_name="TruTV" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_392
+set link="https://www.filmon.com/tv/fusionplus"
+set chan_name="FusionPlus TV" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_393
+set link="https://www.filmon.com/tv/forces-tv"
+set chan_name="Forces TV" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_394
+set link="https://www.filmon.com/tv/challenge"
+set chan_name="Challenge " 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_395
+set link="https://www.filmon.com/tv/pick-tv"
+set chan_name="Pick TV" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_396
+set link="https://www.filmon.com/tv/v-channel"
+set chan_name="V Channel" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+
+:CHAN_397
+set link="https://www.filmon.com/tv/reality-tv"
+set chan_name="Really TV" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE  
+:CHAN_398
+set link="https://www.filmon.com/tv/my-face-my-body "
+set chan_name="My Face My Body " 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE  
+
+:CHAN_399
+set link="https://www.filmon.com/tv/dr-fab-show"
+set chan_name="Dr. Fab Show" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE
+  
+:CHAN_400
+set link="https://www.filmon.com/tv/drama"
+set chan_name="Drama" 
+set /A prior_num="%chan_num%"
+goto PLAY_CASE  
+ 
 REM ####################################RELIGIOUS PROGRAMS #########################################################
 :CHAN_441
 set link=http://players.brightcove.net/1675170007001/Hyo4oydd_default/index.html?videoId=5409283781001
@@ -3705,6 +3934,14 @@ set /A menu_num=0
 set /A prior_num="%chan_num%"
 set /A chan_num=1
 goto MENU_!menu_num!
+
+
+:CHAN_458
+set chan_name="UNASSIGNED"
+set /A prior_num="%chan_num%"
+goto MENU_!menu_num!
+
+
 
 REM ####################################################################################################
 
