@@ -5,8 +5,8 @@ REM ## FILENAME: WINSTREAM.BAT
 REM ## TITLE: WINSTREAM
 REM ## AUTHOR: Endwall
 REM ## Creation Date: January 27, 2018
-REM ## Version: 0.05043
-REM ## Revision Date: September 05, 2019
+REM ## Version: 0.05044
+REM ## Revision Date: September 18, 2019
 REM ##
 REM ## Description:  Stream internet video channels with mpv and youtube-dl
 REM ##
@@ -154,8 +154,8 @@ SET PATH=C:\Users\%USERNAME%\bin;D:\gnuwin32\bin;%PATH%
 
 SET PRODUCT=WINSTREAM
 SET BRANCH="WINDOWS NT 6.x"
-SET VERSION=0.05042
-SET REV_DATE="04/09/2019"
+SET VERSION=0.05044
+SET REV_DATE="18/09/2019"
 SET MODE="VIDEO"
 
 REM ## SET THE TITLE
@@ -214,7 +214,7 @@ ECHO "|| 34) VOA USA             ||74)AFRICA NEWS         ||114)MB TV           
 ECHO "|| 35) RT DOCUMENT         ||75)Fox News Talk       ||115)Generations TV  ||155)-------------   ||195)SKY 24 IT      ||235)-------------- ||"
 ECHO "|| 36) CGTN DOCUMENT       ||76)CNN HLN             ||116)Tv Vendée       ||156)-------------   ||196)RSI LA CH      ||236)-------------- ||" 
 ECHO "|| 37) CBC CA              ||77)Jupiter Broadcast   ||117)OUATCH TV       ||157)-------------   ||197)Telecolor IT   ||237)-------------- ||"
-ECHO "|| 38) CBC NewsNet CA      ||78)----------------    ||118)Telesud         ||158)-------------   ||198)Star Lamia GR  ||238)-------------- ||"
+ECHO "|| 38) CBC NewsNet CA      ||78)FirePower News      ||118)Telesud         ||158)-------------   ||198)Star Lamia GR  ||238)-------------- ||"
 ECHO "|| 39) CPAC 1 CA           ||79)----------------    ||119)TV7 Bordeaux    ||159)-------------   ||199)Action 24 GR   ||239)-------------- ||"
 ECHO "|| 40) OIREACHTAS IE       ||80)----------------    ||120)VL              ||160)-------------   ||200)TRT Haber      ||240)-------------  ||" 
 ECHO "=============================================================================================================================================="
@@ -431,10 +431,10 @@ goto PLAY_CASE
 
 :CHAN_3
 
-set link="https://live.rte.ie/live/a/channel3/news.isml/news.m3u8"
+REM set link="https://live.rte.ie/live/a/channel3/news.isml/news.m3u8"
 
 REM set link="https://cdn.rasset.ie/hls-live/_definst_/newsnow.m3u8"
-REM set link="https://cdn.rasset.ie/hls-live/_definst_/newsnow/newsnow-576.m3u8"
+set link="https://cdn.rasset.ie/hls-live/_definst_/newsnow/newsnow-576.m3u8"
 REM set link="https://cdn.rasset.ie/hls-live/_definst_/newsnow/newsnow-360.m3u8"
 REM set link="https://cdn.rasset.ie/hls-live/_definst_/newsnow/newsnow-270.m3u8"
 REM set link="https://cdn.rasset.ie/hls-live/_definst_/newsnow/newsnow-180.m3u8"
@@ -499,10 +499,37 @@ set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_7
-set link=https://www.cbsnews.com/common/video/dai_prod.m3u8
+REM set link=https://www.cbsnews.com/common/video/dai_prod.m3u8
+REM set link="https://dai.google.com/linear/hls/event/Sid4xiTQTkCT1SLu6rjUSQ/master.m3u8"
 REM for /f "tokens=*" %%a in ( 'curl -L "https://dai.google.com/linear/hls/event/Sid4xiTQTkCT1SLu6rjUSQ/master.m3u8" ^| grep 1689600.m3u8 ^| tail -n 1' ) do set link=%%a
 REM set link="https://dai.google.com/linear/hls/event/Sid4xiTQTkCT1SLu6rjUSQ/master.m3u8"
 REM BANDWIDTHS: 3009600 2481600 1689600 1029600 580800 264000 
+REM set link="https://cbsnewshd-lh.akamaihd.net/i/CBSNHD_7@199302/master.m3u8"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=216000,RESOLUTION=320x180,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://cbsnewshd-lh.akamaihd.net/i/CBSNHD_7@199302/index_120_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=216000,RESOLUTION=320x180,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://cbsnewshd-lh.akamaihd.net/i/CBSNHD_7@199302/index_120_av-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=456000,RESOLUTION=640x360,CODECS="avc1.66.30, mp4a.40.2"
+REM set link="https://cbsnewshd-lh.akamaihd.net/i/CBSNHD_7@199302/index_360_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=456000,RESOLUTION=640x360,CODECS="avc1.66.30, mp4a.40.2"
+REM set link="https://cbsnewshd-lh.akamaihd.net/i/CBSNHD_7@199302/index_360_av-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=796000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://cbsnewshd-lh.akamaihd.net/i/CBSNHD_7@199302/index_700_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=796000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://cbsnewshd-lh.akamaihd.net/i/CBSNHD_7@199302/index_700_av-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1296000,RESOLUTION=960x540,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://cbsnewshd-lh.akamaihd.net/i/CBSNHD_7@199302/index_1200_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1296000,RESOLUTION=960x540,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://cbsnewshd-lh.akamaihd.net/i/CBSNHD_7@199302/index_1200_av-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1896000,RESOLUTION=1280x720,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://cbsnewshd-lh.akamaihd.net/i/CBSNHD_7@199302/index_1800_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1896000,RESOLUTION=1280x720,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://cbsnewshd-lh.akamaihd.net/i/CBSNHD_7@199302/index_1800_av-b.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2296000,RESOLUTION=1280x720,CODECS="avc1.77.30, mp4a.40.2"
+set link="https://cbsnewshd-lh.akamaihd.net/i/CBSNHD_7@199302/index_2200_av-p.m3u8?sd=10&rebase=on"
+REM #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2296000,RESOLUTION=1280x720,CODECS="avc1.77.30, mp4a.40.2"
+REM set link="https://cbsnewshd-lh.akamaihd.net/i/CBSNHD_7@199302/index_2200_av-b.m3u8?sd=10&rebase=on"
+
 set chan_name="CBSN" 
 set /A prior_num="%chan_num%"
 goto PLAY_CASE
@@ -1435,9 +1462,16 @@ set /A prior_num="%chan_num%"
 goto PLAY_CASE
 
 :CHAN_78
-set chan_name="UNASSIGNED"
+REM set link="https://infostream.secure.footprint.net/hls-live/infostream4-infostream4/_definst_/chunklist.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=866304,RESOLUTION=640x360
+REM set link="https://infostream.secure.footprint.net/hls-live/infostream4-infostream4/_definst_/chunklist_b866304.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=1155072,RESOLUTION=854x480
+REM set link="https://infostream.secure.footprint.net/hls-live/infostream4-infostream4/_definst_/chunklist_b1155072.m3u8"
+REM #EXT-X-STREAM-INF:BANDWIDTH=2435072,RESOLUTION=1280x720
+set link="https://infostream.secure.footprint.net/hls-live/infostream4-infostream4/_definst_/chunklist_b2435072.m3u8"
+set chan_name="Infowars Fire Power News"
 set /A prior_num="%chan_num%"
-goto MENU_!menu_num!
+goto PLAY_CASE
 
 :CHAN_79
 set chan_name="UNASSIGNED"
